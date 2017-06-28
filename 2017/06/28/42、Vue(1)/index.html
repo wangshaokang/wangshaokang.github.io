@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="v-on 绑定事件 v-on:事件类型=’处理函数’
+12345$event 特殊变量 代表的是事件对象   &amp;lt;button v-on:click=&amp;quot;say(&amp;apos;param,$event)&amp;quot;&amp;gt;点击&amp;lt;/button&amp;gt;    &amp;lt;!--v-on:缩" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>vue（1） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="v-on 绑定事件 v-on:事件类型=’处理函数’ 12345$event 特殊变量 代表的是事件对象   &amp;lt;button v-on:click=&amp;quot;say(&amp;apos;param,$event)&amp;quot;&amp;gt;点击&amp;lt;/button&amp;gt;    &amp;lt;!--v-on:缩写成@--&amp;gt; &amp;lt;button @click=&amp;quot;say(&amp;apos;param,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue（1）">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/42、Vue(1)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="v-on 绑定事件 v-on:事件类型=’处理函数’ 12345$event 特殊变量 代表的是事件对象   &amp;lt;button v-on:click=&amp;quot;say(&amp;apos;param,$event)&amp;quot;&amp;gt;点击&amp;lt;/button&amp;gt;    &amp;lt;!--v-on:缩写成@--&amp;gt; &amp;lt;button @click=&amp;quot;say(&amp;apos;param,">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue（1）">
+<meta name="twitter:description" content="v-on 绑定事件 v-on:事件类型=’处理函数’ 12345$event 特殊变量 代表的是事件对象   &amp;lt;button v-on:click=&amp;quot;say(&amp;apos;param,$event)&amp;quot;&amp;gt;点击&amp;lt;/button&amp;gt;    &amp;lt;!--v-on:缩写成@--&amp;gt; &amp;lt;button @click=&amp;quot;say(&amp;apos;param,">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-42、Vue(1)" class="post-42、Vue(1) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      vue（1）
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/42、Vue(1)/" data-id="cj4gu5cfm00145sr4umf50yzq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>v-on 绑定事件 v-on:事件类型=’处理函数’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$event 特殊变量 代表的是事件对象 </div><div class="line">  &lt;button v-on:click=&quot;say(&apos;param,$event)&quot;&gt;点击&lt;/button&gt; </div><div class="line">   &lt;!--v-on:缩写成@--&gt;</div><div class="line"> &lt;button @click=&quot;say(&apos;param,$event)&quot;&gt;点击&lt;/button&gt;</div><div class="line"> 不传参 默认第一个参数就是事件对象  v-on 绑定事件 v-on:事件类型=&apos;处理函数&apos;</div></pre></td></tr></table></figure>
+<p>#events<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">new Vue(&#123;</div><div class="line">        el:&apos;#app&apos;,</div><div class="line">        data:&#123;</div><div class="line">            val:&apos;hello world&apos;,</div><div class="line">            isShow:true</div><div class="line">        &#125;,</div><div class="line">        methods:&#123;//存放事件方法 集合</div><div class="line">            say:function(e,event)&#123;</div><div class="line">                console.log(e);</div><div class="line">                console.log(event);//事件对象</div><div class="line">                console.log(event.target);//得到绑定事件的对象</div><div class="line">                alert(this.val);</div><div class="line">                console.log(this); //this是当前的Vue根实例</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">初始化一个Vue根实例  它需要一个参数对象 el 挂载元素  data数据 方法 生命周期钩子template。。。</div><div class="line"> var vm=new Vue(&#123;</div><div class="line">     el:&apos;#app&apos;, //挂载元素  指定应用范围  不能挂载到html or body上</div><div class="line">     data:&#123;    //data 挂载数据</div><div class="line">         title:&apos;hello vue.js!&apos;,</div><div class="line">         text:&apos;hello world!&apos;</div><div class="line">     &#125;</div><div class="line"> &#125;)</div><div class="line"> console.log(vm) //Vue根实例  对data进行处理</div><div class="line"> setInterval(function()&#123;</div><div class="line">     vm.title=&apos;react.js&apos;  //响应式 数据改变视图</div><div class="line"> &#125;,2000);</div></pre></td></tr></table></figure>
+<p>循环谁 就把v-for写在谁上</p>
+<p><li v-for="(result in results)"></li><br><!--v-if控制的是DOM元素--><br>    <div v-if="isInfor"></div><br>    <!--v-show控制的样式的显示和隐藏--></p>
+<p>##用于消除闪烁问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> 编译前就是一个普通的属性选择器 </div><div class="line"> &lt;style&gt;</div><div class="line">        [v-cloak]&#123;</div><div class="line">            display: none;</div><div class="line">        &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">避免了闪烁  避免了看到编译前的样子</div><div class="line">&lt;div id=&quot;app&quot; v-cloak&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>##生命周期<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">var vm=new Vue(&#123;</div><div class="line">       el:&apos;#app&apos;,</div><div class="line">       data:&#123;</div><div class="line">           title:&apos;hello world&apos;</div><div class="line">       &#125;,</div><div class="line">       // 钩子函数</div><div class="line">       beforeCreate()&#123;</div><div class="line">           alert(&apos;实例创建之前&apos;)</div><div class="line">       &#125;,</div><div class="line">       created()&#123;</div><div class="line">           alert(&apos;实例创建之后&apos;);//在这个阶段可以 调用数据</div><div class="line">       &#125;,</div><div class="line">       beforeMount()&#123;</div><div class="line">           alert(&apos;挂载前&apos;);</div><div class="line">       &#125;,</div><div class="line">       mounted()&#123;</div><div class="line">           alert(&apos;挂载完成&apos;);</div><div class="line">       &#125;,</div><div class="line">       beforeDestroy()&#123;</div><div class="line">           alert(&apos;销毁前&apos;);</div><div class="line">       &#125;,</div><div class="line">       destroyed()&#123;</div><div class="line">           alert(&apos;销毁完成&apos;);</div><div class="line">       &#125;,</div><div class="line">       beforeUpdate()&#123;</div><div class="line">           alert(&apos;更新前&apos;);</div><div class="line">       &#125;,</div><div class="line">       update()&#123;</div><div class="line">           alert(&apos;更新完成&apos;)</div><div class="line">       &#125;</div><div class="line">   &#125;)</div></pre></td></tr></table></figure></p>
+<p>##自定义过滤器  一定要放在生成Vue根实例之前</p>
+<blockquote>
+<p>千分符：<br>let num=123435345345<br>num.replace(/(\d)(?=(\d{3})+(.|$))/g,’$1,’)</p>
+</blockquote>
+<p>###动态绑定 v-bind:class<br>    与静态资源class是共存的 class=“font s2”<br>    <div :class="s2" class="font">我是内容</div></p>
+<p>##计算属性 computed 通过一个属性 计算出来一个新的属性 当这个属性变化时  新的属性也会跟着改变</p>
+<p>##vue 事件修饰符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div class=&quot;oDiv&quot; @click=&quot;parent&quot;&gt;</div><div class="line">    &lt;!--修饰符  事件类型.修饰符  click.stop 阻止冒泡传播--&gt;</div><div class="line">    &lt;button v-on:click.stop=&quot;child&quot;&gt;点击&lt;/button&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div class=&quot;oDiv&quot; @click=&quot;parent&quot;&gt;</div><div class="line">&lt;!--阻止默认行为的修饰符  事件类型.prevent--&gt;</div><div class="line">&lt;a href=&quot;http://www.baidu.com&quot; @click.prevent.stop=&quot;link&quot;&gt;百度&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;!--捕获阶段 capture 从外到内--&gt;</div><div class="line">&lt;div class=&quot;outer&quot; @click.capture=&quot;outer&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot; @click.capture=&quot;inner&quot;&gt;</div><div class="line">        &lt;div class=&quot;center&quot; @click.capture=&quot;center&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;!--事件值触发一次 once--&gt;</div><div class="line">&lt;button @click.once=&quot;one&quot;&gt;一次性事件&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;!--阻止表单默认提交</div><div class="line">原生的写法：onsubmit=&quot; return false&quot;</div><div class="line">Vue的写法：@submit.prevent/v-on:submit.prevent--&gt;</div></pre></td></tr></table></figure></p>
+<p>##按键修饰符<br> <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#33;&#x2d;&#x2d;&#x40;&#107;&#x65;&#x79;&#x75;&#112;&#46;&#107;&#x65;&#x79;&#x43;&#111;&#x64;&#x65;&#x2f;&#x4e5f;&#21487;&#20197;&#30452;&#25509;&#x5199;&#x6210;&#x28;&#x40;&#x6b;&#x65;&#x79;&#x75;&#112;&#x2e;&#x952e;&#x7801;&#x503c;&#x29;&#45;&#x2d;">&#33;&#x2d;&#x2d;&#x40;&#107;&#x65;&#x79;&#x75;&#112;&#46;&#107;&#x65;&#x79;&#x43;&#111;&#x64;&#x65;&#x2f;&#x4e5f;&#21487;&#20197;&#30452;&#25509;&#x5199;&#x6210;&#x28;&#x40;&#x6b;&#x65;&#x79;&#x75;&#112;&#x2e;&#x952e;&#x7801;&#x503c;&#x29;&#45;&#x2d;</a><br>    <!--回车 触发--><br>    enter:<input type="text" @keyup.enter="say"><br><br>    <!--空格 触发--><br>    space:<input type="text" @keyup.space="say"><br><br>    <!--esc 触发--><br>    esc:<input type="text" @keyup.esc="say"><br><br>    <!--delete 触发--><br>    delete:<input type="text" @keyup.delete="say"><br><br>    <!--tab 触发--><br>    tab:<input type="text" @keyup.tab="say"><br><br>    <!--up 触发--><br>    up:<input type="text" @keyup.up="say"><br><br>    <!--down 触发--><br>    down:<input type="text" @keyup.down="say"><br><br>    <!--left 触发--><br>    left:<input type="text" @keyup.left="say"><br><br>    <!--right 触发--><br>    right:<input type="text" @keyup.right="say"><br><br>    <!--Q 触发--><br>    Q1:<input type="text" @keyup.81="say"><br><br>    Q2:<input type="text" @keyup.q="say"><br><br><br></p>
+<p>##组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">全局组件  局部组件</div><div class="line">    在初始化实例之前 注册全局组件  可以在多个实例 以自定义的形式被引用</div><div class="line">    @param1  组件名 （自定义标签） 多个单词  my-component(‘-’隔开)  也可以是单个单词 comp  组件名不能是html里已存在的标签</div><div class="line">    @param2  参数对象  配置  组件  结构template  行为methods  数据data  计算属性   钩子函数 (组件data必须是一个函数)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&lt;template id=&quot;temps&quot;&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;h3&gt;我是全局模板&lt;/h3&gt;</div><div class="line">        &lt;p @click=&quot;say&quot;&gt;欢迎来珠峰&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  Vue.component(&apos;my-component&apos;,&#123;</div><div class="line">//  1、    template:&apos;&lt;div&gt;&lt;h3&gt;我是一个全局组件&lt;/h3&gt;&lt;/div&gt;&apos;    //组件只能有一个根元素</div><div class="line">    2、   template:&apos;#temps&apos;,  //通过模板ID来引用</div><div class="line">        methods:&#123;</div><div class="line">            say ()&#123;</div><div class="line">                alert(&apos;hello world&apos;);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>##局部组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> // 局部组件</div><div class="line">    new Vue(&#123;</div><div class="line">        el:&apos;#app1&apos;,</div><div class="line">        components:&#123;//局部注册组件</div><div class="line">            &apos;my-comp1&apos;:&#123;  //有‘-’的局部组件名必须用引号包起来  单个不用</div><div class="line">                template:&apos;&lt;div&gt;&lt;h3&gt;my-comp1&lt;/h3&gt;&lt;/div&gt;&apos;</div><div class="line">            &#125;,</div><div class="line">            child:&#123;</div><div class="line">                template:&apos;&lt;div&gt;&lt;h3&gt;child&lt;/h3&gt;&lt;/div&gt;&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">从子组件外部传递数据  mess=&apos;lilei&apos; 这样的传递都是string</div><div class="line">如果想传递动态属性 需要v-bind      (v-bind:mess)可以缩写成（:mess）</div></pre></td></tr></table></figure></p>
+<p>##父子组件的通信<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">let obj=&#123;count:0&#125;;</div><div class="line">    // 父子组件通信 props接收外部传递进来的数据</div><div class="line">    //子组件不可以 直接使用 父组件的数据</div><div class="line">    /*</div><div class="line">    * props 用来从父组件 传递数据给子组件</div><div class="line">    * */</div><div class="line">    let child=&#123;</div><div class="line">        props:[&apos;mess&apos;,&apos;say&apos;],//指定一个传递的数据属性 如果声明的是驼峰命名  在外部使用的时候全小写 并用‘-’隔开  &lt;child :my-mess=&quot;title&quot;&gt;&lt;/child&gt;</div><div class="line">        template:&apos;&lt;div&gt;&lt;h3&gt;&#123;&#123;say&#125;&#125;  &#123;&#123;mess&#125;&#125;&lt;/h3&gt;&lt;/div&gt;&apos;</div><div class="line">//        template:&apos;&lt;button @click=&quot;count+=1&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/button&gt;&apos;,</div><div class="line">//        data()&#123;</div><div class="line">//            return &#123;count:0&#125;;</div><div class="line">//        &#125;</div><div class="line">    &#125;</div><div class="line">    let vm=new Vue(&#123;</div><div class="line">        el:&apos;#app&apos;,</div><div class="line">        data:&#123;</div><div class="line">            title:&apos;black&apos;</div><div class="line">        &#125;,</div><div class="line">        components:&#123;</div><div class="line">            child</div><div class="line">        &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
+<p> $emit发布    $on监听<br>    let cpc=new Vue();//生成以空实例  由中间控制中心处理发布、监听</p>
+<p>###过载完成 钩子函数   中的this是当前的组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">let cpc=new Vue();</div><div class="line">    let prev=&#123;</div><div class="line">        template:&apos;&lt;div&gt;&lt;input @keyup.enter=&quot;publish&quot; type=&quot;text&quot; v-model=&quot;val&quot;&gt;&lt;button @click=&quot;publish&quot;&gt;发布&lt;/button&gt;&lt;/div&gt;&apos;,</div><div class="line">        data()&#123;</div><div class="line">          return &#123;val:&apos;hello&apos;&#125;</div><div class="line">        &#125;,</div><div class="line">        methods:&#123;</div><div class="line">            publish()&#123;</div><div class="line">                cpc.$emit(&apos;warning&apos;,this.val)</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    let next=&#123;</div><div class="line">        template:&apos;&lt;div&gt;&lt;h3&gt;next 组件&lt;/h3&gt;&lt;p&gt;接收到：&#123;&#123;msg&#125;&#125;&lt;/p&gt;&lt;/div&gt;&apos;,</div><div class="line">        mounted()&#123; //过载完成 钩子函数   中的this是当前的组件</div><div class="line">            cpc.$on(&apos;warning&apos;,this.listen);</div><div class="line">        &#125;,</div><div class="line">        data()&#123;</div><div class="line">            return &#123;msg:&apos;&apos;&#125;</div><div class="line">        &#125;,</div><div class="line">        methods:&#123;</div><div class="line">            listen(val)&#123;</div><div class="line">                console.log(val)</div><div class="line">                this.msg=val.toUpperCase();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;;</div><div class="line">    new Vue(&#123;</div><div class="line">        el:&apos;#app&apos;,</div><div class="line">        components:&#123;</div><div class="line">            prev,</div><div class="line">            next</div><div class="line">        &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/42、Vue(1)/">
+    <time datetime="2017-06-28T10:05:43.038Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/43、Vue(2)/" rel="prev"><span class="meta-nav">←</span> vue(2)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/41、node(1)/" rel="next">node(1) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

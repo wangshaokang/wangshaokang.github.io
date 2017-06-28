@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="元素跟着鼠标移动 （移动的时候mousemove 实时计算元素的位置left和top
+123DOM二级事件绑定 btn.addEventListener(&amp;apos;click&amp;apos;,function()&amp;#123;&amp;#125;,false);true 捕获阶段   false 冒泡阶段
+
+D" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>鼠标跟随 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="元素跟着鼠标移动 （移动的时候mousemove 实时计算元素的位置left和top 123DOM二级事件绑定 btn.addEventListener(&amp;apos;click&amp;apos;,function()&amp;#123;&amp;#125;,false);true 捕获阶段   false 冒泡阶段  DOM零级事件绑定—-元素对象上的私有属性DOM二级事件绑定—-在元素对象原型链上EventTarge">
+<meta property="og:type" content="article">
+<meta property="og:title" content="鼠标跟随">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/24、鼠标跟随/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="元素跟着鼠标移动 （移动的时候mousemove 实时计算元素的位置left和top 123DOM二级事件绑定 btn.addEventListener(&amp;apos;click&amp;apos;,function()&amp;#123;&amp;#125;,false);true 捕获阶段   false 冒泡阶段  DOM零级事件绑定—-元素对象上的私有属性DOM二级事件绑定—-在元素对象原型链上EventTarge">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.343Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="鼠标跟随">
+<meta name="twitter:description" content="元素跟着鼠标移动 （移动的时候mousemove 实时计算元素的位置left和top 123DOM二级事件绑定 btn.addEventListener(&amp;apos;click&amp;apos;,function()&amp;#123;&amp;#125;,false);true 捕获阶段   false 冒泡阶段  DOM零级事件绑定—-元素对象上的私有属性DOM二级事件绑定—-在元素对象原型链上EventTarge">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-24、鼠标跟随" class="post-24、鼠标跟随 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      鼠标跟随
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/24、鼠标跟随/" data-id="cj4gu5bkp000n5sr416ks78h1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>元素跟着鼠标移动 （移动的时候mousemove 实时计算元素的位置left和top</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">DOM二级事件绑定 </div><div class="line">btn.addEventListener(&apos;click&apos;,function()&#123;&#125;,false);</div><div class="line">true 捕获阶段   false 冒泡阶段</div></pre></td></tr></table></figure>
+<blockquote>
+<p>DOM零级事件绑定—-元素对象上的私有属性<br>DOM二级事件绑定—-在元素对象原型链上EventTarget的属性上</p>
+<p>##零级事件绑定和二级事件绑定的区别<br>DOM零级事件绑定中一个元素 同一个事件行为 绑定多个处理函数  最后面的处理函数会将前面的覆盖掉（DOM零级中不能给一个元素同一个事件行为绑定多个处理函数）</p>
+</blockquote>
+<p>DOM二级事件绑定中一个元素同一个事件行为可以绑定多个处理函数  绑定的处理函数放到事件池中，执行顺序是按照绑定顺序执行  </p>
+<p>###传播机制<br>DOM零级事件  只有冒泡阶段<br>DOM二级事件绑定中，可以通过addEvent的第三个参数 指定true 捕获阶段  false 冒泡阶段</p>
+<p>事件传播（先捕获  后冒泡）分为<br>捕获阶段: 从外向内<br>目标阶段: 执行到目标元素时  停止捕获 执行完目标阶段后，再冒泡<br> 冒泡阶段:从内向外–&gt;当前目标元素  相关行为触发，他的所有上级元素的相关行为也会被触发  一直到document（一些浏览器，一直到window）</p>
+<blockquote>
+<p>DOM2中提供了一些新的方法 DOMContentLoaded  jq-ready(html结构加载完毕后才执行)<br>window.onload 是页面中html结构和所有图片文字 资源加载完毕后执行</p>
+</blockquote>
+<p>不能移除匿名函数 只能移除addEventListener绑定的时间 在IE中没有addEventListener 属性，<br> attachEvent  IE低版本6-8 只有冒泡阶段  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">addEventListener(添加事件)/removeEventListener(移除事件)</div><div class="line"></div><div class="line">2、attachEvent(IE低版本下添加事件)/detachEvent(IE低版本下移除事件)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">addEventListener与attachEvent的不同？</div><div class="line">1、addEventListener中的this指的当前的绑定事件</div><div class="line">   attachEvent中的this是window</div><div class="line">2、addEventListener处理函数执行顺序 按照绑定顺序执行</div><div class="line">   attachEvent处理函数执行顺序  不按照绑定顺序执行 倒序/乱序</div><div class="line">3、 addEventListener 同一个事件行为 重复多次绑定 同一个处理函数 只执行一次</div><div class="line">   attachEvent 同一个事件行为  重复多次绑定 同一个处理函数 绑定多少个就执行多少次</div></pre></td></tr></table></figure>
+<p>bind 同一个事件类型 需要绑定多个处理函数（事件类型需要一个容器 按绑定顺序存放处理函数，并且将处理函数里的this 修改为当前绑定事件元素）<br>执行 根据事件类型找到相应的处理函数的容器 然后依次取出 按顺序执行</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/24、鼠标跟随/">
+    <time datetime="2017-06-28T10:05:42.688Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/25、DOM二级事件绑定/" rel="prev"><span class="meta-nav">←</span> DOM二级事件绑定</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/23、DOM 零级 二级事件 基础/" rel="next">DOM零级和二级事件基础 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

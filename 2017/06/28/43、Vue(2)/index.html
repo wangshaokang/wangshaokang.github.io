@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="如果想绑定动态数据  则需要用v-bind   v-bind简写成我们的 :1&amp;lt;img :src=&amp;quot;title&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;
+1234vue init webpack-simple myvuex 新建一个文件夹 myvuexcd myvuex " />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>vue(2) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如果想绑定动态数据  则需要用v-bind   v-bind简写成我们的 :1&amp;lt;img :src=&amp;quot;title&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; 1234vue init webpack-simple myvuex 新建一个文件夹 myvuexcd myvuex 进入文件夹 myvuexnpm install安装npmnpm run dev 让程序跑起来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue(2)">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/43、Vue(2)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如果想绑定动态数据  则需要用v-bind   v-bind简写成我们的 :1&amp;lt;img :src=&amp;quot;title&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; 1234vue init webpack-simple myvuex 新建一个文件夹 myvuexcd myvuex 进入文件夹 myvuexnpm install安装npmnpm run dev 让程序跑起来">
+<meta property="og:image" content="http://yoursite.com/2017/06/28/43、Vue(2)/vuex.png">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.550Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue(2)">
+<meta name="twitter:description" content="如果想绑定动态数据  则需要用v-bind   v-bind简写成我们的 :1&amp;lt;img :src=&amp;quot;title&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; 1234vue init webpack-simple myvuex 新建一个文件夹 myvuexcd myvuex 进入文件夹 myvuexnpm install安装npmnpm run dev 让程序跑起来">
+<meta name="twitter:image" content="http://yoursite.com/2017/06/28/43、Vue(2)/vuex.png">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-43、Vue(2)" class="post-43、Vue(2) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      vue(2)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/43、Vue(2)/" data-id="cj4guoly7001s5sr4ii0mn72m" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>如果想绑定动态数据  则需要用v-bind   v-bind简写成我们的 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img :src=&quot;title&quot; alt=&quot;&quot;&gt;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vue init webpack-simple myvuex 新建一个文件夹 myvuex</div><div class="line">cd myvuex 进入文件夹 myvuex</div><div class="line">npm install安装npm</div><div class="line">npm run dev 让程序跑起来</div></pre></td></tr></table></figure>
+<hr>
+<p><img src="./vuex.png" alt="Alt text"></p>
+<blockquote>
+<p>Vue Components：Vue组件。HTML页面上，负责接收用户操作等交互行为，执行dispatch方法触发对应action进行回应。</p>
+<ul>
+<li>dispatch：操作行为触发方法，是唯一能执行action的方法。<br>actions：操作行为处理模块。负责处理Vue Components接收到的所有交互行为。包含同步/异步操作，支持多个同名方法，按照注册的顺序依次触发。向后台API请求的操作就在这个模块中进行，包括触发其他action以及提交mutation的操作。该模块提供了Promise的封装，以支持action的链式触发。</li>
+<li>commit：状态改变提交操作方法。对mutation进行提交，是唯一能执行mutation的方法。<br>mutations：状态改变操作方法。是Vuex修改state的唯一推荐方法，其他修改方式在严格模式下将会报错。该方法只能进行同步操作，且方法名只能全局唯一。操作之中会有一些hook暴露出来，以进行state的监控等。<br>state：页面状态管理容器对象。集中存储Vue components中data对象的零散数据，全局唯一，以进行统一的状态管理。页面显示所需的数据从该对象中进行读取，利用Vue的细粒度数据响应机制来进行高效的状态更新。</li>
+<li>getters：state对象读取方法。图中没有单独列出该模块，应该被包含在了render中，Vue Components通过该方法读取全局state对象。<br>Vue组件接收交互行为，调用dispatch方法触发action相关处理，若页面状态需要改变，则调用commit方法提交mutation修改state，通过getters获取到state新值，重新渲染Vue Components，界面随之更新。</li>
+</ul>
+</blockquote>
+<p>###为什么要使用打包工具</p>
+<ul>
+<li>在没有模块加载和打包工具前，我们要么手工合并文件，要么使用一堆<script>标签，可是这么做有问题</li>
+<li>你必须保证文件加载的顺序没错，包括知道哪些文件依赖另外一些文件，以及不包含不需要的文件。</li>
+<li>多个<script>标签意味着对服务器发送多次请求，性能会受影响。</li>
+<li>显然，这些工作量都靠你纯手工完成，计算机一点也帮不上你。</li>
+</ul>
+<p>方法说明：<br>将字符串转成对象。说白了其实就是把url上带的参数串转成数组对象。（看例子就知道咯）<br>语法：<br>复制代码 代码如下:</p>
+<p>querystring.parse(str, [sep], [eq], [options])<br>接收参数：<br>str                                         欲转换的字符串<br>sep                                       设置分隔符，默认为 ‘&amp;’<br>eq                                         设置赋值符，默认为 ‘=’<br>[options]  maxKeys             可接受字符串的最大长度，默认为1000方法说明：<br>将字符串转成对象。说白了其实就是把url上带的参数串转成数组对象。（看例子就知道咯）<br>语法：<br>复制代码 代码如下:</p>
+<p>querystring.parse(str, [sep], [eq], [options])<br>接收参数：<br>str                                         欲转换的字符串<br>sep                                       设置分隔符，默认为 ‘&amp;’<br>eq                                         设置赋值符，默认为 ‘=’<br>[options]  maxKeys             可接受字符串的最大长度，默认为1000方法说明：<br>将字符串转成对象。说白了其实就是把url上带的参数串转成数组对象。（看例子就知道咯）<br>语法：<br>复制代码 代码如下:</p>
+<p>querystring.parse(str, [sep], [eq], [options])<br>接收参数：<br>str                                         欲转换的字符串<br>sep                                       设置分隔符，默认为 ‘&amp;’<br>eq                                         设置赋值符，默认为 ‘=’<br>[options]  maxKeys             可接受字符串的最大长度，默认为1000</p>
+</script></li></ul>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/43、Vue(2)/">
+    <time datetime="2017-06-28T10:05:43.054Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/44、xss/" rel="prev"><span class="meta-nav">←</span> xss</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/42、Vue(1)/" rel="next">vue（1） <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

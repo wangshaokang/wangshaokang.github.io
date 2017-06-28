@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="1234567891011121314151617181920212223242526272829 $(function()&amp;#123;        $.ajax(&amp;#123;            url:url, //接口请求地址            type:&amp;apos;GET&amp;apos;" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>jquery版ajax | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829 $(function()&amp;#123;        $.ajax(&amp;#123;            url:url, //接口请求地址            type:&amp;apos;GET&amp;apos;,  //请求方式      1.9以下的版本用method            beforeSe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery版ajax">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/37、jquery版ajax/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829 $(function()&amp;#123;        $.ajax(&amp;#123;            url:url, //接口请求地址            type:&amp;apos;GET&amp;apos;,  //请求方式      1.9以下的版本用method            beforeSe">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.381Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jquery版ajax">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829 $(function()&amp;#123;        $.ajax(&amp;#123;            url:url, //接口请求地址            type:&amp;apos;GET&amp;apos;,  //请求方式      1.9以下的版本用method            beforeSe">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-37、jquery版ajax" class="post-37、jquery版ajax post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      jquery版ajax
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/37、jquery版ajax/" data-id="cj4gu5cac00105sr4hxtb2w1e" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"> $(function()&#123;</div><div class="line">        $.ajax(&#123;</div><div class="line">            url:url, //接口请求地址</div><div class="line">            type:&apos;GET&apos;,  //请求方式      1.9以下的版本用method</div><div class="line">            beforeSend:function(xhr)&#123;  // 发送请求之前 触发</div><div class="line"></div><div class="line">            &#125;,</div><div class="line">            cache:true, //  是否缓存      true（缓存）  false（不缓存）</div><div class="line">            async:true,  //true 异步   false 同步</div><div class="line">            context:window,  //指定success里面的上下文</div><div class="line">            dataType:&apos;text&apos;, // 指定解析 接收的数据的格式  responseType(原生的写法)</div><div class="line">//   跨域    dataType:&apos;jsonp&apos;</div><div class="line">            jsonp:&apos;cd&apos;,   //重写jsonp的请求 URL中回调函数key的名称</div><div class="line">            jsonpCallback:&apos;fn&apos;, // 指定jsonp回调函数的名称</div><div class="line">            success:function(result)&#123; //成功回调函数</div><div class="line">                console.log(result);</div><div class="line">            &#125;,</div><div class="line"></div><div class="line">            timeout:3000, //xhr,timeout 设置超时时间 如果超时会触发error时间</div><div class="line">            // 原生 xhr.timeout  触发 xhr.ontimeout=function</div><div class="line">            error:function(err)&#123;  //请求出错</div><div class="line">                console.log(err);</div><div class="line">            &#125;,</div><div class="line"></div><div class="line">            complete:function(xhr)&#123; //不管提交成功不成功  都会执行</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<p>对象合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">原生的方法</div><div class="line">Object.assign(default1,options1)</div><div class="line"></div><div class="line">es6的方法</div><div class="line">for(let attr in options)&#123;</div><div class="line">if(option1.hasOwnProperty(attr))&#123;</div><div class="line">       default[attr]=opations[attr];</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/37、jquery版ajax/">
+    <time datetime="2017-06-28T10:05:42.956Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/38、node/" rel="prev"><span class="meta-nav">←</span> node</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/36、server/" rel="next">server <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

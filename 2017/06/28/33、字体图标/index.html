@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="字体图标的局限性
+@media    媒体查询
+@keyframes  帧动画
+@font-face   字体图标    eot 兼容IE浏览器    svg 兼容适配手机端    ttf   微软和苹果共同开发的    woff   开放的字体 （最常用的字体）   YourWebFontName" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>字体图标 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字体图标的局限性 @media    媒体查询 @keyframes  帧动画 @font-face   字体图标    eot 兼容IE浏览器    svg 兼容适配手机端    ttf   微软和苹果共同开发的    woff   开放的字体 （最常用的字体）   YourWebFontName  改成我们fonts 字体文件的名称123456789/*YourWebFontName  改成我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字体图标">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/33、字体图标/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="字体图标的局限性 @media    媒体查询 @keyframes  帧动画 @font-face   字体图标    eot 兼容IE浏览器    svg 兼容适配手机端    ttf   微软和苹果共同开发的    woff   开放的字体 （最常用的字体）   YourWebFontName  改成我们fonts 字体文件的名称123456789/*YourWebFontName  改成我">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字体图标">
+<meta name="twitter:description" content="字体图标的局限性 @media    媒体查询 @keyframes  帧动画 @font-face   字体图标    eot 兼容IE浏览器    svg 兼容适配手机端    ttf   微软和苹果共同开发的    woff   开放的字体 （最常用的字体）   YourWebFontName  改成我们fonts 字体文件的名称123456789/*YourWebFontName  改成我">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-33、字体图标" class="post-33、字体图标 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      字体图标
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/33、字体图标/" data-id="cj4gu5bo2000w5sr42ew390bo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>字体图标的局限性</p>
+<p>@media    媒体查询</p>
+<p>@keyframes  帧动画</p>
+<p>@font-face   字体图标<br>    eot 兼容IE浏览器<br>    svg 兼容适配手机端<br>    ttf   微软和苹果共同开发的<br>    woff   开放的字体 （最常用的字体）<br>   <code>YourWebFontName  改成我们fonts 字体文件的名称</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*YourWebFontName  改成我们fonts 字体文件的名称*/</div><div class="line">@font-face&#123;</div><div class="line">  font-family: &apos;YourWebFontName&apos;;</div><div class="line">  src: url(&apos;YourWebFontName.eot&apos;); /* IE9 Compat Modes */</div><div class="line">  src: url(&apos;YourWebFontName.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;), /* IE6-IE8 */</div><div class="line">  url(&apos;YourWebFontName.woff&apos;) format(&apos;woff&apos;), /* Modern Browsers */</div><div class="line">  url(&apos;YourWebFontName.ttf&apos;)  format(&apos;truetype&apos;), /* Safari, Android, iOS */</div><div class="line">  url(&apos;YourWebFontName.svg#YourWebFontName&apos;) format(&apos;svg&apos;); /* Legacy iOS */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>css3属性选择器<br>[attr]          通过属性名选择<br>[attr=’val’]  通过属性名必须要等于属性值才能选中对应的元素<br>[attr ~ =’val’]  属性值/属性值+空格  都会被选中<br>[attr ^ =’val’]  以val开头的属性值都会被选中<br>[attr $=’val’]   以val结束的属性值都会被选中<br>[attr * =’val’]   只要包含val的属性值的元素都会被选中<br>[attr | =’val’]    属性值/属性值 加上-  都会被选中</p>
+<p>##面试题<br>inline-block: 默认的有4px的间距<br>解决的办法：给父元素增加font-size：0   就可以解决这个bug</p>
+<p>图标字体引入方式：<br>1、新浪  通过伪元素before/after  写在css样式表中<br>2、网易  直接写在html结构中</p>
+<p> /<em>多行文本出现省略号</em>/<br>    display: -webkit-box;<br>    /<em>文字的排列方式：垂直</em>/<br>    -webkit-box-orient:vertical;<br>    /<em>文字的行数</em>/<br>    -webkit-line-clamp:2 ;<br>    /<em>文字内容溢出隐藏</em>/<br>    overflow: hidden;</p>
+<p> /<em>单行文本出现省略号</em>/<br>    width（宽度）<br>    overflow：hidden（溢出隐藏）<br>    text-overflow：ellipsis（文本的溢出方式）<br>    white-space：nowrap（文本不折行）</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/33、字体图标/">
+    <time datetime="2017-06-28T10:05:42.814Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/34、EJS模板引擎/" rel="prev"><span class="meta-nav">←</span> ejs模板引擎</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/32、移动端实战/" rel="next">移动端实战 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

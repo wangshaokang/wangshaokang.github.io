@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="##git 讲义
+ 基本数据类型 
+
+number
+string
+boolean
+null
+undefined引用数据类型
+对象数据类型 
+Array 
+Date
+Object
+RegExp
+
+
+函数数据类型
+function
+
+
+
+##全局作用域浏览器在加载html时候，会提供一个供全局JS代码执" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>变量及作用域 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##git 讲义  基本数据类型   number string boolean null undefined引用数据类型 对象数据类型  Array  Date Object RegExp   函数数据类型 function    ##全局作用域浏览器在加载html时候，会提供一个供全局JS代码执行的一个环境  —-&amp;gt;window ##预解释(变量提声)  在当前作用域中，JS代码执行之前">
+<meta property="og:type" content="article">
+<meta property="og:title" content="变量及作用域">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/1、变量及作用域/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##git 讲义  基本数据类型   number string boolean null undefined引用数据类型 对象数据类型  Array  Date Object RegExp   函数数据类型 function    ##全局作用域浏览器在加载html时候，会提供一个供全局JS代码执行的一个环境  —-&amp;gt;window ##预解释(变量提声)  在当前作用域中，JS代码执行之前">
+<meta property="og:updated_time" content="2017-06-28T10:06:50.518Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="变量及作用域">
+<meta name="twitter:description" content="##git 讲义  基本数据类型   number string boolean null undefined引用数据类型 对象数据类型  Array  Date Object RegExp   函数数据类型 function    ##全局作用域浏览器在加载html时候，会提供一个供全局JS代码执行的一个环境  —-&amp;gt;window ##预解释(变量提声)  在当前作用域中，JS代码执行之前">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-1、变量及作用域" class="post-1、变量及作用域 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      变量及作用域
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/1、变量及作用域/" data-id="cj4gu5b8d00025sr4ovo9ouwh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##git 讲义</p>
+<p> 基本数据类型 </p>
+<ul>
+<li>number</li>
+<li>string</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined<br>引用数据类型</li>
+<li>对象数据类型 <ul>
+<li>Array </li>
+<li>Date</li>
+<li>Object</li>
+<li>RegExp</li>
+</ul>
+</li>
+<li>函数数据类型<ul>
+<li>function</li>
+</ul>
+</li>
+</ul>
+<p>##全局作用域<br>浏览器在加载html时候，会提供一个供全局JS代码执行的一个环境  —-&gt;window</p>
+<p>##预解释(变量提声)</p>
+<ul>
+<li>在当前作用域中，JS代码执行之前，把所有带var 和function 关键字的进行声明或者定义——叫做<strong>预解释</strong></li>
+<li>预解释的时候，带var 只声明 不定义 带function预解释的时候，声明加定义</li>
+</ul>
+<p>##声明<br>告诉浏览器文档中有一个叫做xxx的变量</p>
+<p>##定义<br> 告诉浏览器有一个叫做xxx的变量并且已经赋值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(num) //undefined</div><div class="line">var num=12;</div><div class="line">console.log(num) //</div></pre></td></tr></table></figure></p>
+<p>##全局变量<br>在全局作用域下声明的变量</p>
+<p>##私有变量<br>在私有作用域下声明的变量</p>
+<p>##私有作用域<br>函数执行  将函数里的JS代码加载运行 也需要一个供函数内js代码执行的环境</p>
+<ul>
+<li>给形参赋值</li>
+<li>进行预解释</li>
+<li>从上到下执行<br>在私有作用域中声明的变量（形参和预解释的变量）</li>
+</ul>
+<p>##作用域链<br>如果在私有作用域中遇到一个变量，首先看是不是形参或者有没有在域解释的时候声明过 如果没有声明过也不是形参  就会去上级作用域中查找   一直找到window为止<br>   如何看上级作用域<br>   就看函数是在哪里定义的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var num=20;</div><div class="line">function fn()&#123;</div><div class="line">   return function()&#123;</div><div class="line">      num=9;</div><div class="line">      ++num;</div><div class="line">      console.log(num);//输出值为10; </div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">var function=fn();</div><div class="line">console.log(num);//输出值为10;</div></pre></td></tr></table></figure></p>
+<p>###不管if条件是否成立 都会进行预解释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(num);//输出结果为undefined</div><div class="line">if(false)&#123;</div><div class="line">   var num=10;</div><div class="line">&#125;</div><div class="line">console.log(num);//输出结果为undefined</div></pre></td></tr></table></figure></p>
+<p>###预解释的时候不会声明等号右边的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fn();//报错</div><div class="line">var fn=function()&#123;</div><div class="line">   console.log(&apos;function&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###return 下面的代码虽然不执行  也要进行预解释；但是return 右边 不会进行预解释  因为把它当做一个值返回</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/1、变量及作用域/">
+    <time datetime="2017-06-28T10:05:42.207Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/2、预解释/" rel="prev"><span class="meta-nav">←</span> 预解释</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/hello-world/" rel="next">Hello World <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

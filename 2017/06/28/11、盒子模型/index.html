@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="检测字母出现的次数1234567891011121314151617181920212223242526272829var str=&amp;apos;my name is zhou xiao tian&amp;apos;var reg=/(?!\s)[a-z]/g;var obj=&amp;#123;&amp;#125;;str" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>盒子模型 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="检测字母出现的次数1234567891011121314151617181920212223242526272829var str=&amp;apos;my name is zhou xiao tian&amp;apos;var reg=/(?!\s)[a-z]/g;var obj=&amp;#123;&amp;#125;;str.replace(reg,function()&amp;#123;     var cur=argument">
+<meta property="og:type" content="article">
+<meta property="og:title" content="盒子模型">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/11、盒子模型/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="检测字母出现的次数1234567891011121314151617181920212223242526272829var str=&amp;apos;my name is zhou xiao tian&amp;apos;var reg=/(?!\s)[a-z]/g;var obj=&amp;#123;&amp;#125;;str.replace(reg,function()&amp;#123;     var cur=argument">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.515Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="盒子模型">
+<meta name="twitter:description" content="检测字母出现的次数1234567891011121314151617181920212223242526272829var str=&amp;apos;my name is zhou xiao tian&amp;apos;var reg=/(?!\s)[a-z]/g;var obj=&amp;#123;&amp;#125;;str.replace(reg,function()&amp;#123;     var cur=argument">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-11、盒子模型" class="post-11、盒子模型 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      盒子模型
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/11、盒子模型/" data-id="cj4guolxt001q5sr4a3teo3pj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>检测字母出现的次数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var str=&apos;my name is zhou xiao tian&apos;</div><div class="line">var reg=/(?!\s)[a-z]/g;</div><div class="line">var obj=&#123;&#125;;</div><div class="line">str.replace(reg,function()&#123;</div><div class="line">     var cur=arguments[0];</div><div class="line">     if(obj[cur])&#123;</div><div class="line">      obj[cur]++;</div><div class="line">     &#125;else&#123;</div><div class="line">     obj[cur]=1;</div><div class="line">     &#125;</div><div class="line">&#125;)</div><div class="line">console.log(obj);</div><div class="line"></div><div class="line"></div><div class="line"> 比较那个出现的次数最多</div><div class="line">var max=obj[&apos;m&apos;];</div><div class="line">for(var key in obj)&#123;</div><div class="line">var cur=obj[key];</div><div class="line">  cur&gt;max ? max=cur:null;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">得到出现次数最多的那一项</div><div class="line">var ary=[];</div><div class="line">for(var key in obj)&#123;</div><div class="line">   if(obj[key]==max)&#123;</div><div class="line">   ary.push(key)</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var str=&apos;http://www.baidu.com/index.html?name=狮子王&amp;age=20&amp;sex=1&apos;</div><div class="line"></div><div class="line">//封装一个方法</div><div class="line">function getParamer()&#123;</div><div class="line">var reg=/([^?&amp;=]+)=([^?&amp;=]+)/g;</div><div class="line">var obj=[];</div><div class="line">url.replace(reg,function()&#123;</div><div class="line">   obj[arguments[1]]=arguments[2];</div><div class="line">&#125;)</div><div class="line">&#125;</div><div class="line">console.log(getParamer(obj))</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var time=&apos;2017-3-25 18:00:56&apos;</div><div class="line">方式一</div><div class="line">var times=time.split(/[- :]/);</div><div class="line"></div><div class="line">方式二</div><div class="line">time.replace(/(\d+)-(\d+)-(\d+) (\d+):(\d+):(\d+)/g,&apos;$1年$2月$3日 $4时$5分$6秒&apos;);    </div><div class="line">&#125;)</div><div class="line">console.log(times);</div><div class="line">方式三</div><div class="line"> var time = &apos;2017-3-26 18:38:4&apos;;</div><div class="line">        var reg = /(\d+)/g;</div><div class="line">        var count = 0;</div><div class="line">        var arr = [&apos;年&apos;,&apos;月&apos;,&apos;日 &apos;,&apos;时&apos;,&apos;分&apos;,&apos;秒&apos;];</div><div class="line">        var str = &apos;&apos;;</div><div class="line">        var timer = time.replace(reg, function (a) &#123;</div><div class="line">              str += addZero(a) + &apos;&apos;+ arr[count++];</div><div class="line">        &#125;);</div><div class="line">      console.log(str);</div></pre></td></tr></table></figure>
+<p> 去除字符串的首尾空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str=&apos;  may name is zccc  &apos;  //</div><div class="line">var reg=/^\s+|\s+$/;</div><div class="line">或者var reg=/^ +| +$/;</div><div class="line">str.replace(reg,&apos;&apos;);</div></pre></td></tr></table></figure></p>
+<p>千分符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str3=&apos;1324935048334543&apos;</div><div class="line">var reg=/\d(?=(?:\d&#123;3&#125;)+(?:\.\d+|$))/g</div><div class="line">str.replace(reg,$0+&apos;,&apos;);</div></pre></td></tr></table></figure></p>
+<p>//输入框非空验证<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">用户名：&lt;input type=&quot;text&quot; id=&quot;inp&quot;&gt;</div><div class="line">&lt;p id=&quot;info&quot;&gt;请填写用户名&lt;/p&gt;</div><div class="line">&lt;h3 id=&quot;text&quot;&gt;&lt;/h3&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var inp=document.getElementById(&apos;inp&apos;);</div><div class="line">var info=document.getElementById(&apos;info&apos;);</div><div class="line">var text=document.getElementById(&apos;text&apos;);</div><div class="line">inp.onblur=validVal;</div><div class="line">//失去焦点的时候检测输入内容是否为空</div><div class="line">inp.oninput=validVal;</div><div class="line">//实时输入的时候检测输入内容是否为空</div><div class="line">function validVal()&#123;</div><div class="line">text.innerHTML=this.value;</div><div class="line">var reg=/^\s*$/;</div><div class="line">if(reg.test(this.value))&#123;</div><div class="line">    info.style.display=&apos;block&apos;;</div><div class="line">&#125;else&#123;</div><div class="line">    info.style.display=&apos;none&apos;;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>#盒子模型 </p>
+<p>###client</p>
+<blockquote>
+<p>clientWidth  内容宽度+左右padding<br>clientHeight  内容高度+上下padding<br>clientLeft   左边框的宽度<br>clientTop   上边框的宽度</p>
+</blockquote>
+<p>###offset</p>
+<blockquote>
+<p>offsetWidth    clientWidth+左右边框的宽度<br>offsetHeight   clientHeight+上下边框的宽度</p>
+<p>###偏移值<br>offsetLeft  元素左边框外  距离父级参照物（默认是body）的左偏移量<br>offsetTop  元素上边框  距离父级参照物（默认是body）的上偏移量</p>
+</blockquote>
+<p>offsetParent  元素父级参照物    parentNode（父级节点）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">offsetParent  元素父级参照物是可以修改的 想让谁是父级参照物，就是谁给加上position（relative/absolute/fixed)</div><div class="line"></div><div class="line">在IE7以下父级参照物是当前元素上级父节点</div><div class="line"></div><div class="line">我们比较常用的是获取 当前元素距离body的上偏移和下偏移</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function offset(ele)&#123;</div><div class="line">  </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###scroll</p>
+<blockquote>
+<p>scrollWidth<br>scrollHeight<br>在没有溢出的情况下<br>scrollWidth    等于     clientWidth<br>scrollHeight   等于   clientHeight</p>
+<blockquote>
+<p>在有溢出的情况下<br>scrollWidth    等于     clientWidth(一屏可视窗口的宽度)+左右溢出的内容部分<br>scrollHeight   等于   clientHeight(一屏可视窗口的高度)+ 上下溢出的内容部分<br>scrollLeft  （可设置值）左右滚动条  可滚动的区域<br>scrollTop  （可设置值）上下滚动条  可滚动的区域</p>
+</blockquote>
+</blockquote>
+<p>###封装一个获取文档的一些盒模型样式属性值的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function win(attr,val)&#123;</div><div class="line">    if(typeof val===&apos;undefined&apos;)&#123;</div><div class="line">    return   document.documentElement[attr]||document.body[attr];</div><div class="line">  &#125;</div><div class="line">document.documentElement[attr]=val;</div><div class="line">document.body[attr]=val;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<p>##JS中提供获取元素的样式属性值</p>
+<blockquote>
+<p>获取元素的某一个具体的样式属性值<br>元素.style.属性名<br>—需要我们把元素的样式都写在行内上才可以（写在样式表中不起作用）<br>在真实项目中 ，这种方式不常用，因为我不能为了获取值而把所有的样式都写在行内（无法实现css和html的分离)</p>
+</blockquote>
+<p>###为了解决这个问题  我们可以使用<strong>window.getComputedStyle</strong>这个方法获取所有经过浏览器计算过的样式</p>
+<p>###window.getComputedStyle(当前要操作的元素对象 ，当前元素的伪类（一般我们不用为了写null）)</p>
+<h3 id="在IE6–8下我们可以使用currentStyle来获取所有经过浏览器计算过的样式"><a href="#在IE6–8下我们可以使用currentStyle来获取所有经过浏览器计算过的样式" class="headerlink" title="在IE6–8下我们可以使用currentStyle来获取所有经过浏览器计算过的样式"></a>在IE6–8下我们可以使用currentStyle来获取所有经过浏览器计算过的样式</h3><p>##通过检测浏览器版本和类型来处理兼容常用的三种方法<br>方法1、使用try catch方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function get(curEle,attr)&#123;</div><div class="line">var val=null；</div><div class="line">   try&#123;</div><div class="line">val=window.getComputedStyle(curEle,null)</div><div class="line">&#125;  catch(e)&#123;</div><div class="line">val=curEle.currentStyle[attr];</div><div class="line">&#125;</div><div class="line">return val;</div><div class="line">&#125;</div><div class="line">console.log(getCss(box,&quot;height&quot;));</div></pre></td></tr></table></figure></p>
+<p>方法2、 使用in方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">原理：（判断当前浏览器是否存在这个属性或者方法，存在就兼容，不存在就不兼容）</div><div class="line">function get(curEle,attr)&#123;</div><div class="line">var val=null；</div><div class="line"> if(&apos;getComputedStyle&apos; in window//(或者window.getComputedStyle)</div><div class="line"> )&#123;</div><div class="line">      val=window.getComputedStyle(curEle,null)[attr];</div><div class="line"> &#125;else&#123;</div><div class="line">      val=curEle.currentStyle[attr];</div><div class="line"> &#125;</div><div class="line"> return val;</div><div class="line">&#125;</div><div class="line">console.log(getCss(box,&quot;height&quot;));</div></pre></td></tr></table></figure></p>
+<p>方法3 、通过检测浏览器版本和类型来处理兼容</p>
+<blockquote>
+<p>我们用window.navigator.userAgent<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function get(curEle,attr)&#123;</div><div class="line">var val=null；</div><div class="line"> if(/MSIE (6|7|8)/.test(navigator.userAgent))</div><div class="line"> )&#123;</div><div class="line">     val=curEle.currentStyle[attr];</div><div class="line"> &#125;else&#123;</div><div class="line">  val=window.getComputedStyle(curEle,null)[attr];</div><div class="line">      </div><div class="line"> &#125;</div><div class="line"> return val;</div><div class="line">&#125;</div><div class="line">console.log(getCss(box,&quot;height&quot;));</div></pre></td></tr></table></figure></p>
+</blockquote>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/11、盒子模型/">
+    <time datetime="2017-06-28T10:05:42.412Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/12、获取元素样式属性/" rel="prev"><span class="meta-nav">←</span> 获取样式属性</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/10、RegExp/" rel="next">regexp <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

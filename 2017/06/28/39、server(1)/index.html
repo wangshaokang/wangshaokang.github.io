@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="npm init -y    初始化npm install 包名 –save   下载相关模块
+##fs.exists方法123测试某个路径下的文件是否存在。回调函数包含一个参数exists，true则文件存在，否则是false。由于该方法属于fs模块，使用前需要引入fs模块var fs= requ" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>server(1) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="npm init -y    初始化npm install 包名 –save   下载相关模块 ##fs.exists方法123测试某个路径下的文件是否存在。回调函数包含一个参数exists，true则文件存在，否则是false。由于该方法属于fs模块，使用前需要引入fs模块var fs= require(“fs”) fs.existsSync(路径下的文件)  Sync 同步 ##跨域  协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="server(1)">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/39、server(1)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="npm init -y    初始化npm install 包名 –save   下载相关模块 ##fs.exists方法123测试某个路径下的文件是否存在。回调函数包含一个参数exists，true则文件存在，否则是false。由于该方法属于fs模块，使用前需要引入fs模块var fs= require(“fs”) fs.existsSync(路径下的文件)  Sync 同步 ##跨域  协议">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.427Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="server(1)">
+<meta name="twitter:description" content="npm init -y    初始化npm install 包名 –save   下载相关模块 ##fs.exists方法123测试某个路径下的文件是否存在。回调函数包含一个参数exists，true则文件存在，否则是false。由于该方法属于fs模块，使用前需要引入fs模块var fs= require(“fs”) fs.existsSync(路径下的文件)  Sync 同步 ##跨域  协议">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-39、server(1)" class="post-39、server(1) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      server(1)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/39、server(1)/" data-id="cj4gu5cf700125sr4akcyeu2d" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>npm init -y    初始化<br>npm install 包名 –save   下载相关模块</p>
+<p>##fs.exists方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">测试某个路径下的文件是否存在。回调函数包含一个参数exists，true则文件存在，否则是false。</div><div class="line">由于该方法属于fs模块，使用前需要引入fs模块var fs= require(“fs”) </div><div class="line">fs.existsSync(路径下的文件)  Sync 同步</div></pre></td></tr></table></figure></p>
+<p>##跨域</p>
+<ul>
+<li>协议   域名  端口  三者一致</li>
+<li>三者只要有一个不同就是跨域</li>
+<li>主要存在于两个页面交互中URL不同<h3 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h3><blockquote>
+<p>同源策略限制XMLHttpRequest 请求<br>img的src   script的src 。。。不存在跨域<br>jsonp 只支持get请求</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jsonp  请求的方式 （跨域）</div><div class="line">json    请求的文件的格式</div></pre></td></tr></table></figure>
+<p>##跨域的方式</p>
+<p>###第一种方法：jsonp  利用img的src   script的src  。。。这种方式跨域实际上是利用了浏览器允许跨域引用JavaScript资源 （只要给一个正确的路径地址就可以找到）的原理进行跨域   </p>
+<p>###第二种方法： CORS跨域资源共享—后台服务端资源共享（需要后台服务端配合）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">res.setHeader(&apos;Access-Control-Allow-Origin&apos;, &apos;*&apos;);</div></pre></td></tr></table></figure></p>
+<p>##搭建http协议的server(服务器)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let http=require(&apos;http&apos;);</div><div class="line">http: 用于搭建http协议下的server（服务器端）的node.js内置模块</div></pre></td></tr></table></figure></p>
+<p>##搭建fs文件系统模块 负责读写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">let fs=require(&apos;fs&apos;);</div><div class="line">fs:node.js的内置模块,就是文件系统模块，负责读写操作和所有其它JavaScript模块不同的是，fs模块同时提供了异步和同步的方法。</div><div class="line">因为JavaScript的单线程模型，执行IO操作时，JavaScript代码无需等待，而是传入回调函数后，继续执行后续JavaScript代码</div></pre></td></tr></table></figure></p>
+<p>##URL路由<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">我们在本地创建服务器之后需要写不同的后缀名来访问同一个站点的不同页面，如果不实现路由功能。则每次访问localhost:3000 不论后面写什么  比如localhost:3000/index、localhost:3000/detail...最终都会访问同一个地址；而用url路由则可以实现访问不同的页面；在实现url路由功能之前，首先需要引入url模块；const url = require(‘url‘);  nodejs 为我们提供了url模块，并且提供了url模块的一些方法； 最终要的方法是 parse方法 。可以将url字符串转换为url对象</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">http://www.baidu.com/index.html</div><div class="line">sechme://主机名：prot/path? 查询参数  key1=val&amp;key2=val</div><div class="line">uri=url(统一资源定位符)+urn</div><div class="line">https://  安全传输协议  传输格式  443</div><div class="line">http   80</div><div class="line">ftp    21</div><div class="line">www.baidu.com  域名 主机名 每个域名都对应一个IP地址  公网中IP 61.135.125</div><div class="line">port端口号  IP地址  有0-65535  1024&gt;prot&lt;65534   开发人员：四位数</div><div class="line">path 路径/javascript2017/index1.html</div><div class="line">query 查询参数</div></pre></td></tr></table></figure>
+<h2 id="ajax的状态码"><a href="#ajax的状态码" class="headerlink" title="ajax的状态码"></a>ajax的状态码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">* 0  未初始化  创建了ajax对象 但没有调用open</div><div class="line">* 1  载入  发送请求 调用了open和send</div><div class="line">* 2  载入完成  接收响应原始数据</div><div class="line">* 3  交互  将响应回来的原始数据 解析成为客户端可以调用的数据</div><div class="line">* 4  done 完成 通过 xhr.responseText 供客户端调用</div><div class="line">*/</div></pre></td></tr></table></figure>
+<p>##导出方法</p>
+<p> ####1、 相当于提供了一个导出的接口 （挂载到这个对象） 导出模块的接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// module.exports.sum=sum;</div><div class="line">// module.exports=&#123;</div><div class="line">//     sum, //sum:sum</div><div class="line">//     say:&apos;nihao&apos;</div><div class="line">// &#125;</div><div class="line">// 默认导出的都是 module.exports 指向的空间地址</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">exports.name=&apos;liwueb&apos;;</div><div class="line">exports=&#123;//改变了地址默认指向 所以不能批量导出设置</div><div class="line">    id:10,</div><div class="line">     name:&apos;wanggsh&apos;</div></pre></td></tr></table></figure></p>
+<p>###永久重定向<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">都是设置响应头  setHeader 只是针对某一个设置的  而writeHead针对的是全局所有的重新定向</div><div class="line">        res.writeHead(302,&#123;</div><div class="line">            Location:&apos;https://www.baidu.com&apos;</div><div class="line">        &#125;)</div></pre></td></tr></table></figure></p>
+<p>##ajax跨域请求数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">        $.ajax(&#123;</div><div class="line">            url:&apos;http://127.0.0.1:8060/getTime&apos;,</div><div class="line">            type:&apos;get&apos;,</div><div class="line">            dataType:&apos;jsonp&apos;,//跨域请求</div><div class="line">            jsonp:&apos;cb&apos;, // 后台定的   callBack=fn   重写URL请求中  传递函数的字段名</div><div class="line">            jsonpCallback:&apos;wangdaxian&apos;, //重写jsonp  URL请求中 回调函数名</div><div class="line">            success:function(result)&#123;</div><div class="line">                console.log(result);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/39、server(1)/">
+    <time datetime="2017-06-28T10:05:42.987Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/40、Vue/" rel="prev"><span class="meta-nav">←</span> vue</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/38、node/" rel="next">node <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

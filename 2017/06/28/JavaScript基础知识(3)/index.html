@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="title: JavaScript基础知识(3)#引用数据类型，其实就是一块代码块
+#自定义属性的添加1、在变量名后面加.加属性名2、在变量名[‘属性名’]=’属性值’
+##变量，后面对变量定义的修改，会覆盖前面的
+##parseFloat  可以转换一个字符串，在遇到不识别了自动停止识别
+##Nu" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title: JavaScript基础知识(3)#引用数据类型，其实就是一块代码块 #自定义属性的添加1、在变量名后面加.加属性名2、在变量名[‘属性名’]=’属性值’ ##变量，后面对变量定义的修改，会覆盖前面的 ##parseFloat  可以转换一个字符串，在遇到不识别了自动停止识别 ##Number 强制转化：只能转化可识别的有效数字，遇到非有效数字字符，会返回NaN ##parseF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/JavaScript基础知识(3)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title: JavaScript基础知识(3)#引用数据类型，其实就是一块代码块 #自定义属性的添加1、在变量名后面加.加属性名2、在变量名[‘属性名’]=’属性值’ ##变量，后面对变量定义的修改，会覆盖前面的 ##parseFloat  可以转换一个字符串，在遇到不识别了自动停止识别 ##Number 强制转化：只能转化可识别的有效数字，遇到非有效数字字符，会返回NaN ##parseF">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.603Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="title: JavaScript基础知识(3)#引用数据类型，其实就是一块代码块 #自定义属性的添加1、在变量名后面加.加属性名2、在变量名[‘属性名’]=’属性值’ ##变量，后面对变量定义的修改，会覆盖前面的 ##parseFloat  可以转换一个字符串，在遇到不识别了自动停止识别 ##Number 强制转化：只能转化可识别的有效数字，遇到非有效数字字符，会返回NaN ##parseF">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-JavaScript基础知识(3)" class="post-JavaScript基础知识(3) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/JavaScript基础知识(3)/" data-id="cj4gu5ciy001j5sr4tate84uu" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <hr>
+<h2 id="title-JavaScript基础知识-3"><a href="#title-JavaScript基础知识-3" class="headerlink" title=" title: JavaScript基础知识(3)"></a> title: JavaScript基础知识(3)</h2><p>#引用数据类型，其实就是一块代码块</p>
+<p>#自定义属性的添加<br>1、在变量名后面加.加属性名<br>2、在变量名[‘属性名’]=’属性值’</p>
+<p>##变量，后面对变量定义的修改，会覆盖前面的</p>
+<p>##parseFloat  可以转换一个字符串，在遇到不识别了自动停止识别</p>
+<p>##Number 强制转化：只能转化可识别的有效数字，遇到非有效数字字符，会返回NaN</p>
+<p>##parseFloat 可转化字符串，遇到不能转化的非有效数字的字符  </p>
+<p>##布尔数据类型的值  有两个 1、true 2、false</p>
+<p>##引用数据类型<br>对象object  函数 date</p>
+<p>##JSON格式</p>
+<p>#复习</p>
+<p>##对象，自定义属性的方法</p>
+<p>1、对象名.自定义属性名=属性值 （基本数据类型<br>2、对象名[‘属性名’]=属性值<br>3、属性名规范：<br>可以是纯数字  也可以是字符（语义化）<br>4、内置属性</p>
+<p>在对象中，定界符{}  括号中包含的是代码块，</p>
+<p>##for 循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var arr2=&#123;</div><div class="line">   &#123;</div><div class="line">   name:&apos;zhaoxuna&apos;;</div><div class="line">   &#125;</div><div class="line">   &#123;</div><div class="line">   name:&apos;baihui&apos;;</div><div class="line">   &#125;</div><div class="line">   &#123;</div><div class="line">   name:&apos;xioatian&apos;;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">for(var i=0;i&lt;=3 ;i++)&#123;</div><div class="line">var sum=&apos;&apos;;</div><div class="line">sum+=arr2[i].className;</div><div class="line">console.log(&apos;执行的方法，要做的处理&apos;)</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>##for in循环<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var person=&#123;</div><div class="line">      name:&apos;zhaoxuan&apos;;</div><div class="line">      age:&apos;18岁&apos;;</div><div class="line">      like:&apos;敲代码&apos;;</div><div class="line">&#125;</div><div class="line">for(var attr in person)&#123;</div><div class="line">        var str=&apos;&apos;;</div><div class="line">       console.log([&apos;attr&apos;]);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##if判断</p>
+<blockquote>
+<p>格式if () {}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if(条件1成立)&#123;</div><div class="line">     条件1成立执行的语句;</div><div class="line">&#125;else if(条件2成立)&#123;</div><div class="line">      条件2成立执行的语句;</div><div class="line">&#125;else&#123;</div><div class="line">      以上条件都不成立时执行的语句;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(0||2||4);多层或者判断，当遇到true的时候返回当前项</div><div class="line">console.log(2&amp;&amp;0||4);并且和或者重复使用的时候，我们先判断并且</div></pre></td></tr></table></figure>
+<p>##switch 判断</p>
+<blockquote>
+<p>1、case是绝对等于，数据类型需要相等，相当于===;<br>n 要比较的对象<br>case  跟比较的值<br>要执行方法，每次执行完方法后都要加break  判断成功执行方法后，不在往下执行</p>
+</blockquote>
+<p>##三元运算符</p>
+<p>#前端</p>
+<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><blockquote>
+<p>定义变量的时候分为两步<br>声明 和 定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var num = &apos;干活的&apos;;</div><div class="line">var sayName = function () &#123;</div><div class="line">	alert(&apos;告诉你的名字&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>#JS的数据类型</p>
+<p>##基本数据类型<br>number string Boolean null undefined<br>引用数据类型，其实就是一块代码块。</p>
+<p>##string 字符串<br>只要有引号包含就是字符串。<br>任何数据类型和字符串相加，都会转化成字符串。<br>字符串拼接的前提是  ：其中至少有一项字符串。</p>
+<p>##number 数字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function numChange () &#123;</div><div class="line">    var num = &apos;123.1珠峰&apos;;</div><div class="line">    console.log(Number(num)); // 强制转化，只能转化可识别的有效数字，遇到非数字字符，会返回NaN。</div><div class="line">    console.log(parseFloat(num));// 可转化字符串，遇到不能转化的非数字字符，返回之前识别数字</div><div class="line">    console.log(parseInt(num));// 可转化字符串， 只能转化小数点前边的有效数字</div><div class="line">&#125;</div><div class="line">numChange();</div><div class="line">//isNaN()</div><div class="line">// is not a number ? 这不是一个数字，对吗？</div><div class="line">// NaN跟谁都不相等。</div></pre></td></tr></table></figure></p>
+<p>##布尔<br>布尔数据类型的值有两个 1、true 2、false<br>在js中!的作用就是取反,<br>!! 将其他数据类型转为布尔</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; id=&quot;aleVal&quot; value=&quot;&quot;&gt;</div><div class="line">var ale = document.getElementById(&apos;aleVal&apos;).value;</div><div class="line">if (!ale) &#123;   //在浏览器在做if判断时，会把空字符串默认转化为false;</div><div class="line">     alert(&apos;对不起，请输入信息&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>#引用数据类型<br>对象object 函数 date 正则 数组<br>js 对象、<br>在对象中，定界符 { }，括号中包含的是代码块，属性：属性值，带对象中给熟悉赋值得格式是’ : ‘<br>// 格式JSON<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var people = &#123;</div><div class="line">    init: function () &#123;alert(&apos;大家好&apos;)&#125;,</div><div class="line">    youName: &apos;常哲楠&apos;,</div><div class="line">    tag: &apos;咋开心&apos;,</div><div class="line">    obj: &#123;</div><div class="line">        name: &apos;阿拉蕾&apos;,</div><div class="line">        age: &apos;4.5岁&apos;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">// 获取对象的属性 对象名.属性名</div><div class="line">people.youName = &apos;陈卉&apos;;</div></pre></td></tr></table></figure></p>
+<p>// 对象，自定属性的方法？</p>
+<blockquote>
+<p>1、对象名.自定义属性名 = 属性值；（基本数据类型、引用数据类型都可）<br>2、 对象名[‘属性名’] = 属性值；（基本数据类型、引用数据类型都可）<br>3、属性名规范：可以是纯数字，也可是字符（语义化）<br>4、内置属性，对象天生自带的属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var people = &#123;</div><div class="line">    init: function () &#123;alert(&apos;大家好&apos;)&#125;,</div><div class="line">    &apos;youName&apos;: &apos;常哲楠&apos;,</div><div class="line">    &apos;tag&apos;: &apos;咋开心&apos;,</div><div class="line">    teacher: &quot;zhaoxuan&quot;</div><div class="line">&#125;;</div><div class="line">var teacher = &#123;</div><div class="line">    name: &apos;zhaoxuan&apos;,</div><div class="line">    age: &apos;26岁&apos;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">people[&apos;teacher&apos;] = teacher;</div><div class="line">var that = &apos;teacher&apos;;</div><div class="line">console.log(people[that])</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>###for 循环<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// for+() +&#123;&#125;</div><div class="line">//(var i=0; i&lt;8; i++)声明一个循环的标记， 循环次数的判断， 	每次循环完了改变标记</div><div class="line"></div><div class="line">	for (var i=0; i&lt;8; i++ ) &#123;</div><div class="line">		var num = 1; // 没次循环的时候都创建了一个num变量</div><div class="line">		console.log(num) </div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">var arr2 = [</div><div class="line">     &#123;</div><div class="line">         name: &apos;zhaoxuan&apos;</div><div class="line">     &#125;,</div><div class="line">     &#123;</div><div class="line">         name: &apos;baihui&apos;</div><div class="line">     &#125;,</div><div class="line">     &#123;</div><div class="line">         name: &apos;xiaotian&apos;</div><div class="line">     &#125;</div><div class="line"> ];</div><div class="line"> var teachers = &apos;&apos;;</div><div class="line"> for (var i=0; i&lt;3; i++) &#123;</div><div class="line">     teachers+=arr2[i].name;</div><div class="line">     console.log(teachers);</div><div class="line"> &#125;</div><div class="line"> //输出结果 &apos;zhaoxaun&apos;   &apos;zhaoxuanbaihui&apos;  &apos;zhaoxuanbaihuixiaotian&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">// 错误的</div><div class="line">var arr2 = [</div><div class="line">        &#123;</div><div class="line">            name: &apos;zhaoxuan&apos;</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            name: &apos;baihui&apos;</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            name: &apos;xiaotian&apos;</div><div class="line">        &#125;</div><div class="line">    ];</div><div class="line">    </div><div class="line">    for (var i=0; i&lt;3; i++) &#123;</div><div class="line">	    var teachers = &apos;&apos;; // 每次进来都会穿件一个空字符串 </div><div class="line">        teachers+=arr2[i].name; //1、&apos;&apos;+zhaoxuan  2、&apos;&apos;+baihui 3、&apos;&apos; + xiaotian</div><div class="line">        console.log(teachers);</div><div class="line">    &#125;</div><div class="line">    //错误输出结果 &apos;zhaoxaun&apos;   &apos;baihui&apos;  &apos;xiaotian&apos;</div></pre></td></tr></table></figure>
+<p>###for in循环<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//语法</div><div class="line">var person = &#123;</div><div class="line">	name: &apos;zhaoXuan&apos;,</div><div class="line">	age: &apos;12&apos;,</div><div class="line">	like: &apos;讲课&apos;</div><div class="line">	&#125;</div><div class="line">for (var attr in obj) &#123;</div><div class="line">	// var attr 声明变量;</div><div class="line">	// 然后循环体中赋值 attr = &apos;name&apos;</div><div class="line">	// 再循环体中给他赋值每一次遍历的属性名		 </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="if-判断"><a href="#if-判断" class="headerlink" title="if 判断"></a>if 判断</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">	if (//判断条件，条件正确为true的时候，才执行方法) &#123;</div><div class="line">		//方法的代码块</div><div class="line">	&#125;else&#123;</div><div class="line">		//在if判断不成立为false时候，执行else里边的代码</div><div class="line">    &#125;</div><div class="line"></div><div class="line">	// 自上而下依次判断，只要有一成立，就不再往下做判断</div><div class="line">	if () &#123;</div><div class="line">	// 多个判断条件</div><div class="line">	&#125; else if () &#123;</div><div class="line">	// 第二次，先判断在执行</div><div class="line">	&#125; else if () &#123;</div><div class="line">	// 第三次，先判断在执行</div><div class="line">	&#125; else &#123;</div><div class="line">	// 以上所有的判断条件都不成立，执行这的代码</div><div class="line">	&#125;</div><div class="line">     console.log(0 || 0 || 4 || &apos;&apos;);// 多层或者判断，当遇到true的时候返回当前项</div><div class="line">     &amp;&amp; 并且  是所有的逻辑都成立才行，如果一个不成立就返回不成立项</div><div class="line">    console.log(2&amp;&amp;0||4&amp;&amp;6); // 并且和或者重复使用的时候我们先判断并且</div><div class="line">    console.log(!!0&amp;&amp;1);</div><div class="line">```    </div><div class="line">###switch case 判断</div><div class="line">   </div><div class="line">   ![Alt text](./1488620056899.png)</div><div class="line">&gt;1、case 是绝对等于，数据类型需要相等，相当于 ===；</div><div class="line">&gt; n 要比较的对象</div><div class="line">&gt; case 跟比较的值</div><div class="line">&gt; ： 要执行方法，每次执行完方法后要写break，判断成功执行方法后，不再往下判断</div><div class="line">&gt; default  所有判断条件都不成立时，执行的方法</div><div class="line">###三元运算符 ？ ： ;</div></pre></td></tr></table></figure>
+<p>  判断的条件 ? 条件成立执行的方法 : 条件不成立执行的方法;<br>‘0’ ? alert(‘厉害了我的哥’) : alert(‘笨蛋我的哥’);<br>// 所有的判断条件都会默认转化成Boolean，true执行，false不执行</p>
+<p>#while 循环</p>
+<p>while(循环的条件){<br>  条件成立时执行的代码};<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">var sum=1;</div><div class="line">while(i&lt;100)&#123;</div><div class="line">console.log(sum+=4);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">``` </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">document.getElementsById(&apos;main&apos;);</div><div class="line">获取的是ID=&apos;main&apos;的这个DOM节点，包含他的子节点</div><div class="line"></div><div class="line">document.getElementByClassName();</div><div class="line">document.getElementTagName();</div><div class="line">上边两种方法，获取到的是节点集合，我可以理解是一个数组，所以他不能使用DOM的getElement的这个方法</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">##绑定事件</div><div class="line">1、先看给谁绑定事件，就获取谁的DOM节点</div><div class="line">2、给事件绑定的方法：</div><div class="line">li.onclick=function()&#123;  &#125;</div><div class="line">3、当我们触发这个事件的时候，方法自动执行</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">##i++和++i的区别</div><div class="line">var i=0;</div><div class="line">var num=++i ;</div><div class="line">console.log(num)</div><div class="line"></div><div class="line"></div><div class="line">i++ 先干活再吃饭</div><div class="line">++i 先吃饭再干活</div><div class="line"></div><div class="line"></div><div class="line">##引用数据类型解析</div></pre></td></tr></table></figure></p>
+<p>function setname(obj){<br>obj.name=’aobaoma’;<br>obj={name:’kelindun’};<br>}<br>var president={name:’bushi’};<br>setname(president);<br>console.dir(president);</p>
+<p>最终结果是’aobama’;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p> //1 题<br>    var obj = {<br>        name: ‘克林顿’<br>    };<br>    var thatVal = ‘name’;<br>    var obj2 = obj;<br>    obj2[thatVal] = ‘公子’;<br>    console.log(obj.name);</p>
+<p>结果:输出’公子’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">    //2 题</div><div class="line">    var thatName = &apos;gelin&apos;;</div><div class="line">    thatName.newVal = 1;</div><div class="line">    console.log(thatName.newVal == &apos;1&apos;);</div><div class="line"></div><div class="line">基本数据类型不能自定义属性 ，即自定义的属性值无效（undefined）</div><div class="line">所以结果是false</div><div class="line">```</div></pre></td></tr></table></figure>
+<pre><code>//3 题
+var str = &apos;&apos;;
+str += 10;
+var num = str/5;// 除了加号之外的其他运算符号都会进行Number()转化，
+num+=4;
+console.log(num);
+</code></pre><p>```</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/JavaScript基础知识(3)/">
+    <time datetime="2017-06-28T10:05:43.404Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/JavaScript基础知识(4)/" rel="prev"><span class="meta-nav">←</span> JavaScript基础知识(4)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/JavaScript基础知识(2)/" rel="next">JavaScript基础知识(2) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

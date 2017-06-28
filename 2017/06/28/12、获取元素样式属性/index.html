@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="复习：clientWidthclientHeightclientLeftclientTop
+元素.style只能获取到行内样式
+window.getComputedStyle 通过它获取所有经过浏览器计算过的元素样式属性和属性值（元素在浏览器加载的时候渲染出来 展现在页面中的样式）window.ge" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>获取样式属性 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="复习：clientWidthclientHeightclientLeftclientTop 元素.style只能获取到行内样式 window.getComputedStyle 通过它获取所有经过浏览器计算过的元素样式属性和属性值（元素在浏览器加载的时候渲染出来 展现在页面中的样式）window.getComputedStyle(元素，伪类【通常不写， 用null占位】) 但是IE8以下不兼容---">
+<meta property="og:type" content="article">
+<meta property="og:title" content="获取样式属性">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/12、获取元素样式属性/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="复习：clientWidthclientHeightclientLeftclientTop 元素.style只能获取到行内样式 window.getComputedStyle 通过它获取所有经过浏览器计算过的元素样式属性和属性值（元素在浏览器加载的时候渲染出来 展现在页面中的样式）window.getComputedStyle(元素，伪类【通常不写， 用null占位】) 但是IE8以下不兼容---">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.048Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="获取样式属性">
+<meta name="twitter:description" content="复习：clientWidthclientHeightclientLeftclientTop 元素.style只能获取到行内样式 window.getComputedStyle 通过它获取所有经过浏览器计算过的元素样式属性和属性值（元素在浏览器加载的时候渲染出来 展现在页面中的样式）window.getComputedStyle(元素，伪类【通常不写， 用null占位】) 但是IE8以下不兼容---">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-12、获取元素样式属性" class="post-12、获取元素样式属性 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      获取样式属性
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/12、获取元素样式属性/" data-id="cj4gu5bd200065sr42iiffc7v" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>复习：<br>clientWidth<br>clientHeight<br>clientLeft<br>clientTop</p>
+<p>元素.style只能获取到行内样式</p>
+<p>window.getComputedStyle 通过它获取所有经过浏览器计算过的元素样式属性和属性值（元素在浏览器加载的时候渲染出来 展现在页面中的样式）<br>window.getComputedStyle(元素，伪类【通常不写， 用null占位】) <code>但是IE8以下不兼容----只能使用currentStyle</code><br>元素.currentStyle[attr]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">获取元素样式</div><div class="line">function getCss(ele,attr)&#123;</div><div class="line">var val;</div><div class="line">   if(&quot;getComputedStyle&quot; in window)&#123;   </div><div class="line">   val=window.getComputStyle(ele,null)[attr]</div><div class="line">   &#125;</div><div class="line">   else if(attr===&apos;opacrty&apos;)&#123;</div><div class="line">     val=ele.currentStyle.filer;</div><div class="line">     var reg=/^alpha\(opacity=(\d+(?:\.\d+)?)\)$/;</div><div class="line">     val=reg.test(val)?(reg.exec(val)[1])/100:1;</div><div class="line">   &#125;</div><div class="line">   else&#123;</div><div class="line">      val=ele.currentStyle[attr];</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line">     var regs=/^-?\d+(\.\d)?(px|pt|rem|em)?$/;</div><div class="line">     return regs.test(val)?parseFloat(val):val;</div></pre></td></tr></table></figure>
+<p>加单位  如果不带单位的value  我们给加上单位</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/12、获取元素样式属性/">
+    <time datetime="2017-06-28T10:05:42.424Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/13、类名的增删改查/" rel="prev"><span class="meta-nav">←</span> 类型的增删改查</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/11、盒子模型/" rel="next">盒子模型 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

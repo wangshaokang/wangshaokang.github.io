@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="预解释的时候带var 和function 的只声明一次  但是function可以重复定义123456789fn();//输出函数最终在预解释中的定义的值123    function fn()&amp;#123;console.log(12)&amp;#125;;fn();//输出函数最终在预解释中的定义的值12" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>预解释 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="预解释的时候带var 和function 的只声明一次  但是function可以重复定义123456789fn();//输出函数最终在预解释中的定义的值123    function fn()&amp;#123;console.log(12)&amp;#125;;fn();//输出函数最终在预解释中的定义的值123function fn()&amp;#123;console.log(13)&amp;#125;;fn();//">
+<meta property="og:type" content="article">
+<meta property="og:title" content="预解释">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/2、预解释/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="预解释的时候带var 和function 的只声明一次  但是function可以重复定义123456789fn();//输出函数最终在预解释中的定义的值123    function fn()&amp;#123;console.log(12)&amp;#125;;fn();//输出函数最终在预解释中的定义的值123function fn()&amp;#123;console.log(13)&amp;#125;;fn();//">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.286Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="预解释">
+<meta name="twitter:description" content="预解释的时候带var 和function 的只声明一次  但是function可以重复定义123456789fn();//输出函数最终在预解释中的定义的值123    function fn()&amp;#123;console.log(12)&amp;#125;;fn();//输出函数最终在预解释中的定义的值123function fn()&amp;#123;console.log(13)&amp;#125;;fn();//">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-2、预解释" class="post-2、预解释 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      预解释
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/2、预解释/" data-id="cj4gu5b8a00015sr4jcajgtbw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <blockquote>
+<p>预解释的时候带var 和function 的只声明一次  但是function可以重复定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">fn();//输出函数最终在预解释中的定义的值123    </div><div class="line">function fn()&#123;console.log(12)&#125;;</div><div class="line">fn();//输出函数最终在预解释中的定义的值123</div><div class="line">function fn()&#123;console.log(13)&#125;;</div><div class="line">fn();//输出函数最终在预解释中的定义的值123</div><div class="line">fucntion fn()&#123;console.log(14)&#125;;</div><div class="line">var fn=555;</div><div class="line">function fn()&#123;console.log(123)&#125;;</div><div class="line">fn();</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##堆内存<br>堆内存用来存储引用数据类型的值</p>
+<p>##栈内存<br>供JS代码执行的环境</p>
+<ul>
+<li>window (栈内存)  关闭浏览器的时候就会销毁 </li>
+<li>一般情况下函数执行形成私有作用域(栈内存) 执行完成代码  就会立即销毁</li>
+<li></li>
+</ul>
+<p>##内存释放<br>浏览器默认机制，浏览器每间隔一段时间 会把那些没有被占用的 内存回收</p>
+<blockquote>
+<p>在私有作用域(栈内存)中，返回一个  引用数据类型  被外部接收  就不能被销毁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">return &#123;</div><div class="line">   name:wang;</div><div class="line">   age:25;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">var f=fn(); //fn形成的栈内存不会销毁 他被赋值给一个变量 </div><div class="line">console.log(f);</div><div class="line">fn();// 执行完成后  可以被销毁 </div><div class="line">fn()();</div></pre></td></tr></table></figure></p>
+<p>不立即销毁  如果返回的是一个函数数据类型    要等返回值执行完后，fn才能销毁</p>
+<p>给元素绑定事件的时候 也会涉及到栈内存不销毁</p>
+</blockquote>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/2、预解释/">
+    <time datetime="2017-06-28T10:05:42.229Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/3、构造函数/" rel="prev"><span class="meta-nav">←</span> 构造函数</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/1、变量及作用域/" rel="next">变量及作用域 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

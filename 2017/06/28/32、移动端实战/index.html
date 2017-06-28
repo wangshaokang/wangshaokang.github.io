@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="##设计稿设计稿       640   iPhone5/5s  320分辨率  DPR 2.0       750   iphone6     375分辨率  DPR 2.0       1242  iPhone6plus 414分辨率  DPR 3.0
+##step123456789101112" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>移动端实战 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##设计稿设计稿       640   iPhone5/5s  320分辨率  DPR 2.0       750   iphone6     375分辨率  DPR 2.0       1242  iPhone6plus 414分辨率  DPR 3.0 ##step123456789101112131415161718192021222324DPR   device  picture  ele">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动端实战">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/32、移动端实战/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##设计稿设计稿       640   iPhone5/5s  320分辨率  DPR 2.0       750   iphone6     375分辨率  DPR 2.0       1242  iPhone6plus 414分辨率  DPR 3.0 ##step123456789101112131415161718192021222324DPR   device  picture  ele">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.851Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动端实战">
+<meta name="twitter:description" content="##设计稿设计稿       640   iPhone5/5s  320分辨率  DPR 2.0       750   iphone6     375分辨率  DPR 2.0       1242  iPhone6plus 414分辨率  DPR 3.0 ##step123456789101112131415161718192021222324DPR   device  picture  ele">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-32、移动端实战" class="post-32、移动端实战 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      移动端实战
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/32、移动端实战/" data-id="cj4gu5bnb000v5sr4ssksugdf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##设计稿<br>设计稿<br>       640   iPhone5/5s  320分辨率  DPR 2.0<br>       750   iphone6     375分辨率  DPR 2.0<br>       1242  iPhone6plus 414分辨率  DPR 3.0</p>
+<p>##step<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">DPR   device  picture  element  Ratio  设备的像素比</div><div class="line"></div><div class="line"></div><div class="line"> //动态获取html根元素的字体大小</div><div class="line">   </div><div class="line">1、放在匿名函数中：</div><div class="line">      ~function(desW)&#123;</div><div class="line">        var winW=document.documentElement.clientWidth;</div><div class="line">        var ratio=winW/desW;</div><div class="line">        document.documentElement.style.fontSize=ratio*100+&apos;px&apos;;</div><div class="line">    &#125;(750);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">2、放在实名函数中</div><div class="line"></div><div class="line">function refreshRem() &#123;</div><div class="line">    var desW = 750;</div><div class="line">    var winW = document.documentElement.clientWidth;</div><div class="line">    var ratio = winW / desW;</div><div class="line">    document.documentElement.style.fontSize = ratio * 100 + &apos;px&apos;;</div><div class="line">&#125;</div><div class="line">refreshRem();</div><div class="line">window.addEventListener(&apos;resize&apos;, refreshRem);</div></pre></td></tr></table></figure></p>
+<p>##音频播放<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">src 音频的路径</div><div class="line">    autoplay 自动播放</div><div class="line">    loop 循环播放</div><div class="line">    preload   音频是否有预加载的效果</div><div class="line">            auto-当页面加载完成后载入音频</div><div class="line">            meta-当页面加载完成后只载入元数据</div><div class="line">            none-当页面加载后不载入音频</div><div class="line">   play() 音频播放</div><div class="line">   pause() 音频暂停</div><div class="line">   paused;暂停的状态</div><div class="line">　　canplay() 缓冲至音频可播放的状态</div><div class="line">     --&gt;</div><div class="line">autoplay  自动播放</div><div class="line">loop  无缝衔接  循环播放</div><div class="line">&lt;audio src=&quot;audio/music.wav&quot; autoplay loop&gt;&lt;/audio&gt;</div></pre></td></tr></table></figure></p>
+<p> animation:bounceInLeft .2s ease 2s both;<br>            /<em>both   保留第一帧 或者最后一帧的状态</em>/</p>
+<p>##页面布局的方式<br>1、 固定布局  宽高写死（px）                       常用在PC端<br>2、流式布局（百分比）+媒体查询+px单位   常用PC和移动端共用一套页面结构<br>3、流式布局（百分比）+rem单位                  常用在移动端<br>4、flexbox  弹性布局  弹性盒模型                  主要用在移动端项目中</p>
+<h2 id="fastclick"><a href="#fastclick" class="headerlink" title="fastclick"></a>fastclick</h2><p>//    fastclick是解决300毫秒延迟的问题    移动端都有300毫秒的延迟</p>
+<pre><code>FastClick.attach(document.body)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">在JS中添加fastclick的身体，推荐以下做法：</div><div class="line">if (&apos;addEventListener&apos; in document) &#123;  </div><div class="line">    document.addEventListener(&apos;DOMContentLoaded&apos;, function() &#123;  </div><div class="line">        FastClick.attach(document.body);  </div><div class="line">    &#125;, false);  </div><div class="line">&#125;  </div><div class="line">  如果你使用了JQuery，那么JS引入就可以改用下面的写法：</div><div class="line">$(function() &#123;  </div><div class="line">    FastClick.attach(document.body);  </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>//    产品形态<br>//    1、PC端和移动端共用一套页面结构  域名地址同一个  由一个人独立完成  猎豹、华为、摩拜<br>//    2、PC端和移动端完全分离开   域名地址不同   3g/i/m  由不同的人开发  例如  京东  淘宝  天猫  网易  腾讯  新浪</p>
+<p>##媒体查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media screen and （条件）&#123;</div><div class="line">        css代码块</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>@media 媒体  媒介<br>媒体类型  all  所有类型<br>                 screen   设备类型<br>                 print     打印机<br>                 TV         电视机类型<br>连接符     and<br>                only<br>                not<br>条件（）<br>     min-width    max-width<br>大括号{<br>      选择器{<br>             属性名：属性值，<br>             属性名：属性值<br>     }<br>  }                                 </p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/32、移动端实战/">
+    <time datetime="2017-06-28T10:05:42.796Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/33、字体图标/" rel="prev"><span class="meta-nav">←</span> 字体图标</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/31、animation/" rel="next">animation <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

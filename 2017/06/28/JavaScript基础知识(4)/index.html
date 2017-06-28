@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="##DOM
+###获取DOM对象的方法
+####- 通过ID获取_一个 元素12345- document，getElementById(&amp;apos;idName&amp;apos;);	- document是获取范围，通过ID获取的时候，范围只能是document;	- 如果页面上右两个以上的ID名称，获" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>JavaScript基础知识(4) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##DOM ###获取DOM对象的方法 ####- 通过ID获取_一个 元素12345- document，getElementById(&amp;apos;idName&amp;apos;);	- document是获取范围，通过ID获取的时候，范围只能是document;	- 如果页面上右两个以上的ID名称，获取第一个	- 在IE6 7 中，会将表单元素的name属性值当做ID名称来调取  并且不区分大小写">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础知识(4)">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/JavaScript基础知识(4)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##DOM ###获取DOM对象的方法 ####- 通过ID获取_一个 元素12345- document，getElementById(&amp;apos;idName&amp;apos;);	- document是获取范围，通过ID获取的时候，范围只能是document;	- 如果页面上右两个以上的ID名称，获取第一个	- 在IE6 7 中，会将表单元素的name属性值当做ID名称来调取  并且不区分大小写">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.390Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript基础知识(4)">
+<meta name="twitter:description" content="##DOM ###获取DOM对象的方法 ####- 通过ID获取_一个 元素12345- document，getElementById(&amp;apos;idName&amp;apos;);	- document是获取范围，通过ID获取的时候，范围只能是document;	- 如果页面上右两个以上的ID名称，获取第一个	- 在IE6 7 中，会将表单元素的name属性值当做ID名称来调取  并且不区分大小写">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-JavaScript基础知识(4)" class="post-JavaScript基础知识(4) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      JavaScript基础知识(4)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/JavaScript基础知识(4)/" data-id="cj4gu5cj3001k5sr4cz42mc7j" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##DOM</p>
+<p>###获取DOM对象的方法</p>
+<p>####- 通过ID获取_一个 元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">- document，getElementById(&apos;idName&apos;);</div><div class="line">	- document是获取范围，通过ID获取的时候，范围只能是document;</div><div class="line">	- 如果页面上右两个以上的ID名称，获取第一个</div><div class="line">	- 在IE6 7 中，会将表单元素的name属性值当做ID名称来调取  并且不区分大小写</div><div class="line">	- 可以直接调用ID代表这个元素(不推荐)</div></pre></td></tr></table></figure></p>
+<p>####通过一组标签名来获取元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">document.getElementByTagName(&apos;TagName&apos;)</div><div class="line"> 获取到的是一个集合  类数组（索引  长度）</div><div class="line"> document是一个可变的范围</div><div class="line"> 获取的时候通过集合中的索引进行获取</div></pre></td></tr></table></figure></p>
+<p>####通过标签属性name的值获取 一组  元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">document.getElementByName(&apos;name&apos;);</div><div class="line"> 获取到的是一个集合  类数组（索引  长度）</div><div class="line"> document是一个可变的范围</div><div class="line"> 获取的时候通过集合中的索引进行获取 </div><div class="line"> 在IE6~9浏览器下 只对表单元素器作用</div></pre></td></tr></table></figure></p>
+<p>####通过标签属性class的值获取 一组  元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">document.getElementByClassName(&apos;name&apos;);</div><div class="line"> 获取到的是一个集合  类数组（索引  长度）</div><div class="line"> document是一个可变的范围</div><div class="line"> 获取的时候通过集合中的索引进行获取 </div><div class="line"> IE6，7，8中报错</div><div class="line">``` </div><div class="line">####通过根元素获取元素</div></pre></td></tr></table></figure></p>
+<p>document.documentElement  获取html元素<br>document.body 获取body元素 </p>
+<p>获取当前页面的宽度和高度</p>
+<blockquote>
+<p>client  客户端 当前 当事人<br>var width=document.documentElement.clientWidth||document.body.clientWidth;<br>var height=document.documentElement.clientHeight||document.body.clientHeight;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">####在移动端我们获取元素的常用方法（IE6 7 8 不兼容）</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>document.querySelector(‘#id’);获取一个<br>document.querySelectorAll(‘.class’) 获取一组<br>document.querySelectorAll(‘#tab li’)  获取特定的一组<br>```</p>
+<p>##DOM节点<br> Node 在页面中出现的所有东西都是节点，元素，注释，文本都是节点<br>应用场景：通过节点可以进行DOM对象的增 删 改 查</p>
+<table>
+<thead>
+<tr>
+<th>节点类型</th>
+<th>node Type</th>
+<th>nodeName</th>
+<th>nodeValue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素节点(元素标签)</td>
+<td>1</td>
+<td>大写的标签</td>
+<td>null</td>
+</tr>
+<tr>
+<td>文本节点(文字)</td>
+<td>3</td>
+<td>#text</td>
+<td>文字内容</td>
+</tr>
+<tr>
+<td>注释节点(注释)</td>
+<td>8</td>
+<td>#comment</td>
+<td>注释内容</td>
+</tr>
+<tr>
+<td>document(整个文档)</td>
+<td>9</td>
+<td>#document</td>
+<td>null</td>
+</tr>
+</tbody>
+</table>
+<p>##DOM节点的增删改查</p>
+<p>###创建元素 节点<br>createElement()         创建  创造</p>
+<p>####将新创建的元素节点添加到指定元素所有内容之后(末尾)<br>oDiv.parentNode.appendChild( oDiv);</p>
+<blockquote>
+<p>appendChild前是oDiv的父级节点</p>
+<p>####将创建的元素添加到已有元素之前<br>父级元素.insertBefore（要放置的元素，放在谁之前）<br>oldTag.parentNode.insertBefore(newTag , oldTag)</p>
+</blockquote>
+<p>###创建属性节点<br>setAttribute(属性名，属性值)—–直接向对象添加一对键值对<br>这个属性会在html标签中出现</p>
+<p>oDiv.setAttribute(‘zhufeng’,’peixun’);<br>oDiv.getAttribute(‘zhufeng’,’peixun’);<br>oDiv.removeAttribute(‘zhufeng’,’peixun’);</p>
+<p>###删除创建的元素节点<br>父级元素.removeChild(删除的对象)<br>op.parentNode.removeChild(op)<br>已有的和新创建的都可以删除</p>
+<p>###克隆元素节点<br>op.cloneNode(true);<br>默认参数为false(不填参数)：只克隆当前元素<br>true  克隆当前元素与元素的所有子节点</p>
+<p>###替换元素节点<br>父级元素.replaceChild(替换的对象，被替换的对象)<br>op.parentNode.replaceChild(替换的对象，被替换的对象)<br>任何元素都可以被替换</p>
+<p>###math方法及应用</p>
+<p>1、Math.abs()  取绝对值<br>2、Math.ceil()  向上取整（出现小数的就向上+1）<br>3、Math.floor()  向下取整<br>4、Math.round() 四舍五入<br>5、Math.max(val1,val2, val3….) 取最大值<br>6、Math.min(val1,val2,val3,….)  取最小值<br>7、Math.random()获取[0-1]之间的随机小数（不包含1）;<br>8、Math.round(Math.random()*(m-n)+n)  获取任意两个数之间的随机数<br>9、Math.PI     3.14159265..<br>10、Math.pow  n的m次幂</p>
+<p>parentNode 获取父级元素节点<br>previousSibling  获取上一个节点<br>previousElementSibling 获取上一个元素节点<br>nextSibling  获取下一个节点<br>nextElementSibling  获取下一个元素节点<br>firstChild  获取第一个节点<br>lastChild  获取最后一个节点<br>children   获取所有子元素节点<br>childNodes  获取所有子节点</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/JavaScript基础知识(4)/">
+    <time datetime="2017-06-28T10:05:43.420Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/JavaScript基础知识(5)/" rel="prev"><span class="meta-nav">←</span> JavaScript基础知识(5)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/JavaScript基础知识(3)/" rel="next">(no title) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

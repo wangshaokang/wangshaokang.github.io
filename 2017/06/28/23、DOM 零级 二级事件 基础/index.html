@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="DOM 0级事件绑定oDiv.onclick=function(){};DOM 2级事件绑定oDiv.addEventListener(‘click’,function(){},false)addEventListener这个属性是定义在当前元素所属EventTarget这个类的原型上的
+
+函数表达" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>DOM零级和二级事件基础 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="DOM 0级事件绑定oDiv.onclick=function(){};DOM 2级事件绑定oDiv.addEventListener(‘click’,function(){},false)addEventListener这个属性是定义在当前元素所属EventTarget这个类的原型上的  函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为我们把匿名函数定义的部分当做一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM零级和二级事件基础">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/23、DOM 零级 二级事件 基础/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="DOM 0级事件绑定oDiv.onclick=function(){};DOM 2级事件绑定oDiv.addEventListener(‘click’,function(){},false)addEventListener这个属性是定义在当前元素所属EventTarget这个类的原型上的  函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为我们把匿名函数定义的部分当做一个">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.021Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DOM零级和二级事件基础">
+<meta name="twitter:description" content="DOM 0级事件绑定oDiv.onclick=function(){};DOM 2级事件绑定oDiv.addEventListener(‘click’,function(){},false)addEventListener这个属性是定义在当前元素所属EventTarget这个类的原型上的  函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为我们把匿名函数定义的部分当做一个">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-23、DOM 零级 二级事件 基础" class="post-23、DOM 零级 二级事件 基础 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      DOM零级和二级事件基础
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/23、DOM 零级 二级事件 基础/" data-id="cj4gu5bji000m5sr4jpnes99x" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <blockquote>
+<p>DOM 0级事件绑定<br>oDiv.onclick=function(){};<br>DOM 2级事件绑定<br>oDiv.addEventListener(‘click’,function(){},false)<br>addEventListener这个属性是定义在当前元素所属EventTarget这个类的原型上的</p>
+</blockquote>
+<h3 id="函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为"><a href="#函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为" class="headerlink" title="函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为"></a>函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为</h3><p>我们把匿名函数定义的部分当做一个值赋值给oDiv的点击行为（函数表达式）</p>
+<p>####重要：不仅仅把绑定的方法执行了，而浏览器还默认的给这个方法传递了一个参数值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mouseEvent:鼠标事件对象</div><div class="line"> 它是一个对象数据类型值  里面包含了很多属性名和属性值 这些都是用来记录当前鼠标的相关信息的</div><div class="line"> mouseEvent记录的是页面中唯一一个鼠标每一次触发时候的相关信息 和到底在哪个元素触发的没有关系</div></pre></td></tr></table></figure></p>
+<p>冒泡事件处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mouseover 和 mouseout  </div><div class="line">mouseenter 和 mouseleave  //阻止事件冒泡</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>事件传播机制 (true)<br>事件捕获阶段<br>事件冒泡阶段：(false)当前元素相关行为（click）触发时，会导致当前元素的所有上级元素相关行为（click）触发  一直到document<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">center.onclick=function(e)&#123;</div><div class="line"> 事件对象：   e=e||window.event; //兼容IE8以下</div><div class="line">阻止事件冒泡 ：e.stopPropagation ?e.stopPropagation(): e.cancelBubble=true;  //兼容低版本</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##事件委托<br>利用事件默认会进行冒泡传播的机制，我们给最外层元素相关行为绑定事件  元素内的子元素相关行为 触发的时候 也会导致 最外层元素的相关行为事件触发，我们根据事件对象中的事件源来进行相关处理<br> 一个容器内document多个元素div 相关行为click绑定的时候  可以采用事件委托方式进行绑定  比单独一个一个绑定事件 执行和性能上提升很多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">document.onclick=function(e)&#123;  </div><div class="line">       e=e||window.event;</div><div class="line">       var tar=e.target;</div><div class="line">       if(tar.id===&apos;center&apos;)&#123;</div><div class="line">             console.log(tar.innerHTML);</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/23、DOM 零级 二级事件 基础/">
+    <time datetime="2017-06-28T10:05:42.674Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/24、鼠标跟随/" rel="prev"><span class="meta-nav">←</span> 鼠标跟随</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/22、事件基础/" rel="next">事件基础 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

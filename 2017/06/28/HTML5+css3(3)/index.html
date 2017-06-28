@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="行内式：通过标签属性style引入css样式，直接将css代码写在开始标签内
+
+
+内嵌式：将css代码写在&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;元素内，通常来说style元素一般放在head元素内
+
+
+外联式：html和css文件是独立的文件，通过link标签将css文件引入到htm" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>html+css3(3) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="行内式：通过标签属性style引入css样式，直接将css代码写在开始标签内   内嵌式：将css代码写在&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;元素内，通常来说style元素一般放在head元素内   外联式：html和css文件是独立的文件，通过link标签将css文件引入到html文件中  导入式：html文件和css文件是独立的文件，通过css语句@import “url”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html+css3(3)">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/HTML5+css3(3)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="行内式：通过标签属性style引入css样式，直接将css代码写在开始标签内   内嵌式：将css代码写在&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;元素内，通常来说style元素一般放在head元素内   外联式：html和css文件是独立的文件，通过link标签将css文件引入到html文件中  导入式：html文件和css文件是独立的文件，通过css语句@import “url”">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.033Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html+css3(3)">
+<meta name="twitter:description" content="行内式：通过标签属性style引入css样式，直接将css代码写在开始标签内   内嵌式：将css代码写在&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;元素内，通常来说style元素一般放在head元素内   外联式：html和css文件是独立的文件，通过link标签将css文件引入到html文件中  导入式：html文件和css文件是独立的文件，通过css语句@import “url”">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-HTML5+css3(3)" class="post-HTML5+css3(3) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      html+css3(3)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/HTML5+css3(3)/" data-id="cj4gu5chf001a5sr4ii0b24ql" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <ul>
+<li>行内式：通过标签属性style引入css样式，直接将css代码写在开始标签内</li>
+</ul>
+<ul>
+<li>内嵌式：将css代码写在<code>&lt;style&gt;&lt;/style&gt;</code>元素内，通常来说style元素一般放在head元素内</li>
+</ul>
+<ul>
+<li>外联式：html和css文件是独立的文件，通过link标签将css文件引入到html文件中 </li>
+<li>导入式：html文件和css文件是独立的文件，通过css语句@import “url”引入一个css文件，这条语句的特定规则是：</li>
+</ul>
+<p>###css选择器</p>
+<p>####基本选择器</p>
+<ul>
+<li>标签选择器：直接将标签名当做选择器来使用 权重为1</li>
+<li>类选择器：将标签属性class的属性值当做选择器使用，在使用时需要在属性值前加一个“.”<br>一个元素的类名可以有多个，每个类名之间用空格隔开</li>
+<li>ID选择器：将标签属性ID的属性值当做选择器使用，在使用的时候要在属性值前面加一个“#”<br>ID属性值在当前文档下只能有一个</li>
+<li>通配符选择器：选择当前文档下所有的元素权重小于1</li>
+<li>标签属性选择器：是利用标签属性的属性名和属性值来进行元素的选择</li>
+</ul>
+<p>权重为10</p>
+<p>####其他选择器</p>
+<ul>
+<li>后代选择器（派生选择器）：父辈选择器用来划定范围，子级选择器用来添加样式。后代选择器不必将每个选择器都标出来，只需标出关键节点即可<br>后代选择器的个数尽量不超过3个</li>
+<li>子级选择器：父级选择器&gt;子级选择器（父子元素必须是相邻的关系）</li>
+<li>相邻兄弟选择器：上一个选择器+下一个相邻选择器</li>
+<li>并集选择器：又叫分组选择器，可以让不同的元素使用同一段css样式，每一个选择器用逗号隔开<br>权重是独立计算</li>
+<li>交集选择器：两种属性同一个元素上的时候，可以使用这两种属性准确的找到要操作的元素，将同一个元素的不同属性结合在一起就是交集选择器<br>交集选择器链接什么符号都不需要，直接写选择器即可<br>PS：标签选择器和其他选择器组合的时候，标签选择器要写在前面</li>
+<li>伪类选择器：给某个元素添加状态<br>基本语法:     选择器:伪类{}<br>权重权重：  选择器的权重就是伪类选择器的权重   10&lt;权重&lt;11</li>
+</ul>
+<ul>
+<li>伪元素：通过css向html结构中，输出假元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">选择器:after，选择器:before&#123;</div><div class="line">display:block;</div><div class="line">cintent:&quot;内容可以为空&quot;&#125;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>##盒模型<br>组成网页的每一个元素，在页面上的表现形式都是一个矩形（所占的位置是一个矩形），这一个个的矩形都叫做盒子（因为每一个矩形都会装东西）</p>
+<p><strong>盒子模型</strong> ：用来描述每一个元素之间的位置关系，和盒子本身的大小属性</p>
+<p>元素的css属性分为两种：</p>
+<ul>
+<li>内置属性：元素天生自带的属性</li>
+<li>自定义属性：人为添加给元素的css属性，自定义属性的属性权重大于内置属性<br>###盒子模型的组成<br>盒子模型由外边距，边框，内边距，和内容部分组成，其中外边距，边框，内边距都是4个方向。内容只有宽高<br>每一个元素都有自己的内置样式，在编辑页面需要将这些内置样式统一重置，保证页面样式的正常展示</li>
+<li>外边距：盒子与盒子之间的距离，用css属性margin表示，margin有四个方向<ul>
+<li>margin-top  上外边距</li>
+<li>margin-bottom下外边距</li>
+<li>margin-left  左外边距</li>
+<li>margin-right  右外边距<br>margin值可以是数字、百分比、em、rem、并且margin值支持负数<br>margin的写法：</li>
+</ul>
+</li>
+<li>margin:10px 20px 30px 40px;上右下左</li>
+<li>margin:10px 20px 30px;上    左右   下</li>
+<li>margin:10px  20px; 上下  左右</li>
+<li>margin:10px; 四个方向的值一致<br>外边距的兼容问题</li>
+<li>当上面的盒子有下外边距，下面的盒子有上外边距时，两个值只有最大值起作用</li>
+<li>子级盒子的上边距会上传给父级盒子（指的是有包含关系的所有盒子），当父级盒子没有内边距或边框的时候，就会出现这个问题<ul>
+<li>解决方式：<ul>
+<li>给父级元素添加 overflow:hidden;（溢出隐藏）属性</li>
+<li>给父级元素添加内边距或者是边框属性</li>
+<li>将子元素的margin-top值变为父级元素的padding-top值【最优选项】<blockquote>
+<p>边框：在内边距和外边距之间，包裹盒子的四个方向的线条</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>边框有四个方向</li>
+<li>边框可以设置颜色</li>
+<li>边框可以设置样式<br>|属性|描述|<br>|–|–|<br>|border-top-width|上边框的宽度|<br>|border-top-color|上边框的颜色|<br>|border-top-style|上边框的样式|<br>|border-top:1px solid red|上边框宽度样式颜色|<br>|border-width:10px 20px 30px 40px;|上右下左的四个方向的边框宽度|<br>|border-width:10px 20px 30px;|上  左右  下的边框宽度|<br>|border:10px solid red;|四个方向的宽度 颜色 样式都一致|</li>
+</ul>
+<p><code>transparent</code>透明</p>
+<blockquote>
+<p>利用边框来制作三角形</p>
+</blockquote>
+<ul>
+<li>内边距是指边框距离盒子内容的距离  padding有四个方向<ul>
+<li>padding-top  上外边距</li>
+<li>padding-bottom下外边距</li>
+<li>padding-left  左外边距</li>
+<li>padding-right  右外边距<br>padding值可以是数字、百分比、em、rem、并且padding值不支持负数<br>padding的写法：</li>
+</ul>
+</li>
+<li>padding:10px 20px 30px 40px;上右下左</li>
+<li>padding:10px 20px 30px;上    左右   下</li>
+<li>padding:10px  20px; 上下  左右</li>
+<li>padding:10px; 四个方向的值一致</li>
+<li>内容（content）分别有两个属性代表</li>
+<li>宽度width 数字 百分比  rem em</li>
+<li>高度height数字 百分比  rem em</li>
+</ul>
+<ul>
+<li>如何计算盒子的大小<ul>
+<li>盒子的宽度=内容的宽度+左右内边距+左右边框宽度</li>
+<li>boxwidth=width+（padding-left）+（padding-right）+(border-left-width)+(border-right-width)</li>
+<li>盒子的高度=内容的高度+上下内边距+上下边框宽度</li>
+<li>boxheight=height+（padding-top）+（padding-bottom）+(border-top-width)+(border-bottom-width)</li>
+</ul>
+</li>
+</ul>
+<p>###bfc块级盒子渲染模式</p>
+<blockquote>
+<p>block formatting context<br>块级盒子应该如何在页面中排版？</p>
+<ul>
+<li>盒子从父级盒子的左上开始</li>
+<li>垂直布局</li>
+<li>如果遇到上下margin值的时候，会发生margin的折叠</li>
+<li>所有bfc渲染的盒子都是基本流（文档流）内的盒子</li>
+</ul>
+</blockquote>
+<p>###IFC行内盒子渲染模式</p>
+<blockquote>
+<p>inline formatting context</p>
+<ul>
+<li>盒子从父级盒子的左上开始</li>
+<li>横向排布，达到父级宽度的最大值，自动折行</li>
+<li>padding-top，padding-bottom，margin-top，margin-bottom可识别但不起作用<h3 id="块级元素的特点"><a href="#块级元素的特点" class="headerlink" title="块级元素的特点"></a>块级元素的特点</h3></li>
+<li>独占一行，垂直排列</li>
+<li>可以设置盒子模型的所有属性（width，height，padding，border）</li>
+<li>在不设置盒子的宽高时候，宽度是其父级盒子内容的宽度，高度是其本身内容的高度</li>
+<li>块级元素可以嵌套其他元素<ul>
+<li>ul、ol第一层级里面只能是li</li>
+<li>dl第一层级只能是dt和dd</li>
+<li>p不能嵌套块级元素<br>###行内元素的特点</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>在一行显示，从左到右，达到父级元素的最大宽度的时候，自动折行</li>
+<li>不能设置宽度和高度，padding和margin的上下值</li>
+<li>宽度和高度是由本身内容的宽高决定的</li>
+<li>行内元素进行嵌套时，不要嵌套块级元素</li>
+<li>行内元素之间如果有空格或者回车，在页面上显示的时候会出现盒子与盒子之间的空隙</li>
+</ul>
+<p>###overflow<br>|属性值|描述|<br>|–|–|<br>|hidden|隐藏[超出盒子的部分不显示]<br>|auto|自动识别[哪个方向内容溢出，那么哪个放向就会出现滚动条]|<br>|scroll|出现滚动条[无论是否溢出，都会出现滚动条]|<br>|visible|默认状态|<br>|inherit|从父元素的属性上继承属性值|</p>
+<p>###display 以什么样的方式来显示元素<br>|属性值|描述|<br>|–|–|<br>|block|块级|<br>|inline|行内|<br>|inline-block|行内块级元素|<br>|list-item|列表项目[列表队列]|<br>|table|表格|<br>|table-cell|表格项|</p>
+<p>####行内块级元素</p>
+<ul>
+<li>从父级盒子的左上角开始排列，从左到右排列，遇到父级元素最大宽度的时候，自动折行</li>
+<li>可以直接设置盒子模型的所有属性</li>
+<li>元素之间如果有空格或者回车，在页面上显示的时候会出现盒子与盒子之间的空隙</li>
+<li>同级元素之间默认垂直方向对齐方式为“基线对齐”<br>#####基线对齐：同级元素之间的垂直对齐方式<br>vertical-align：baseline；<br>|属性值|描述|<br>|–|–|<br>|baseline|基线对齐|<br>|top|顶部对齐[兄弟元素之间最高的那个元素的顶部对齐]|<br>|bottom|底部对齐[兄弟元素之间最高的那个元素的底部对齐]|<br>|middle|中部对齐[兄弟元素之间最高的那个元素的中部对齐]|<br>|text-top|文字顶部对齐|<blockquote>
+<p>如果想要改变基线对齐的方式，那么需要给给每一个改变的元素都添加上这个属性</p>
+</blockquote>
+</li>
+</ul>
+<p>###水平对齐</p>
+<blockquote>
+<p>这个属性要给有宽度的元素</p>
+<ul>
+<li>文字的水平对齐<ul>
+<li>左对齐    text-align：left；</li>
+<li>居中对齐 text-align：center；</li>
+<li>右对齐   tex-align:  right ；</li>
+</ul>
+</li>
+</ul>
+<p>这个属性需要给有宽度的元素</p>
+<ul>
+<li>盒子的水平对齐<ul>
+<li>行内或行内块级元素对齐方式<ul>
+<li>左对齐    text-align：left；</li>
+</ul>
+</li>
+<li>居中对齐 text-align：center；</li>
+<li>右对齐   tex-align:  right ；</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>块级元素的对齐方式<ul>
+<li>给这个块级元素宽度，并且margin:0 auto;左右值为auto即可，那么这个块级元素就会在其父级元素水平居中</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/HTML5+css3(3)/">
+    <time datetime="2017-06-28T10:05:43.122Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/HTML5+css3(4)/" rel="prev"><span class="meta-nav">←</span> html+css3(4)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/HTML5+css3(2)/" rel="next">html+css3(2) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

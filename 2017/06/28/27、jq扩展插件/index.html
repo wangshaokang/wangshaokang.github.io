@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="12345$.extend  在jq对象自身上扩展插件$.fn.extend  在jq原型上扩展插件$this.each(cur,function()&amp;#123;&amp;#125;)each里面的this是指当前的元素
+在元素自定义属性上保存属性值attr 只能保存字符串的值jq对象.data用来在元素上" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>jq扩展插件 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345$.extend  在jq对象自身上扩展插件$.fn.extend  在jq原型上扩展插件$this.each(cur,function()&amp;#123;&amp;#125;)each里面的this是指当前的元素 在元素自定义属性上保存属性值attr 只能保存字符串的值jq对象.data用来在元素上保存数据 字符串和对象数据类型 12jq:fadeIn  fadeOut  渐隐渐现 ##html5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jq扩展插件">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/27、jq扩展插件/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="12345$.extend  在jq对象自身上扩展插件$.fn.extend  在jq原型上扩展插件$this.each(cur,function()&amp;#123;&amp;#125;)each里面的this是指当前的元素 在元素自定义属性上保存属性值attr 只能保存字符串的值jq对象.data用来在元素上保存数据 字符串和对象数据类型 12jq:fadeIn  fadeOut  渐隐渐现 ##html5">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.484Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jq扩展插件">
+<meta name="twitter:description" content="12345$.extend  在jq对象自身上扩展插件$.fn.extend  在jq原型上扩展插件$this.each(cur,function()&amp;#123;&amp;#125;)each里面的this是指当前的元素 在元素自定义属性上保存属性值attr 只能保存字符串的值jq对象.data用来在元素上保存数据 字符串和对象数据类型 12jq:fadeIn  fadeOut  渐隐渐现 ##html5">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-27、jq扩展插件" class="post-27、jq扩展插件 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      jq扩展插件
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/27、jq扩展插件/" data-id="cj4gu5blo000q5sr41r3vulvv" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$.extend  在jq对象自身上扩展插件</div><div class="line">$.fn.extend  在jq原型上扩展插件</div><div class="line"></div><div class="line">$this.each(cur,function()&#123;&#125;)</div><div class="line">each里面的this是指当前的元素</div></pre></td></tr></table></figure>
+<p>在元素自定义属性上保存属性值attr 只能保存字符串的值<br>jq对象.data用来在元素上保存数据 字符串和对象数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jq:</div><div class="line">fadeIn  fadeOut  渐隐渐现</div></pre></td></tr></table></figure>
+<p>##html5<br>标签语义化<br><code>以前是object里插入flag控件</code><br>媒体  audio<br>音频   video<br>本地存储<br>canvas </p>
+<p>地理定位<br>表单控件  number</p>
+<p>##IE 条件注释   解决html5 兼容问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> article, aside, footer, header, hgroup, main, nav, section &#123;</div><div class="line">            display: block;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">如果IE版本低于小于9 引入以下js文件</div><div class="line">&lt;!--[if It IE 9]&gt;</div><div class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;html5.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;![endif]--&gt;</div><div class="line"></div><div class="line">如果IE版本小于等于9 引入以下js文件</div><div class="line"> &lt;!--[if Ite IE 9]&gt;</div></pre></td></tr></table></figure></p>
+<p>###html5结构标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">header:头部</div><div class="line">section ：划分区域</div><div class="line">footer：底部</div><div class="line">main：表示文档中唯一主体部分</div><div class="line">nav：导航链接部分</div><div class="line"></div><div class="line">figure：图片 内容标签</div><div class="line">figcaption:图像描述</div><div class="line"></div><div class="line">article:包含文章、博客、文档的标签</div><div class="line">hgroup:包含一组标题</div><div class="line">aside：侧边栏或者广告</div></pre></td></tr></table></figure></p>
+<p>###jq中检测number数据类型公式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.type(n)===&apos;number&apos;?step=n:step++;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/27、jq扩展插件/">
+    <time datetime="2017-06-28T10:05:42.732Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/28、css3属性/" rel="prev"><span class="meta-nav">←</span> css3属性</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/26、ECMAScript/" rel="next">ECMAScript <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

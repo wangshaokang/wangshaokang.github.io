@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="##javaScript:    JS就是一门轻量级的脚本“编程”语言
+##1、编程语言
+
+C   、C++ 、 PHP、 .NET(dot  net)(“刀奈特”)、  c#（c沙浦）、ASP、 ASP.NET 、 Python  、Ruby 、 Go 、 VB、 JavaScript..所有编程" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>原型模式 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##javaScript:    JS就是一门轻量级的脚本“编程”语言 ##1、编程语言  C   、C++ 、 PHP、 .NET(dot  net)(“刀奈特”)、  c#（c沙浦）、ASP、 ASP.NET 、 Python  、Ruby 、 Go 、 VB、 JavaScript..所有编程语言都是面向对象开发的C是面向过程的 ##2、面向对象  对象   万物皆对象  他是一个泛指 类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型模式">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/5.原型模式/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##javaScript:    JS就是一门轻量级的脚本“编程”语言 ##1、编程语言  C   、C++ 、 PHP、 .NET(dot  net)(“刀奈特”)、  c#（c沙浦）、ASP、 ASP.NET 、 Python  、Ruby 、 Go 、 VB、 JavaScript..所有编程语言都是面向对象开发的C是面向过程的 ##2、面向对象  对象   万物皆对象  他是一个泛指 类">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.411Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="原型模式">
+<meta name="twitter:description" content="##javaScript:    JS就是一门轻量级的脚本“编程”语言 ##1、编程语言  C   、C++ 、 PHP、 .NET(dot  net)(“刀奈特”)、  c#（c沙浦）、ASP、 ASP.NET 、 Python  、Ruby 、 Go 、 VB、 JavaScript..所有编程语言都是面向对象开发的C是面向过程的 ##2、面向对象  对象   万物皆对象  他是一个泛指 类">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-5.原型模式" class="post-5.原型模式 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      原型模式
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/5.原型模式/" data-id="cj4gu5bb000045sr4i1t9japt" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##javaScript:    JS就是一门轻量级的脚本“编程”语言</p>
+<p>##1、编程语言</p>
+<blockquote>
+<p>C   、C++ 、 PHP、 .NET(dot  net)(“刀奈特”)、  c#（c沙浦）、ASP、 ASP.NET 、 Python  、Ruby 、 Go 、 VB、 JavaScript..<br>所有编程语言都是面向对象开发的<br>C是面向过程的</p>
+<p>##2、面向对象</p>
+<ul>
+<li>对象   万物皆对象  他是一个泛指</li>
+<li>类      对象的细分</li>
+<li>实例   某一个类别中具体的事物 </li>
+</ul>
+</blockquote>
+<p>生活中的例子<br>我们生活在自然界中，在自然界中的一切事物都是我们要研究的对象（统称为对象） 而我们研究自然界的过程就是面向对象的思想 自然界中把具有相同特点的进行分类（大类中包含小类）当我们需要研究的时候，只需要找出一个类别中的具体事物来研究即可，这个事物就是类的实例</p>
+<p>###在JS中：我们研究JS中的一切事物都是对象  js也是按照对象、类 、实例三层体系架构实现的  js把所有的东西按照特征分成了很多的大类和小类  我们要研究其中的某一类，只需要研究里面的一个实例即可</p>
+<p>Math.PI   3.141592653…<br>Math.pow（n,m）获取n 的m次幂<br>Math.sqrt（n)  给n开平方  </p>
+<p>###研究数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var ary=[12,34]-----------字面量创建</div><div class="line"></div><div class="line">var ary2=new  Array(12);----实例创建</div><div class="line">1、new Array（12）括号中的数字是设定数组的长度，而不是给增加值</div><div class="line">2、new Array（&apos;12&apos;） 这样才是给数组第一项设定为12 ，数组有一项</div><div class="line">3、new Array（12，23） 这样数组有两项，分别是12 和23</div></pre></td></tr></table></figure></p>
+<p>##学习面向对象<br>1、学会自己创建类和实例<br>2、掌握原型机制（掌握实例和类的关系）<br>3、掌握类的继承、封装、多态<br>4、基于面向对象思想封装组件插件等</p>
+<p>##创建的类第一个字母最好是大写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function Person()&#123;</div><div class="line">// 看不见  **var obj=&#123;&#125;**  浏览器会默认去做</div><div class="line">// 看不见  **return obj**  浏览器会默认去做</div><div class="line">&#125;</div><div class="line"></div><div class="line">1、var a=Person ();此时的person仅仅是一个普通的函数   走的是函数那一套流程：</div><div class="line">创建私有作用域==》赋值/预解释==》依次执行代码（私有变量还是全局变量）--》作用域）==》作用域是否销毁   </div><div class="line">         ----- “生命周期”</div><div class="line">console.log(a) ---&gt;undefined  因为函数执行的时候没有返回值</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">2、var p=new Person(); 这样执行 person就是一个类了  他的执行步骤：</div><div class="line">   1）也和普通函数执行一样，创建一个私有作用域。进行形参赋值和预解释</div><div class="line">   2）new 这样执行  在预解释完成后，浏览器会默认的在私有作用域创建一个对象，而函数中的this就指向这个对象</div><div class="line">   3）然后再和普通函数一样，代码从上到下执行（作用域链）</div><div class="line">   4）new 这样执行，在代码执行完成后，会默认的把第二步中我们创建的这个对象返回</div><div class="line">   ==&gt;这种执行方式叫做构造函数模式：new Person（）；Person（）就是一个类（自定义类） 而返回的结果p就是当前类的一个实例</div><div class="line">   </div><div class="line">   console.log(p);</div></pre></td></tr></table></figure></p>
+<p>###区分this的情况<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">普通函数执行，方法中的this取决于函数执行的时候前面是否有“.”  有的话点前面是谁 this 就指向谁 ，没有的会话this就指向window</div><div class="line"></div><div class="line">构造函数模式下，方法中的this指向的是当前类的一个实例</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function Student()&#123;</div><div class="line"> this.name=name;</div><div class="line"> this.age=age;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var str1=new Student();</div><div class="line">var str2=new Student;在构造函数模式执行的时候，如果不需要传递参数，后面的小括号可加可不加， 没什么区别  </div><div class="line"></div><div class="line">通过构造函数创建出来的实例都是相互独立的个体，互相不影响，而在构造函数体中this.xxx=xxx 都相当于再给当前的实例增加属于自己的私有属性</div></pre></td></tr></table></figure>
+<p>####实例之间是相互独立的  this.xxx=xxx 其实是给实例增加的私有的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Fn(name)&#123;</div><div class="line">     var school=&apos;珠峰&apos; //school仅仅是私有作用域中的一个私有变量，在函数体中只有this.xxx=xxx才是给实例设置私有的属性，而私有变量和实例没有必然的联系</div><div class="line">     this.name=name;</div><div class="line">     this.say=function()&#123;</div><div class="line">        console.log(&apos;my name is &apos;+name)</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">var f1=new Fn(&apos;jia&apos;)</div><div class="line">console.log(f1)  ----实例：</div><div class="line">如果我们手动返回的结果是一个基本数据类型的值，对最后的实例没有任何影响</div><div class="line">如果我们手动返回的结果是一个引用数据类型的值，会把默认返回的实例给覆盖，此时的f1就不是类的实例了</div><div class="line">var f2=new Fn(&apos;han&apos;)</div></pre></td></tr></table></figure>
+<p>####in  不管当前的属性是私有的还是公有的，只要有返回的结果就是true   </p>
+<p>####hasOwnProperty检测属性是否是当前这个对象的私有属性   只有私有的属性才会返回true ，即使你在公有里面有这个属性，但是如果私有中没有，返回的结果也是false</p>
+<p>###临时构建一个小方法：  检测一个对象是否拥有某个公有的属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function hasPublicPorperty(obj,attr)&#123;</div><div class="line">  return (attr in obj)&amp;&amp;! hasOwnPorperty(attr)</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##单例模式的误区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var sum=&#123;&#125;;</div><div class="line">var sum=(function()&#123;</div><div class="line">  return &#123; &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<p>##构造函数模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function person=&#123;</div><div class="line">&#125;</div><div class="line">var p=new Person;</div></pre></td></tr></table></figure></p>
+<h3 id="外界面试官认为-只有形成一个不销毁的私有作用域才叫闭包"><a href="#外界面试官认为-只有形成一个不销毁的私有作用域才叫闭包" class="headerlink" title="外界面试官认为 只有形成一个不销毁的私有作用域才叫闭包"></a>外界面试官认为 只有形成一个不销毁的私有作用域才叫闭包</h3><p>#原型模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function Person(name)&#123;</div><div class="line">    this.name=name;</div><div class="line">    this.say=function()&#123;</div><div class="line">    console.log(&apos;my name is&apos;+this.name)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var p1=new Person(&apos;网&apos;)</div></pre></td></tr></table></figure></p>
+<p>1、每一个函数数据类型（普通函数、类（内置类  自定义类））都天生自带一个属性 —prototype   这个属性的属性值是一个对象数据类型的的结果<br>2、prototype 对应的对象中，有一个天生自带的属性，constructor（构造函数），这个属性的属性值指向当前函数本身<br>3、每一个对象数据类型（普通对象、实例、prototype、函数也是对象）都有一个天生自带的属性: <strong>proto</strong>   这个属性指向所属类的原形（prototype） </p>
+<blockquote>
+<p>对象数据类型的基类（最底层Object),它的原型上没有<strong>proto</strong>这个属性</p>
+<p>类的原型（prototype)上存储的属性和方法都是实例的公有的属性方法</p>
+<p>##原型链<br>先找自己私有的属性，如果私有的属性中没有drink ，则继续到所属类的原型上查找。。。一直找到Object.prototype为止</p>
+</blockquote>
+<p>p.<strong>proto</strong>.drink( );  跳过了私有的查找，直接找到原型上的公有属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">p1.hasOwnProperty(); ---&gt;this指向p1;</div><div class="line">p1.__proto__.hasOwnProperty();---&gt; tihs指向p1.__proto__</div><div class="line">p1.__proto__.__proto__.hasOwnProperty(); this指向基类的原型上的方法</div><div class="line"></div><div class="line">通过以上三种方法，我们都可以把hasOwnProperty方法执行，但是有所区别：方法在执行的时候，方法中的this是不一样的：在万恶的IE浏览器下，为了保护原型，屏蔽了我们使用__proto__属性</div></pre></td></tr></table></figure>
+<p>###构造原型模式</p>
+<p>在内置类的原型上扩展一个方法  如果这个方法之前人家有，我们这样操作会把人家覆盖掉，这样非常不好  所以我们在取方法名的时候 最好加一个特殊的前缀<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Object.prototype.myHasPublicProperty=function myHasPublicProperty()&#123;      </div><div class="line">   var attr=arguments[0];</div><div class="line">   //this  需要处理的那个实例；</div><div class="line">   return （attr in this）&amp;&amp;！this.hasOwnProperty(attr);</div><div class="line">&#125;</div><div class="line">console.log(f.myHasPublicProperty(&apos;m&apos;));</div></pre></td></tr></table></figure></p>
+<p>思考题：<br>数组中存在一个方法：slice ，在一个数组中进行查找，找到我们需要的部分，最后返回一个新数组，原数组不变<br>ary.slice(n,m)<br>如果n或者m两者都是负数<br>如果是小数<br>如果是非有效数字<br>如果传递的n&gt;m呢<br>如果传递的n或者m或者两者都大于最大长度</p>
+<p>Array.prototype.mySlice=function mySlice(){</p>
+<p>实现你的代码，完成和内置slice一模一样的功能，要求尽可能的考虑更多情况  不能使用数组中内置的方法<br>}</p>
+<p>###基于原型进阶-链式写法</p>
+<p> 链式写法：需要保证每一次执行方法返回的结果依然是当前类的一个实例，这样就可以调取原型上的方法了。。<br>1、 ary.sort(function(a,b){<br> return   a-b;<br>}).slice().reverse().push()</p>
+<p>2、Array.prototype.mySlice=function mySlice(){<br>   return  this ;<br>}<br>ary.mySlice().push()</p>
+<p>3、思考题  (5).plus(3).minus(2) =&gt;6   在Number的原型上扩展方法：plus和minus不仅可以实现加减操作而且还可以实现链接写法  </p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/5.原型模式/">
+    <time datetime="2017-06-28T10:05:42.282Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/6、重构对象模型/" rel="prev"><span class="meta-nav">←</span> 重构对象模型</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/4、工厂模式/" rel="next">工厂模式 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

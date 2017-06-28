@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main">
+  
+    <article id="post-4、工厂模式" class="post-4、工厂模式 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/4、工厂模式/">工厂模式</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/4、工厂模式/" data-id="cj4guomim001v5sr4fnlz603v" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <ul>
+<li>周啸天<ul>
+<li>QQ    1282347298</li>
+<li>tel     13041086186/ 18310612838</li>
+<li>微信 zhouxiaotian1990</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>##in  —-验证某一个属性属于这个对象(不管是私有的属性还是公有的属性  只要有返回的结果就是true)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(name in obj)</div><div class="line">如果name不加引号 他的意思是把name这个变量存储值作为检测的依据，来检测存储的这个值是否为obj的一个属性，加引号‘name’就是属性名，验证obj中是否有name这个属性</div></pre></td></tr></table></figure></p>
+<p>学习方法：</p>
+<ul>
+<li>基础知识可以死记硬背   但是做一个需求前一定要动脑思考  JS中的东西  都是先有中文的思路  然后拿基础知识去实现的过程    每天笔记一定要做    每天一定要给自己半个小时的时候，从头到尾看笔记——–坚持一定时间，你会发现所有的知识点自动在你的脑海中浮现一张关系网     </li>
+</ul>
+<p>####预解释<br>var num ；（undefined——-全局下有一个叫做num的变量了  在全局下声明的变量相当于给window增加了一个属性名—-window.num=undefined<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">自执行函数执行---&gt;私有的作用域（栈内存）</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>私有作用域中 只有形参和预解释过的变量是私有变量  其余的都不是</p>
+</blockquote>
+<p>###逻辑| |  和  逻辑&amp;&amp;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">A| | B 首先看A是真是假  如果A是真，返回的是A值，否则返回B的值</div><div class="line">1||2  ---&gt;1</div><div class="line">0||2  ---&gt;2</div><div class="line"></div><div class="line">A&amp;&amp;B  首先看A是真还是假，如果A是真，返回的是B的值  否则返回A的值</div><div class="line">1&amp;&amp;2  ---&gt;2</div><div class="line">0&amp;&amp;2  ---&gt;0</div><div class="line"></div><div class="line">（逻辑&amp;&amp;）  的优先级高于  （逻辑||）</div><div class="line">0||1&amp;&amp;2||3 </div><div class="line"> ---&gt;0||2||3---&gt;2</div><div class="line"></div><div class="line">运算&gt;比较&gt;逻辑&gt;赋值</div></pre></td></tr></table></figure></p>
+<p>###非严格模式下<br>arguments [0]和形参在非严格模式下是存在映射关系的  一个变了另一个也跟着变了  </p>
+<p>###严格模式下<br>“use strict”  —–&gt;使用js中的严格模式<br>arguments和形参之间没有映射关系了</p>
+<blockquote>
+<p>arguments.callee :指向的是当前函数本身，这里代表的就是当前的函数fn<br>arguments.callee.caller 指向的是当前函数是在哪个函数下执行的  那么caller就指向这个函数  如果在window下执行的  caller值是null   </p>
+<p>####严格模式下不允许我们使用arguments的callee 和caller属性</p>
+</blockquote>
+<p>###单例模式是我们以后项目开发中业务逻辑编写最常用的设计模式在业务逻辑相对复杂的时候，我们会基于单例模式引入“发布订阅模式”、“Promise模式”。。。</p>
+<p>###构造原型模式是我们以后项目中封装类库、组件、插件、框架最常用的设计模式</p>
+<p>###单例模式：解决了变量冲突  实现了分类分组  在单例模式中我们的对象叫做“命名空间”：单例模式把实现和描述同一件事物的属性和方法进行分类归纳  然后汇总的同一个命名空间下，不同的命名空间互不冲突<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">真实项目中我们实现模块化开发基本上都采用单例模式</div></pre></td></tr></table></figure></p>
+<p>###构造函数模式的目的<br>为了创建一个自定义类 ，并且创建这个类的实例</p>
+<p>##构造模式和工厂模式的区别？<br>1、执行的时候<br>普通函数执行—–&gt;sun( );<br>构造函数模式—–&gt;new Sum( );<strong>通过new执行后，我们sun就是一个类  而函数执行返回的值就是sum类的一个实例</strong><br>2、在JS中所有的类都是函数数据类型的，他通过new执行变成了一个类，但是他本身也是一个普通的函数<br>JS当中所有的实例都是对象数据类型的<br>3、 在构造函数模式中，类中（函数体中）出现的this.xxx=xxx 中的this是当前类的一个实例<br>4、在构造函数模式中new Fn()执行，如果Fn不需要传递参数的话，后面的小括号可以省略<br>5、this的四种情况：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1、自执行函数中this永远是window</div><div class="line">2、函数执行前 看前面有没有‘.’   没有---&gt;this指的是window </div><div class="line">有-----&gt;this就是当前的元素</div><div class="line">3、给元素的某个事件绑定一个方法  当事件触发的时候，执行这个方法   方法中的this指的是当前的绑定点击事件的元素</div><div class="line">4、在构造函数中，类中（函数体中）出现的this.xxx=xxx中的this就是当前类的一个实例</div><div class="line">5、call/apply第一个参数指定谁 方法中的this就是谁</div></pre></td></tr></table></figure></p>
+<p>6、类也有普通函数的一面，当函数执行的时候，var num其实只是当前形成的私有作用域中的私有变量  他和我们的这个实例没有任何关系，只有this.xxx=xxx才相当于给f1这个实例增加私有的属性和方法  才和我们f1有关系</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/4、工厂模式/">
+    <time datetime="2017-06-28T10:05:42.265Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-3、构造函数" class="post-3、构造函数 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/3、构造函数/">构造函数</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/3、构造函数/" data-id="cj4gu5bax00035sr4zwr84xqg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>js中this当前行为的主体</p>
+<p>1、全局中的this是window<br>主要研究函数中的this<br>2、函数执行的时候方法中的this要看函数执行的时候要看前面有没有”.”</p>
+<ul>
+<li>如果前面有点  点前面是谁 this就是谁</li>
+<li>如果没有点  this就是window<br>3、函数中的this和函数在哪里执行没有关系 只看<strong>执行的时候</strong><br>4、自执行函数里面的this永远是window<br>5、给元素绑定事件，事件触发的时候，里面的this 就是当前绑定事件的元素<br>6、给定时器的this也是window<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var len=5;</div><div class="line">    var fn=function()&#123;</div><div class="line">        console.log(this);</div><div class="line">   &#125;;</div><div class="line">    var main=&#123;</div><div class="line">        fn: function (fn) &#123;</div><div class="line">           console.log(this);</div><div class="line">            fn();</div><div class="line">            arguments[0]();</div><div class="line">              console.log(this);</div><div class="line">        &#125;,</div><div class="line">        len:10</div><div class="line">    &#125;;</div><div class="line">    main.fn(fn);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fn1()&#123;console.log(this)&#125;;</div><div class="line">function fn2()&#123;&#125;;</div><div class="line">function fn3()&#123;&#125;;</div><div class="line">function fn4()&#123;&#125;;</div><div class="line">var ary=[fn1,fn2,fn3,fn4];</div><div class="line">ary[0]();</div></pre></td></tr></table></figure>
+<p>##单例模式  (缺点：类似手工作坊)<br>把描述同一个事物（同一个对象）的属性和方法放在一个内存空间  起到分组的作用  即使属性名相同也不会发生冲突 </p>
+<p>##工厂模式<br>把实现一个功能的代码 放到一个函数里面  减少冗长的代码  “函数封装”  “高内聚低耦合”  减少页面中的重复代码  提高代码重复利用率</p>
+<p>###模块化开发  ：<br>项目中 开发模块比较多的时候，多人协作 每个人负责一个模块 最终将代码合在一起 单例模式中把flightFn和trainFn成为“命名空间”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var flightFn=&#123;</div><div class="line">    name:&apos;zhufeng&apos;</div><div class="line">    fn:funciton()&#123;</div><div class="line">      </div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>##面向对象<br> 在很多语言中都有面向对象<br> 对象是一个泛指</p>
+<ul>
+<li>类：对对象的具体细分  </li>
+<li>实例：类中某一个具体事物</li>
+<li>类的封装 继承  多态</li>
+<li>继承  子类继承父类<ul>
+<li>多态：多种状态 （重载和重写） <h2 id="JS中没有重载"><a href="#JS中没有重载" class="headerlink" title="JS中没有重载"></a>JS中没有重载</h2>重写：子类重写父类<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr2=new Array(1,2,3,4) //实例创建</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>##构造函数<br>创建一个自定义类  并且创建这个类的实例<br>构造函数执行  它的返回值是一个实例</p>
+<p>###构造函数模式执行的时候，如果指定返回的  是一个引用数据类型，那么返回的就是这个引用数据类型</p>
+<p>###在类中的this.xxx是给 当前实例添加属性  类中的this是当前实例</p>
+<p>###类本身是个函数  类都是函数数据类型 </p>
+<p>###实例就是对象数据类型</p>
+<blockquote>
+<p>工厂模式和构造函数模式的区别<br>1、工厂模式 普通函数执行 构造函数通过new来执行  默认创建一个对象 将其返回的值作为这个类的实例<br>2、执行的时候形成一个私有作用域—》形参赋值—》预解释—》代码 从上到下执行<br>不同<br>构造函数模式执行的时候，会默认创建一个对象  默认返回的实例<br>工厂模式 自己手工创建</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var obj1=&#123;&#125; 字面量创建</div><div class="line">var obj2=new Object() 实例创建</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">funciton sum(name,age)&#123;</div><div class="line">执行之前浏览器默认创建一个对象</div><div class="line">this.name=name;  给当前实例添加私有属性</div><div class="line">this.age=age;   </div><div class="line">默认这个对象返回</div><div class="line">&#125;</div><div class="line">var op=new sum(&apos;wang&apos;,15)</div><div class="line">console.log(op)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>instanceof 用来检测一个实例是否属于这个类</p>
+</blockquote>
+<p>###数字<br>parseFloat(.3)===&gt; 0.3<br>parseFloat(.3px)===&gt; NaN<br>parseInt(.3)===&gt; 0<br>parseInt(.3px)===&gt;NaN</p>
+<p>##字符串<strong>（所见即所得）</strong><br>parseFloat(‘.4px’)===&gt;0.4<br>parseFloat(‘.px’)===&gt;NaN<br>parseInt(‘.4’)===&gt;NaN<strong>（所见即所得）</strong><br>parseInt(‘.4px’)===&gt;NaN<strong>（所见即所得）</strong></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/3、构造函数/">
+    <time datetime="2017-06-28T10:05:42.246Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-2、预解释" class="post-2、预解释 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/2、预解释/">预解释</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/2、预解释/" data-id="cj4gu5b8a00015sr4jcajgtbw" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <blockquote>
+<p>预解释的时候带var 和function 的只声明一次  但是function可以重复定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">fn();//输出函数最终在预解释中的定义的值123    </div><div class="line">function fn()&#123;console.log(12)&#125;;</div><div class="line">fn();//输出函数最终在预解释中的定义的值123</div><div class="line">function fn()&#123;console.log(13)&#125;;</div><div class="line">fn();//输出函数最终在预解释中的定义的值123</div><div class="line">fucntion fn()&#123;console.log(14)&#125;;</div><div class="line">var fn=555;</div><div class="line">function fn()&#123;console.log(123)&#125;;</div><div class="line">fn();</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##堆内存<br>堆内存用来存储引用数据类型的值</p>
+<p>##栈内存<br>供JS代码执行的环境</p>
+<ul>
+<li>window (栈内存)  关闭浏览器的时候就会销毁 </li>
+<li>一般情况下函数执行形成私有作用域(栈内存) 执行完成代码  就会立即销毁</li>
+<li></li>
+</ul>
+<p>##内存释放<br>浏览器默认机制，浏览器每间隔一段时间 会把那些没有被占用的 内存回收</p>
+<blockquote>
+<p>在私有作用域(栈内存)中，返回一个  引用数据类型  被外部接收  就不能被销毁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">return &#123;</div><div class="line">   name:wang;</div><div class="line">   age:25;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">var f=fn(); //fn形成的栈内存不会销毁 他被赋值给一个变量 </div><div class="line">console.log(f);</div><div class="line">fn();// 执行完成后  可以被销毁 </div><div class="line">fn()();</div></pre></td></tr></table></figure></p>
+<p>不立即销毁  如果返回的是一个函数数据类型    要等返回值执行完后，fn才能销毁</p>
+<p>给元素绑定事件的时候 也会涉及到栈内存不销毁</p>
+</blockquote>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/2、预解释/">
+    <time datetime="2017-06-28T10:05:42.229Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-1、变量及作用域" class="post-1、变量及作用域 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/1、变量及作用域/">变量及作用域</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/1、变量及作用域/" data-id="cj4gu5b8d00025sr4ovo9ouwh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##git 讲义</p>
+<p> 基本数据类型 </p>
+<ul>
+<li>number</li>
+<li>string</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined<br>引用数据类型</li>
+<li>对象数据类型 <ul>
+<li>Array </li>
+<li>Date</li>
+<li>Object</li>
+<li>RegExp</li>
+</ul>
+</li>
+<li>函数数据类型<ul>
+<li>function</li>
+</ul>
+</li>
+</ul>
+<p>##全局作用域<br>浏览器在加载html时候，会提供一个供全局JS代码执行的一个环境  —-&gt;window</p>
+<p>##预解释(变量提声)</p>
+<ul>
+<li>在当前作用域中，JS代码执行之前，把所有带var 和function 关键字的进行声明或者定义——叫做<strong>预解释</strong></li>
+<li>预解释的时候，带var 只声明 不定义 带function预解释的时候，声明加定义</li>
+</ul>
+<p>##声明<br>告诉浏览器文档中有一个叫做xxx的变量</p>
+<p>##定义<br> 告诉浏览器有一个叫做xxx的变量并且已经赋值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.log(num) //undefined</div><div class="line">var num=12;</div><div class="line">console.log(num) //</div></pre></td></tr></table></figure></p>
+<p>##全局变量<br>在全局作用域下声明的变量</p>
+<p>##私有变量<br>在私有作用域下声明的变量</p>
+<p>##私有作用域<br>函数执行  将函数里的JS代码加载运行 也需要一个供函数内js代码执行的环境</p>
+<ul>
+<li>给形参赋值</li>
+<li>进行预解释</li>
+<li>从上到下执行<br>在私有作用域中声明的变量（形参和预解释的变量）</li>
+</ul>
+<p>##作用域链<br>如果在私有作用域中遇到一个变量，首先看是不是形参或者有没有在域解释的时候声明过 如果没有声明过也不是形参  就会去上级作用域中查找   一直找到window为止<br>   如何看上级作用域<br>   就看函数是在哪里定义的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var num=20;</div><div class="line">function fn()&#123;</div><div class="line">   return function()&#123;</div><div class="line">      num=9;</div><div class="line">      ++num;</div><div class="line">      console.log(num);//输出值为10; </div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">var function=fn();</div><div class="line">console.log(num);//输出值为10;</div></pre></td></tr></table></figure></p>
+<p>###不管if条件是否成立 都会进行预解释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(num);//输出结果为undefined</div><div class="line">if(false)&#123;</div><div class="line">   var num=10;</div><div class="line">&#125;</div><div class="line">console.log(num);//输出结果为undefined</div></pre></td></tr></table></figure></p>
+<p>###预解释的时候不会声明等号右边的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fn();//报错</div><div class="line">var fn=function()&#123;</div><div class="line">   console.log(&apos;function&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###return 下面的代码虽然不执行  也要进行预解释；但是return 右边 不会进行预解释  因为把它当做一个值返回</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/1、变量及作用域/">
+    <time datetime="2017-06-28T10:05:42.207Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="post-hello-world post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/hello-world/" data-id="cj4gtzwgx00005sr405kbm6fg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/hello-world/">
+    <time datetime="2017-06-28T09:50:25.784Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+  
+    <nav id="pagination">
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+      </nav>
+    </nav>
+  
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

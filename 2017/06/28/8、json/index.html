@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="##JSON :一种数据格式，主要应用于前后端交互，前台向后台发送请求时，后台返回返回的基本是JSON格式的数据
+##JSON对象和JSON字符串
+###1、JSON对象和JS对象类似，但是属性名必须用’””‘(双引号)包起来，属性值如果是字符串也要用双引号抱起来12var obj=&amp;#123;na" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>json | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##JSON :一种数据格式，主要应用于前后端交互，前台向后台发送请求时，后台返回返回的基本是JSON格式的数据 ##JSON对象和JSON字符串 ###1、JSON对象和JS对象类似，但是属性名必须用’””‘(双引号)包起来，属性值如果是字符串也要用双引号抱起来12var obj=&amp;#123;name:&amp;apos;zhufeng&amp;apos;,age:8&amp;#125;  普通对象var obj=&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="json">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/8、json/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##JSON :一种数据格式，主要应用于前后端交互，前台向后台发送请求时，后台返回返回的基本是JSON格式的数据 ##JSON对象和JSON字符串 ###1、JSON对象和JS对象类似，但是属性名必须用’””‘(双引号)包起来，属性值如果是字符串也要用双引号抱起来12var obj=&amp;#123;name:&amp;apos;zhufeng&amp;apos;,age:8&amp;#125;  普通对象var obj=&amp;#">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.987Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="json">
+<meta name="twitter:description" content="##JSON :一种数据格式，主要应用于前后端交互，前台向后台发送请求时，后台返回返回的基本是JSON格式的数据 ##JSON对象和JSON字符串 ###1、JSON对象和JS对象类似，但是属性名必须用’””‘(双引号)包起来，属性值如果是字符串也要用双引号抱起来12var obj=&amp;#123;name:&amp;apos;zhufeng&amp;apos;,age:8&amp;#125;  普通对象var obj=&amp;#">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-8、json" class="post-8、json post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      json
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/8、json/" data-id="cj4gu5bea000a5sr4ub6wuggo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##JSON :一种数据格式，主要应用于前后端交互，前台向后台发送请求时，后台返回返回的基本是JSON格式的数据</p>
+<p>##JSON对象和JSON字符串</p>
+<p>###1、JSON对象和JS对象类似，但是属性名必须用’””‘(双引号)包起来，属性值如果是字符串也要用双引号抱起来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;name:&apos;zhufeng&apos;,age:8&#125;  普通对象</div><div class="line">var obj=&#123;&quot;name&quot;:”zhufeng&quot;,&quot;age&quot;:8&#125; JSON对象</div></pre></td></tr></table></figure></p>
+<p>###2、JSON字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var jsonStr=&apos;&#123;&quot;name&quot;:&quot;zhufeng&quot;,&quot;age&quot;:8&#125;&apos;</div><div class="line">var jsonStr=&apos;[  &#123;&quot;name&quot;:&quot;zhufeng&quot;,&quot;age&quot;:8&#125;  ]&apos;</div></pre></td></tr></table></figure></p>
+<p>window上有一个JSON属性对象<br>提供了两个方法</p>
+<blockquote>
+<p>1、JSON.parse  将JSON格式的字符串转化为JSON格式的对象<br>var jStr1=JSON.parse(jsonStr1);</p>
+<p>2、JSON.stringify  将普通格式/JSON格式的对象转化为JSON格式字符串<br>var objs={“name”:”zhufeng”,”age”:8}</p>
+</blockquote>
+<p>###在不兼容（不兼容IE6 -7）的情况下 需要用到eval<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var json1=&apos;&#123;&quot;name&quot;:&quot;zhufeng&quot;&#125;&apos;</div><div class="line">var date=eval(&apos;(&apos;+json1+&apos;)&apos;)</div></pre></td></tr></table></figure></p>
+<p>##处理兼容性(将字符串转化为JSON对象)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var obj2=&apos;&#123;&quot;name&quot;:&quot;zhufeng&quot;&#125;&apos;</div><div class="line">var  sum=&quot;JSON&quot; in window？JSON.parse(obj2):eval(&apos;(&apos;+obj2+&apos;)&apos;);</div></pre></td></tr></table></figure></p>
+<p>##简单交互</p>
+<ul>
+<li>ajax :异步请求  局部刷新<br>需要XMLHttpRequest<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">var xhr=new XMLHttpRequest //生成了一个的实例  在这个实例里面提供了我们发送请求和接收数据的  属性方法</div><div class="line"></div><div class="line">1、要发送请求</div><div class="line">xhr.open(&apos;get&apos;,&apos;../date.txt&apos;,true)</div><div class="line">**//  获取方式  请求方式 get post</div><div class="line"> // 请求地址  &apos;../data.txt&apos;**</div><div class="line">2、xhr.onreadystatechange=function()&#123;</div><div class="line">  //监听请求&#125;</div><div class="line"> // readystate：0，1，2，3，4</div><div class="line">  //如果是4的话说明成功完成发送请求  如果请求成功  状态码 如果http请求成功发送请求  基本是200一些开头三位数也代表成功  通常访问一个不存在的网页，返回的http状态码 404；</div><div class="line">  status http 请求状态码</div><div class="line">  readyState ajax 状态码</div><div class="line">  if(this.readyState===4&amp;&amp;this.status==200)&#123;  console.log(xhr.responseText) </div><div class="line">   &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  xhr.send();  发送</div><div class="line">  </div><div class="line"></div><div class="line"></div><div class="line">2、监听请求响应（还需要判断是否成功，是否拿到数据）</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>###</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/8、json/">
+    <time datetime="2017-06-28T10:05:42.373Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/9、oop(Object Oriented  Programming) 面向对象/" rel="prev"><span class="meta-nav">←</span> oop</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/7、改变this的指向/" rel="next">改变this的指向 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

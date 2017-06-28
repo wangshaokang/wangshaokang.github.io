@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="##基本数据类型直接对值进行操作
+##引用数据类型1、浏览器提供给代码运行的环境，代码在这个里从上到下的执行2、当遇到引用数据类型的时候，浏览器会开辟一个新的内存空间，将引用数据类型中的代码当做字符串存到这里面3、开辟的空间会返回给对象一个地址，那么此时这个对象存储的不是代码而是一个地址4、当将这个" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>JavaScript基础知识(2) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##基本数据类型直接对值进行操作 ##引用数据类型1、浏览器提供给代码运行的环境，代码在这个里从上到下的执行2、当遇到引用数据类型的时候，浏览器会开辟一个新的内存空间，将引用数据类型中的代码当做字符串存到这里面3、开辟的空间会返回给对象一个地址，那么此时这个对象存储的不是代码而是一个地址4、当将这个对象赋值给另一个对象的时候，其实赋值过程是将地址传递给另一个对象也就是说，这两个对象将要访问同一个地">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础知识(2)">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/JavaScript基础知识(2)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##基本数据类型直接对值进行操作 ##引用数据类型1、浏览器提供给代码运行的环境，代码在这个里从上到下的执行2、当遇到引用数据类型的时候，浏览器会开辟一个新的内存空间，将引用数据类型中的代码当做字符串存到这里面3、开辟的空间会返回给对象一个地址，那么此时这个对象存储的不是代码而是一个地址4、当将这个对象赋值给另一个对象的时候，其实赋值过程是将地址传递给另一个对象也就是说，这两个对象将要访问同一个地">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.293Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript基础知识(2)">
+<meta name="twitter:description" content="##基本数据类型直接对值进行操作 ##引用数据类型1、浏览器提供给代码运行的环境，代码在这个里从上到下的执行2、当遇到引用数据类型的时候，浏览器会开辟一个新的内存空间，将引用数据类型中的代码当做字符串存到这里面3、开辟的空间会返回给对象一个地址，那么此时这个对象存储的不是代码而是一个地址4、当将这个对象赋值给另一个对象的时候，其实赋值过程是将地址传递给另一个对象也就是说，这两个对象将要访问同一个地">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-JavaScript基础知识(2)" class="post-JavaScript基础知识(2) post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      JavaScript基础知识(2)
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/JavaScript基础知识(2)/" data-id="cj4guoly6001r5sr4xj57ddjz" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##基本数据类型<br>直接对值进行操作</p>
+<p>##引用数据类型<br>1、浏览器提供给代码运行的环境，代码在这个里从上到下的执行<br>2、当遇到引用数据类型的时候，浏览器会开辟一个新的内存空间，将引用数据类型中的代码当做字符串存到这里面<br>3、开辟的空间会返回给对象一个地址，那么此时这个对象存储的不是代码而是一个地址<br>4、当将这个对象赋值给另一个对象的时候，其实赋值过程是将地址传递给另一个对象<br>也就是说，这两个对象将要访问同一个地址，也就是说他们操作的是同一分代码</p>
+<p>##字符串的拼接<br>在JS中其他数据类型+=一个字符串的话，全部会变成字符串</p>
+<p>##在JS数据类型的检测</p>
+<p>###typeof （value)<br>返回值永远是一个<strong>字符串</strong>里面包着数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">typeof undefined--------&apos;undefined&apos;</div><div class="line">typeof &apos;&apos;--------------&apos;string&apos;</div><div class="line">typeof 1------------------&apos;number&apos;</div><div class="line">typeof []------------------&apos;object&apos;</div><div class="line">typeof &#123;&#125;------------------&apos;object&apos;</div><div class="line">typeof true ---------------&apos;boolean&apos;</div><div class="line">typeof null----------------&apos;object&apos;</div><div class="line">typeof function()&#123;&#125;--------&apos;function&apos;</div><div class="line"></div><div class="line">typeof不能具体细分object下面的数据类型</div><div class="line">typeof认为null也是object下面的数据类型</div></pre></td></tr></table></figure>
+<p>###instanceof<br>运算返回的值是布尔类型的值<br>判断已知对象数据类型的方法<br>（判断一个实例是否是属于这个类）（例如 []是不是属于数组类）<br>instanceof在检测时候，基本数据类型不能检测<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">value instanceof Class</div></pre></td></tr></table></figure></p>
+<p>###constructor<br>[1,2,3],constructor===Array</p>
+<p>===绝对比较</p>
+<p>###Object.prototype.toString.call()</p>
+<p>##数据类型之间的比较</p>
+<ul>
+<li>对象==对象  永远是false<ul>
+<li>({}=={})   ([]==[])  </li>
+</ul>
+</li>
+<li>数字==字符串  字符串调用Number()方法，将字符串转为数字，然后在进行比较</li>
+</ul>
+<ul>
+<li>数字==布尔   布尔转为数字类型数据，调用Number()<br>true=1  false=0</li>
+</ul>
+<p>-数字==对象  对象调用.toString()变成字符串，字符串调用Number()方法</p>
+<p>只要两侧有引号的字符都是字符串，字符串在JS中没有意义</p>
+<p>null  预留一个位置<br>undefined    本应有值  但是没有</p>
+<p>**对象和其他数据类型比较的时候，首先都要转为字符串</p>
+<blockquote>
+<p>最终比较的时候，其实都是数字在比较</p>
+<p>###规律<br>1、对象==对象  false<br>2、对象==字符串  对象转为字符串<br>3、对象==数字  对象转为字符串，字符串转为数字<br>4、对象==布尔  都转为数字<br>5、字符串==数字  字符串转为数字<br>6、字符串==布尔 都转为数字<br>7、数字==布尔  布尔转为数字<br>8、null==undefined         true<br>9、null===undefined       false<br>10、NaN==NaN        rd  false</p>
+</blockquote>
+<p>##判断语句</p>
+<p>###if(条件){条件成立执行的代码} </p>
+<p>###if(条件){条件成立执行的代码}else{条件不成立执行的代码}</p>
+<p>###if(条件1){条件1成立执行的代码};<br>        else if(条件2){条件2成立执行的代码};<br>        else if(条件3){条件3成立执行的代码};<br>        else{以上条件都不成立执行的代码}<br>     }</p>
+<p>####querySelector   通过选择器查找  —获取DOM对象</p>
+<p>####</p>
+<p>####switch  绝对比较<br>如果break跟这个条件成立的话，就跳出（中断）判断，不会继续执行哦按段了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var n=1;</div><div class="line">switch(n)&#123;</div><div class="line">case 0:</div><div class="line">  alert(2);</div><div class="line">  break;</div><div class="line">case 1:</div><div class="line">  alert(10);</div><div class="line">  break;</div><div class="line">default:</div><div class="line">  alert（以上都不成立）;</div></pre></td></tr></table></figure></p>
+<p>###三元运算符（条件运算符/三目运算符）<br>基于某些条件对变量进行赋值的条件运算符；<br>声明  变量名=（条件)?条件成立是将这个值给变量:条件不成立将这个值给到变量</p>
+<p>void（0）用来占位的</p>
+<p>i0?(alert(‘ok’),console.log(‘ok’)):void  0;<br>如果要执行的是多个语句 需要将这些语句放在一个括号里，用逗号隔开</p>
+<p>##循环</p>
+<p>###for循环<br>for循环适用于已知循环次数</p>
+<ul>
+<li>声明一个变量  设置初始值</li>
+<li>设定循环范围</li>
+<li>执行初始值的累加操作</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">for(var i=0;i&lt;4;i++)&#123;</div><div class="line"> </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>####break出现在循环体中，break后面的代码不在执行  整个循环就结束了</p>
+<p>####continue出现在循环体中，循环体continue后面的代码不执行，但是循环体依然正常</p>
+<blockquote>
+<p>i++  ——先赋值再累加<br>++i ——-先累加再赋值</p>
+</blockquote>
+<p>###for in循环<br>作用：遍历对象的属性名和属性值</p>
+<p>for （var key in obj）{<br>console.log(obj[key]);<br>在遍历对象时，不知道这个对象的属性名是否存在数字，所以只能用对象名[变量名]的形式获取属性值</p>
+<p>for in 循环只能遍历可枚举属性（自定义属性)<br>}</p>
+<p>明天内容<br>1、隔行变色<br>2、点击弹出<br>3、自定义属性<br>4、99<br>5、选项卡</p>
+<p>#函数</p>
+<p>##形参<br>函数执行的时候，方法中需要的变量</p>
+<p>##实参<br>在执行的时候，传递的具体的参数，也就是给形参赋的实际意义值</p>
+<p>##return<br>方法执行的产物  在函数的内部，return返回的是什么  外边就得到什么</p>
+<p>##arguments</p>
+<p>##匿名函数<br>没有名字的函数，自执行函数和函数表达式</p>
+<p>写一个方法  实名函数  匿名函数<br>介绍自己<br>姓名  年龄 性别  QQ  电话  多少年毕业</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/JavaScript基础知识(2)/">
+    <time datetime="2017-06-28T10:05:43.383Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/JavaScript基础知识(3)/" rel="prev"><span class="meta-nav">←</span> (no title)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/JavaScript基础知识(1)/" rel="next">JavaScript基础知识(1) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

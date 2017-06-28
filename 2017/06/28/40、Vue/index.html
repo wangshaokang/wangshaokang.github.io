@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="渐进式框架  mvvm
+
+###MVC1、m: model  数据层  保存数据2、v:  view    视图层   用户界面3、c: controller  控制器  业务逻辑过程：v-c-m-v用户操作界面  通过DOM事件—-&amp;gt;向控制器发送指令  执行相应 业务逻辑 —&amp;gt; 通知数" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>vue | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="渐进式框架  mvvm  ###MVC1、m: model  数据层  保存数据2、v:  view    视图层   用户界面3、c: controller  控制器  业务逻辑过程：v-c-m-v用户操作界面  通过DOM事件—-&amp;gt;向控制器发送指令  执行相应 业务逻辑 —&amp;gt; 通知数据层  保存或者修改状态  再有数据层—-&amp;gt;反馈给视图层 ##angular  采用MVC模">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/40、Vue/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="渐进式框架  mvvm  ###MVC1、m: model  数据层  保存数据2、v:  view    视图层   用户界面3、c: controller  控制器  业务逻辑过程：v-c-m-v用户操作界面  通过DOM事件—-&amp;gt;向控制器发送指令  执行相应 业务逻辑 —&amp;gt; 通知数据层  保存或者修改状态  再有数据层—-&amp;gt;反馈给视图层 ##angular  采用MVC模">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.116Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue">
+<meta name="twitter:description" content="渐进式框架  mvvm  ###MVC1、m: model  数据层  保存数据2、v:  view    视图层   用户界面3、c: controller  控制器  业务逻辑过程：v-c-m-v用户操作界面  通过DOM事件—-&amp;gt;向控制器发送指令  执行相应 业务逻辑 —&amp;gt; 通知数据层  保存或者修改状态  再有数据层—-&amp;gt;反馈给视图层 ##angular  采用MVC模">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-40、Vue" class="post-40、Vue post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      vue
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/40、Vue/" data-id="cj4gu5cfc00135sr45tofwchg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <ul>
+<li>渐进式框架  mvvm</li>
+</ul>
+<p>###MVC<br>1、m: model  数据层  保存数据<br>2、v:  view    视图层   用户界面<br>3、c: controller  控制器  业务逻辑<br>过程：v-c-m-v<br>用户操作界面  通过DOM事件—-&gt;向控制器发送指令  执行相应 业务逻辑 —&gt; 通知数据层  保存或者修改状态  再有数据层—-&gt;反馈给视图层</p>
+<h1 id="angular-采用MVC模式-单向通信"><a href="#angular-采用MVC模式-单向通信" class="headerlink" title="##angular  采用MVC模式  单向通信"></a>##angular  采用MVC模式  单向通信</h1><p>##MVVM  双向数据绑定</p>
+<ul>
+<li>m    model  数据模型   保存数据</li>
+<li>v     view    视图层  用户界面</li>
+<li>vm  视图模型  viewModel  <code>enter code here</code><br>v &lt;-&gt;vm &lt;-&gt;m<br>1、view 改变了 —-&gt;会导致VM改变 —-&gt; 通知m数据源状态改变<br>2、m 数据源跟新了 —&gt; VM发生改变—-&gt; v视图跟着改变</li>
+</ul>
+<p>##Vue 压缩和不压缩<br>通常开发阶段  引入不压缩版 报错提示 便于调试  生成版（压缩版） Vue.min.js  是没有  报错提示的</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/40、Vue/">
+    <time datetime="2017-06-28T10:05:43.012Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/41、node(1)/" rel="prev"><span class="meta-nav">←</span> node(1)</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/39、server(1)/" rel="next">server(1) <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

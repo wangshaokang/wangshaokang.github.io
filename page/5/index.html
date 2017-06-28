@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main">
+  
+    <article id="post-24、鼠标跟随" class="post-24、鼠标跟随 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/24、鼠标跟随/">鼠标跟随</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/24、鼠标跟随/" data-id="cj4gu5bkp000n5sr416ks78h1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>元素跟着鼠标移动 （移动的时候mousemove 实时计算元素的位置left和top</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">DOM二级事件绑定 </div><div class="line">btn.addEventListener(&apos;click&apos;,function()&#123;&#125;,false);</div><div class="line">true 捕获阶段   false 冒泡阶段</div></pre></td></tr></table></figure>
+<blockquote>
+<p>DOM零级事件绑定—-元素对象上的私有属性<br>DOM二级事件绑定—-在元素对象原型链上EventTarget的属性上</p>
+<p>##零级事件绑定和二级事件绑定的区别<br>DOM零级事件绑定中一个元素 同一个事件行为 绑定多个处理函数  最后面的处理函数会将前面的覆盖掉（DOM零级中不能给一个元素同一个事件行为绑定多个处理函数）</p>
+</blockquote>
+<p>DOM二级事件绑定中一个元素同一个事件行为可以绑定多个处理函数  绑定的处理函数放到事件池中，执行顺序是按照绑定顺序执行  </p>
+<p>###传播机制<br>DOM零级事件  只有冒泡阶段<br>DOM二级事件绑定中，可以通过addEvent的第三个参数 指定true 捕获阶段  false 冒泡阶段</p>
+<p>事件传播（先捕获  后冒泡）分为<br>捕获阶段: 从外向内<br>目标阶段: 执行到目标元素时  停止捕获 执行完目标阶段后，再冒泡<br> 冒泡阶段:从内向外–&gt;当前目标元素  相关行为触发，他的所有上级元素的相关行为也会被触发  一直到document（一些浏览器，一直到window）</p>
+<blockquote>
+<p>DOM2中提供了一些新的方法 DOMContentLoaded  jq-ready(html结构加载完毕后才执行)<br>window.onload 是页面中html结构和所有图片文字 资源加载完毕后执行</p>
+</blockquote>
+<p>不能移除匿名函数 只能移除addEventListener绑定的时间 在IE中没有addEventListener 属性，<br> attachEvent  IE低版本6-8 只有冒泡阶段  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">addEventListener(添加事件)/removeEventListener(移除事件)</div><div class="line"></div><div class="line">2、attachEvent(IE低版本下添加事件)/detachEvent(IE低版本下移除事件)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">addEventListener与attachEvent的不同？</div><div class="line">1、addEventListener中的this指的当前的绑定事件</div><div class="line">   attachEvent中的this是window</div><div class="line">2、addEventListener处理函数执行顺序 按照绑定顺序执行</div><div class="line">   attachEvent处理函数执行顺序  不按照绑定顺序执行 倒序/乱序</div><div class="line">3、 addEventListener 同一个事件行为 重复多次绑定 同一个处理函数 只执行一次</div><div class="line">   attachEvent 同一个事件行为  重复多次绑定 同一个处理函数 绑定多少个就执行多少次</div></pre></td></tr></table></figure>
+<p>bind 同一个事件类型 需要绑定多个处理函数（事件类型需要一个容器 按绑定顺序存放处理函数，并且将处理函数里的this 修改为当前绑定事件元素）<br>执行 根据事件类型找到相应的处理函数的容器 然后依次取出 按顺序执行</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/24、鼠标跟随/">
+    <time datetime="2017-06-28T10:05:42.688Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-23、DOM 零级 二级事件 基础" class="post-23、DOM 零级 二级事件 基础 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/23、DOM 零级 二级事件 基础/">DOM零级和二级事件基础</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/23、DOM 零级 二级事件 基础/" data-id="cj4gu5bji000m5sr4jpnes99x" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <blockquote>
+<p>DOM 0级事件绑定<br>oDiv.onclick=function(){};<br>DOM 2级事件绑定<br>oDiv.addEventListener(‘click’,function(){},false)<br>addEventListener这个属性是定义在当前元素所属EventTarget这个类的原型上的</p>
+</blockquote>
+<h3 id="函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为"><a href="#函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为" class="headerlink" title="函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为"></a>函数表达式：把函数（方法）当做一个值赋值给一个变量或某一个元素的某一个行为</h3><p>我们把匿名函数定义的部分当做一个值赋值给oDiv的点击行为（函数表达式）</p>
+<p>####重要：不仅仅把绑定的方法执行了，而浏览器还默认的给这个方法传递了一个参数值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mouseEvent:鼠标事件对象</div><div class="line"> 它是一个对象数据类型值  里面包含了很多属性名和属性值 这些都是用来记录当前鼠标的相关信息的</div><div class="line"> mouseEvent记录的是页面中唯一一个鼠标每一次触发时候的相关信息 和到底在哪个元素触发的没有关系</div></pre></td></tr></table></figure></p>
+<p>冒泡事件处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mouseover 和 mouseout  </div><div class="line">mouseenter 和 mouseleave  //阻止事件冒泡</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>事件传播机制 (true)<br>事件捕获阶段<br>事件冒泡阶段：(false)当前元素相关行为（click）触发时，会导致当前元素的所有上级元素相关行为（click）触发  一直到document<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">center.onclick=function(e)&#123;</div><div class="line"> 事件对象：   e=e||window.event; //兼容IE8以下</div><div class="line">阻止事件冒泡 ：e.stopPropagation ?e.stopPropagation(): e.cancelBubble=true;  //兼容低版本</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##事件委托<br>利用事件默认会进行冒泡传播的机制，我们给最外层元素相关行为绑定事件  元素内的子元素相关行为 触发的时候 也会导致 最外层元素的相关行为事件触发，我们根据事件对象中的事件源来进行相关处理<br> 一个容器内document多个元素div 相关行为click绑定的时候  可以采用事件委托方式进行绑定  比单独一个一个绑定事件 执行和性能上提升很多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">document.onclick=function(e)&#123;  </div><div class="line">       e=e||window.event;</div><div class="line">       var tar=e.target;</div><div class="line">       if(tar.id===&apos;center&apos;)&#123;</div><div class="line">             console.log(tar.innerHTML);</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/23、DOM 零级 二级事件 基础/">
+    <time datetime="2017-06-28T10:05:42.674Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-22、事件基础" class="post-22、事件基础 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/22、事件基础/">事件基础</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/22、事件基础/" data-id="cj4gu5bjf000l5sr4wx97av57" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>柯理化函数：一个js预先处理的思想</p>
+<blockquote>
+<p>定时器设置为0 不是立即执行  是因为浏览器有一个默认的缓存机制<br>chrome浏览器缓存（反应）时间为5-6毫秒<br>IE浏览器缓存（反应）时间为10-13毫秒<br><code>window.setTimout(fn, 0)</code></p>
+</blockquote>
+<p>##事件  ：一个行为 </p>
+<blockquote>
+<p>事件行为<br>事件处理函数（监听函数）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">onfocus  获取焦点触发事件</div><div class="line">onchange  焦点改变触发事件</div><div class="line">onresize   监听可视窗口改变事件</div><div class="line">ondblclick  双击点击触发事件</div><div class="line">onmousemove  在移入后移动时触发的事件</div><div class="line">onmousedown  鼠标按下的时候触发</div><div class="line">onmouseup    鼠标抬起的时候触发</div><div class="line">onkeydown   键盘键按下的时候触发</div><div class="line">onkeyup  键盘按下后抬起的时候触发</div><div class="line">onmousewheel  滚轮事件</div><div class="line">wheelDelta  -120 往下滚动  120往上滚动</div><div class="line"></div><div class="line">```  </div><div class="line">&gt;事件对象 是一个事件行为 直接绑定的处理函数第一个形参 </div><div class="line">&gt;事件对象是一个对象数据类型的值 里面保存着事件的相关信息</div></pre></td></tr></table></figure>
+<p>btn.onclick=function( e){<br>     console.log(window.event)  //兼容IE6-8<br>     e=e||window.event  //解决事件对象 兼容<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">事件对象  存储事件的相关信息</div></pre></td></tr></table></figure></p>
+<p>type  事件类型<br>target  事件源<br>e.srcElement.tagName;  事件源（在IE6-8下）<br>e.target=e.target|| e.srcElement   事件源兼容 IE 6-8<br>e.preventDefault()    阻止默认行为<br>e.returnValue=false    ie6-8下阻止默认行为</p>
+<p>e.preventDefault？e.preventDefault:e.returnValue=false</p>
+<p>e.stopPropagation()   //阻止冒泡传播<br>e.canceIBubble=true    //在IE6-8下阻止冒泡传播<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###事件传播-事件冒泡：当前元素相关事件（click）触发 同时也会触发上级相关事件  一直到document</div><div class="line"></div><div class="line"></div><div class="line">e.clientX/e.clientY    当前鼠标距离浏览器窗口的左边距离   //   上边距离</div><div class="line">e.pageX/e.pageY    当前鼠标距离body左边距离/上边距离</div><div class="line">e.screenX/e.screenY  当前鼠标距离电脑屏幕的左/上边距</div><div class="line">e.keyCode    键码值</div><div class="line">e.offsetX/e.offsetY     距离事件源  左边距离 和上边距离 IE的两个属性</div><div class="line"></div><div class="line"></div><div class="line">在IE下的写法</div></pre></td></tr></table></figure></p>
+<p>var pagex=e.clientX+(document.documentElement.scroll)<br>```</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/22、事件基础/">
+    <time datetime="2017-06-28T10:05:42.665Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-21、常用工具方法" class="post-21、常用工具方法 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/21、常用工具方法/">常用的工具方法</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/21、常用工具方法/" data-id="cj4gu5bjc000k5sr4qi96oec6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">去重  直接在原有上去重</div><div class="line">var ary=[1,2,2,3,3,4,6,6]</div><div class="line">$(.unipue(arr))</div><div class="line"></div><div class="line"></div><div class="line">合并数组</div><div class="line">$.merge([1,2],[3,4])</div><div class="line"></div><div class="line"></div><div class="line">将第二个参数对象合并到 第一个对象里面  修改第一个first</div><div class="line">var first=&#123;name:&apos;zhufeng&apos;,id:1,age:20&#125;;</div><div class="line">var second=&#123;name:&apos;zheli&apos;,id:2,say:&apos;hello world&apos;&#125;</div><div class="line">$.extend(first,send)</div><div class="line"></div><div class="line"></div><div class="line">检测数据类型</div><div class="line">console.log($.type(12));</div><div class="line"></div><div class="line"></div><div class="line">检测一个对象是否为空</div><div class="line">$.idEmptyObject(&#123;&#125;) //true</div><div class="line"></div><div class="line"></div><div class="line">检测是字面量创建的or 实例创建的对象??</div><div class="line">var a=&#123;&#125;</div><div class="line">var obj= new Object</div><div class="line">$.isPlainObject(obj);  // true</div><div class="line">$.isPlainObject(a);    // false</div><div class="line"></div><div class="line"></div><div class="line">$.extend(&#123;</div><div class="line">  myAdd:function(a,b)&#123;</div><div class="line">   return a+b;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">在jq原型上扩展的属性方法</div><div class="line">$.fn.extend(&#123;</div><div class="line">    mySay:function()&#123;</div><div class="line">        console.log(&apos;nihao&apos;);</div><div class="line">     &#125;</div><div class="line"> &#125;)</div><div class="line"></div><div class="line"></div><div class="line">去除首尾空格</div><div class="line">console.log($.trim(&apos; ni hao &apos;));</div><div class="line"></div><div class="line"></div><div class="line">JSON 字符串转化为JSON对象</div><div class="line"></div><div class="line"></div><div class="line">get请求 需要我们给后台传递的参数  以这种形式URL？wd=nihao&amp;res_spt=1</div><div class="line">var url=&apos;http://www.baidu.com/s?&apos;+$param(obj);</div><div class="line">var obj=&#123;</div><div class="line">   wd:&apos;nihao&apos;,</div><div class="line">   rev_spt:1</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">$(&apos;from&apos;).serialize();</div><div class="line"></div><div class="line">$(&apos;from&apos;).serializeAll();</div></pre></td></tr></table></figure>
+<p>##jQ-ajax<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">	  type:&apos;GET&apos; //请求方式 GET  POST</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>##jQuery中ajax请求数据的几种方式<br>常用</p>
+<blockquote>
+<p>get<br>post<br>delete<br>put<br>不常用<br>head<br>patch<br>options<br>trace</p>
+</blockquote>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/21、常用工具方法/">
+    <time datetime="2017-06-28T10:05:42.650Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-20、jQuery的DOM 、事件、" class="post-20、jQuery的DOM 、事件、 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/20、jQuery的DOM 、事件、/">jQuery的DOM事件</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/20、jQuery的DOM 、事件、/" data-id="cj4gu5bic000j5sr4wv0joi53" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">    console.log(this)  // #document</div><div class="line">&#125;)</div><div class="line"></div><div class="line">console.log(this)  //window</div></pre></td></tr></table></figure>
+<p>##内部插入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">append  在指定的容器中插入节点（插入到容器底部）</div><div class="line">$(&apos;.div&apos;).append($(&apos;h3&apos;)); 移动节点</div><div class="line"></div><div class="line">appendTo  将节点添加到指定容器(容器内容的前面)</div><div class="line">$(&apos;&lt;h2&gt;angular&lt;/h2&gt;&apos;).appendTo($(&apos;.oDiv&apos;));</div><div class="line"></div><div class="line">prepend  在指定容器 内部 前面 插入 节点</div><div class="line">$(&apos;.oDiv&apos;).prepend(&apos;&lt;h2&gt;angular&lt;/h2&gt;&apos;)</div><div class="line"></div><div class="line">prependTo  将节点 插入到 指定容器内部 前面</div><div class="line">$(&apos;&lt;h2&gt;argular&lt;/h2&gt;&apos;).prependTo(&apos;.oDiv&apos;)</div></pre></td></tr></table></figure></p>
+<p>##外部插入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">在指定容器外部（同辈元素） 后面添加节点</div><div class="line">$(&apos;div&apos;).after(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;);</div><div class="line"></div><div class="line">在指定容器外部（同辈元素） 前面添加节点</div><div class="line">$(&apos;div&apos;).before(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;);</div><div class="line"></div><div class="line"></div><div class="line">将节点插入到指定的元素外部后面  </div><div class="line">$(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;).insertAfter($(&apos;div&apos;));</div><div class="line"></div><div class="line"></div><div class="line">将节点插入到指定的元素外部前面</div><div class="line">$(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;).insertBefore$($(&apos;div&apos;));</div><div class="line"></div><div class="line"></div><div class="line">包裹节点</div><div class="line">$(&apos;span&apos;).wrap(&apos;&lt;strong&gt;&lt;/strong&gt;&apos;) //前提是这个标签里面什么都没有</div><div class="line"></div><div class="line">包裹所有节点    将匹配到的元素 包裹在一起 包裹所有</div><div class="line">$(&apos;span&apos;).wrapAll(&apos;&lt;strong&gt;&lt;/strong&gt;&apos;) </div><div class="line"></div><div class="line"></div><div class="line">包裹指定容器的子内容</div><div class="line">$(&apos;span&apos;).wrapInner(&apos;&lt;strong&gt;&lt;/strong&gt;&apos;)</div><div class="line"></div><div class="line"></div><div class="line">将包裹的父级元素移除 只移除父级</div><div class="line">$(&apos;i&apos;).unwrap()</div><div class="line"></div><div class="line"></div><div class="line">移除节点（不仅会移除节点 也会移除绑定事件（原有的事件也会被移除） 并移除节点后 返回移除节点的jq对象</div><div class="line">$(&apos;div i&apos;).remove() 返回的结果是移除的节点</div><div class="line"></div><div class="line">detach 移除节点 保留事件</div><div class="line"></div><div class="line"></div><div class="line">复制节点</div><div class="line">clone 不加true 不会复制事件  为true 复制事件</div><div class="line"></div><div class="line"></div><div class="line">替换节点</div><div class="line">replaceAll  用其他节点 替换指定节点</div><div class="line">replaceWith   将指定节点替换成其他节点</div></pre></td></tr></table></figure></p>
+<p>##JQ-CSS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">获取多项样式属性 返回一个普通样式对象  获取的多项以键值对的形式 放在对象里返回</div><div class="line">console.log($(&apos;.div&apos;).css([&apos;width&apos;,&apos;height&apos;,&apos;backgroundColor&apos;]));</div><div class="line"></div><div class="line">console.log($(&apos;.div&apos;).height()); // number 100  不带单位</div><div class="line">console.log($(&apos;.div&apos;).css(&apos;height&apos;)); // string 100px 带单位</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">console.log($(&apos;div&apos;).innerWidth()) 相当于获取当前元素的clientWidth;</div><div class="line">console.log($(&apos;div&apos;).innerHeight()) 相当于获取当前元素的clientHeight;</div><div class="line"></div><div class="line">console.log($(&apos;div&apos;).outerWidth()) 相当于获取当前元素的offsetWidth;</div><div class="line">console.log($(&apos;div&apos;).outerHeight())相当于获取当前元素的offsetHeight;</div><div class="line"></div><div class="line">距离视口偏移量</div><div class="line">$(&apos;div&apos;).offset()</div><div class="line"></div><div class="line">父级参照物的 偏移值</div><div class="line">$(&apos;div&apos;).position();</div></pre></td></tr></table></figure></p>
+<p>##jQ-DOM<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">插入jq对象节点</div><div class="line">var $h3=$(&apos;&lt;h3&gt;hello jQuery!&lt;/h3&gt;&apos;)</div><div class="line">$(&apos;.oDiv&apos;).append($h3);</div><div class="line"></div><div class="line">插入原生DOM节点</div><div class="line">var h3=document.createElement(&apos;h3&apos;)</div><div class="line">h3.innerHTML=&apos;hello vueJs&apos;;</div></pre></td></tr></table></figure></p>
+<p>##jQ-DOM 查找<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">prev 上一个哥哥元素 （jQ对象）</div><div class="line">$(&apos;.four&apos;).prev().css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">next 下一个弟弟元素（jQ对象）</div><div class="line">$(&apos;.four&apos;).next().css(&apos;backgroundColor&apos;,&apos;blue&apos;);</div><div class="line"></div><div class="line">prevAll 所有哥哥元素（jQ对象）</div><div class="line">$(&apos;.four&apos;).prevAll().css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">nextAll 所有弟弟元素（jQ对象）</div><div class="line">$(&apos;.four&apos;).nextAll().css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">所有子元素</div><div class="line">console.log($(&apos;ul&apos;).children());</div><div class="line"></div><div class="line">所有父元素 (得到所有祖先元素  一直找到html为止)</div><div class="line">console.log($(&apos;.four&apos;).parents());</div><div class="line"></div><div class="line"></div><div class="line">查找所有祖先元素中 id为oDiv1的元素</div><div class="line">console.log($(&apos;.four&apos;)).parents(&apos;#oDiv1&apos;);</div></pre></td></tr></table></figure></p>
+<p>##jQ-事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">上拉收取复合写法</div><div class="line">$(&apos;#btn&apos;).on(&apos;click.btn1&apos;,function()&#123;</div><div class="line">        </div><div class="line">        $(&apos;oDiv&apos;).slideToggle();</div><div class="line">   &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"> ///  off </div><div class="line">   移除指定事件行为</div><div class="line">$(&apos;#btn&apos;).off(&apos;click&apos;);  </div><div class="line"></div><div class="line">移除当前元素所有事件行为</div><div class="line">$(&apos;#btn&apos;).off()</div><div class="line"></div><div class="line">根据命名空间移除的相应事件类型移除</div><div class="line">$(&apos;#btn&apos;).off(&apos;click.btn1&apos;);</div><div class="line"></div><div class="line"></div><div class="line">根据命名空间移除</div><div class="line">$(&apos;#btn&apos;).off(&apos;.btn1&apos;); </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">/// unbind</div><div class="line">$(&apos;#btn&apos;).unbind()  //移除所有</div><div class="line"></div><div class="line">$(&apos;#btn&apos;).unbind(&apos;click&apos;)  //移除某个行为</div><div class="line"></div><div class="line">$(&apos;#btn&apos;).unbind(&apos;.over&apos;)  //命名空间</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">/// 预留事件 解决未来添加的元素  绑定事件</div><div class="line">$(&apos;body&apos;).on(&apos;click&apos;,&apos;button&apos;,function()&#123;</div><div class="line">      console.log(&apos;button&apos;)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line"></div><div class="line">/// 预留事件  解决未来添加的后代元素 绑定事件</div><div class="line">$(&apos;.container&apos;).delegate(&apos;button&apos;,&apos;click&apos;,function()&#123;</div><div class="line">         </div><div class="line">         console.log(&apos;delegate-click&apos;) ;</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">/// 移除delegate绑定的事件</div><div class="line">  $(&apos;.container&apos;).undelegate(&apos;click&apos;);</div><div class="line">  $(&apos;.container&apos;).undelegate();</div><div class="line"></div><div class="line"></div><div class="line">/// 显示/隐藏切换</div><div class="line">$(&apos;oDiv&apos;).stop().toggle(3000,function()&#123;</div><div class="line">       console.log(&apos;结束&apos;)   </div><div class="line"> &#125;)</div><div class="line"></div><div class="line"></div><div class="line">///滑入滑出</div><div class="line">$(&apos;#btn&apos;).hover(function()&#123; </div><div class="line">     console.log(&apos;mouseover&apos;)</div><div class="line">&#125;,function()&#123;</div><div class="line">     console.log(&apos;mouseout&apos;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// slideToggle 上拉收起  </div><div class="line">$(&apos;.oDiv&apos;).stop().slideToggle(&apos;fast&apos;);</div><div class="line"></div><div class="line"></div><div class="line">//fadeToggle  渐入渐出</div><div class="line">$(&apos;.oDiv&apos;).fadeToggle()</div><div class="line"></div><div class="line"></div><div class="line">//一次性事件</div><div class="line">$(&apos;#btn&apos;).one(&apos;click&apos;,function()&#123;</div><div class="line">      console.log(&apos;one&apos;);</div><div class="line">  &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">//不会事件冒泡</div><div class="line">$(&apos;#btn&apos;).triggerHandler(&apos;click&apos;);</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/20、jQuery的DOM 、事件、/">
+    <time datetime="2017-06-28T10:05:42.632Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-19、jQuery" class="post-19、jQuery post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/19、jQuery/">jQuery</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/19、jQuery/" data-id="cj4gu5bib000i5sr4lgxotwq8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##一个javascript 函数库，里面提供了 强大的选择器  DOM方法封装 ajax完整的封装  动画animate</p>
+<p>###jQuery 版本 1.0  2.0  3.0、<br>1、1.0版本 兼容IE6-8<br>2、2.0版本   不兼容IE6-8<br>3、3.0 版本   不兼容ie6-8  增加了一些新特性  同时 弃用了一些方法</p>
+<p>console.log(jQuery )    //构造函数<br>console.log($==jQuery )   //true<br>console.log(jQuery.fn===jQuery.prototype)  //jQuery 原型上的属性方法  通过jQuery对象调用</p>
+<p>var  $oDiv= new  $(‘#oDiv’)</p>
+<p>$.fn.jQuery    //查看jQuery 版本号</p>
+<p>###有可能和其他类库冲突  解决$和其他类库的冲突<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1、 jQuery();</div><div class="line"></div><div class="line">1、(function($)&#123;</div><div class="line">        </div><div class="line">&#125;)(jQuery)</div><div class="line"></div><div class="line"></div><div class="line">2、 将$的控制权 转让 同时 里面 返回jQuery</div><div class="line">var $$=jQuery.noConflict();</div></pre></td></tr></table></figure></p>
+<p>###read</p>
+<blockquote>
+<p>html页面中DOM结构和所有文件资源（如：图片加载完成后）才执行<br>onload 调用多次  执行一次<br>window.onload=function(){    }</p>
+<p>DOM结构加载完后执行（不包括所有文件）<br>ready 可以调用多次<br>$(document).ready(function(){   })</p>
+<p>区别三   $(document).ready(function(){   })缩写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(function()&#123; console.log($(&apos;#oDiv&apos;))</div><div class="line">      </div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##jQuery中的选择器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">1    //id选择器$(&apos;#id&apos;) : 匹配一个id名为oDiv的元素</div><div class="line">    </div><div class="line">2    //群组选择器 获取一个id名为div1和class名为div2的元素</div><div class="line">     console.log($(&apos;#div5, .div2&apos;))</div><div class="line"></div><div class="line">3    //后代选择器 匹配id名为div5中的 后代元素中的所有span</div><div class="line">    console.log($(&apos;#div5 span&apos;))</div><div class="line">    </div><div class="line">4    //后代中 所有class名为span2的后代元素span</div><div class="line">    console.log($(&apos;#div5 span.span2&apos;))</div><div class="line">    </div><div class="line">5    //匹配后代中， 所有类名为span2的元素</div><div class="line">    console.log($(&apos;#div5 .span2&apos;))</div><div class="line">    </div><div class="line">6    //匹配指定父元素中的直接所有span子元素</div><div class="line">    console.log($(&apos;#div5&gt;span&apos;))</div><div class="line">    </div><div class="line">7    //匹配指定元素后面紧跟的下一个元素</div><div class="line">    console.log($(&apos;.span1+&apos;));</div><div class="line">     console.log($(&apos;.span1&apos;)).next();</div><div class="line">    </div><div class="line">8    //匹配指定元素后面的所有同辈元素</div><div class="line">    console.log($(&apos;.sd2&apos;)).nextAll()   </div><div class="line">     console.log($(&apos;.sd2~&apos;))</div><div class="line">     </div><div class="line">9    //匹配页面中的所有元素</div><div class="line">    console.log($(&apos;*&apos;));</div><div class="line">   </div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>##jQuery选择器的筛选<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">1     //匹配所有li元素中 最后一个li </div><div class="line">     $(&apos;ul li:last&apos;).css(&apos;background-color&apos;,&apos;green&apos;);</div><div class="line">     console.log($(&apos;ul li:last&apos;));</div><div class="line">     </div><div class="line">2     //匹配索引为2的li  根据指定索引得到相应元素</div><div class="line">     console.log($(&apos;ul li:eq(2)&apos;));</div><div class="line">     </div><div class="line">3     //匹配所有li元素中  索引小于2的元素  匹配小于指定索引的元素</div><div class="line">     console.log($(&apos;ul li:lt(2)&apos;));</div><div class="line">     </div><div class="line">4     //匹配所有li元素中  索引大于2的元素  匹配大于指定索引的元素</div><div class="line">     console.log($(&apos;ul li:gt(2)&apos;));</div><div class="line">     </div><div class="line">5     //匹配所有索引为偶数的li元素</div><div class="line">     console.log($(&apos;ul li:even&apos;));</div><div class="line"></div><div class="line">6     //匹配所有索引为奇数的li元素</div><div class="line">     console.log($(&apos;ul li:odd&apos;))</div><div class="line"></div><div class="line">7     //匹配除了(:not中匹配的)所有对应元素</div><div class="line">     console.log($(&apos;ul li:not(.oDiv)&apos;));</div><div class="line">     </div><div class="line">8     //匹配包含指定选择器（span）的元素</div><div class="line">     console.log($(&apos;ul li:has(span)&apos;));</div><div class="line">     </div><div class="line">9     //匹配一个空标签  匹配一个不包含任何元素和文本的元素</div><div class="line">     console.log($(&apos;ul li:empty&apos;));</div><div class="line">     </div><div class="line">10     //匹配作为父级的元素</div><div class="line">     console.log($(&apos;ul li:parent&apos;));</div><div class="line">     </div><div class="line">11    //匹配所包含的内容匹配 元素</div><div class="line">     console.log($(&apos;ul li:contains(&quot;3&quot;)&apos;));</div><div class="line"></div><div class="line">12    //匹配根元素</div><div class="line">     console.log($(&apos;:root&apos;))</div><div class="line"></div><div class="line">13    //匹配所有标题元素</div><div class="line">     console.log($(&apos;:header&apos;))</div><div class="line">     </div><div class="line"></div><div class="line">14   //匹配动画</div><div class="line">     console.log($(&apos;div:animated&apos;))</div><div class="line">  &#125;)</div></pre></td></tr></table></figure></p>
+<p>##属性选择器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//匹配有[attr]属性的元素   console.log($(&apos;div[id]&apos;))</div><div class="line"></div><div class="line">//匹配                   console.log($(&apos;input[name]&apos;))</div></pre></td></tr></table></figure></p>
+<p>##关于子元素的筛选<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//匹配指定父元素中的第一个子元素</div><div class="line">console.log($(&apos;ul li:first-child&apos;))</div><div class="line"></div><div class="line">//匹配每个指定父元素中的最后一个子元素</div><div class="line">console.log($(&apos;ul li:last-child&apos;)).css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">//匹配每个指定父级元素中的指定位置的子元素</div><div class="line">console.log($(&apos;ul li:nth-child(2)&apos;))</div><div class="line"></div><div class="line">//倒数第二个</div><div class="line">console.log($(&apos;ul li:last-child(2)&apos;))</div><div class="line"></div><div class="line">//奇数</div><div class="line">console.log($(&apos;ul li:odd&apos;))</div><div class="line"></div><div class="line">//偶数</div><div class="line">console.log($(&apos;ul li:even&apos;))</div><div class="line"></div><div class="line">//匹配ul唯一的一个li子节点</div><div class="line">console.log($(&apos;ul li:only-child&apos;))</div></pre></td></tr></table></figure></p>
+<p>##增加和移除属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">属性 操作</div><div class="line">attr  操作自定义属性</div><div class="line">prop  操作固有属性</div><div class="line"></div><div class="line"></div><div class="line">$(function()&#123;</div><div class="line">   setTimeout(function()&#123;</div><div class="line">        $(&apos;div&apos;).attr(&apos;own&apos;)    // 获取属性</div><div class="line">        $(&apos;div&apos;).removeAttr(&apos;class&apos;);   //移除属性 </div><div class="line">        $(&apos;div&apos;).attr(&apos;own&apos;,&apos;hello&apos;); //添加属性</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>###在html 中保存数据  data-key=value  通过data（key）<br>console.log($(‘div.selected’).data(‘name’,’zhufeng’));</p>
+<p>##获取表单元素内容 text html  val<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">   var name=&apos;vueJs&apos;;</div><div class="line">   $(&apos;h3&apos;).text(&apos;hello&apos;+name+&apos;!&apos;);</div><div class="line">   $</div><div class="line">  &#125;)</div></pre></td></tr></table></figure></p>
+<p>##jQuery事件基础<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$(&apos;div&apos;).click(function()&#123;</div><div class="line">   this---&gt;绑定事件的元素 原生对象</div><div class="line">   $(this).hide(300)</div><div class="line">   $(this).slideUp(300) // 拉帘</div><div class="line">   $(this).stop() //隐藏当前动画</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">//点击两次才出发点击事件</div><div class="line">$(&apos;div&apos;).dblclick(function()&#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>##动画效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">   if( $(&apos;oDiv&apos;).is(&apos;:visible&apos;) ) &#123;</div><div class="line">       $(&apos;oDiv&apos;).hide(300)    //隐藏</div><div class="line">        $(&apos;oDiv&apos;).slideUp(300)   // 收起</div><div class="line">        $(&apos;oDiv&apos;).fadeOut(300) //淡出（1-0）</div><div class="line">     &#125;else&#123;</div><div class="line">        $(&apos;oDiv&apos;).show(300)    // 显示</div><div class="line">        $(&apos;oDiv&apos;).slideDown300)   // 下拉</div><div class="line">        $(&apos;oDiv&apos;).fadeIn()   //淡入（0-1）</div><div class="line">      &#125;</div><div class="line"> &#125;)</div></pre></td></tr></table></figure></p>
+<p>##原生对象和jQuery 对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var obox=document.getElementById(&apos;obox&apos;);</div><div class="line">//将原生对象转化为jq对象</div><div class="line">console.log($(obox))</div><div class="line">console.log(jQuery(obox))</div><div class="line">console.log($(&apos;#obox&apos;))</div><div class="line"></div><div class="line">//将jq对象转化为原生对象</div><div class="line">console.log($(&apos;#obox&apos;)[0])</div><div class="line">console.log($(&apos;#obox&apos;).get(0));</div><div class="line"></div><div class="line">//根据指定索引 找到对应的jq对象</div><div class="line">console.log($(&apos;div&apos;).eq(0));</div><div class="line"></div><div class="line">// 回到上一次的状态</div><div class="line">console.log($(&apos;#obox&apos;).end());</div></pre></td></tr></table></figure></p>
+<p>##在String原型上扩展一个方法 ,去除空白<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">String.prototype.myTrim=function myTrim()&#123;</div><div class="line">     if(&apos;trim&apos; in String.prototype)&#123;</div><div class="line">          return this.trim();</div><div class="line">     &#125;</div><div class="line">     return this.replace(/^ +| +$/g,&apos;&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/19、jQuery/">
+    <time datetime="2017-06-28T10:05:42.612Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-18、面向对象" class="post-18、面向对象 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/18、面向对象/">面向对象</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/18、面向对象/" data-id="cj4gu5bhf000h5sr4u8dawvpr" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>面向对象的过程—-实现逻辑</p>
+<p>选择器—&gt;查找DOM元素并且保存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gt(5)  大于指定索引5</div><div class="line">lt(5)  小于指定索引5</div><div class="line">not(:last)  除了括号里面的</div></pre></td></tr></table></figure>
+<p>##jQuery 的过滤筛选方法有三个：<br>find ( )   方法返回被选元素的后代元素，一路向下知道最后一个后代（后代是子、孙、曾孙等等）<br>children( )方法返回的被选元素的所有直接子元素（只会找到子元素  不会找子元素的子元素）<br>filter  平级过滤</p>
+<p>###如何判断一个对象是否是DOM对象(Assret;  断言,条件)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">try&#123;</div><div class="line">   selector.clone(true);//   克隆是DOM里面的方法 影响最小  </div><div class="line">   this[0]=selector;</div><div class="line">   this.length=1;</div><div class="line">&#125;catch(e)&#123;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/18、面向对象/">
+    <time datetime="2017-06-28T10:05:42.596Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-17、回调函数" class="post-17、回调函数 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/17、回调函数/">回调函数</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/17、回调函数/" data-id="cj4gu5bhd000g5sr4gtwrz8if" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##在方法A里 把 方法B当做一个参数 在方法A调用执行  何时执行执行多少次都可以</p>
+<blockquote>
+<p>回调函数中 一般情况下 this都是window<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function fn1()&#123;</div><div class="line">    console.log(&apos;fn1&apos;);</div><div class="line">&#125;</div><div class="line">function fn1(callBack)&#123;</div><div class="line">    setTimeout(funciton()&#123;</div><div class="line">       callBack();</div><div class="line">    &#125;,1000)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/17、回调函数/">
+    <time datetime="2017-06-28T10:05:42.588Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-16、简单动画" class="post-16、简单动画 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/16、简单动画/">简单动画</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/16、简单动画/" data-id="cj4gu5bg3000f5sr4pq555mvh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">匀速运动公式：当前时间，初始偏移值，总运动量，总运动时间</div><div class="line">function(time,begin,change,duration)&#123;</div><div class="line">           return   time/duration*change+begin;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/16、简单动画/">
+    <time datetime="2017-06-28T10:05:42.475Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+    <article id="post-15、JS中兼容性检测" class="post-15、JS中兼容性检测 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title">
+      <a class="article-title" href="/2017/06/28/15、JS中兼容性检测/">JS中兼容性检测</a>
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/15、JS中兼容性检测/" data-id="cj4gu5bfv000e5sr4vd413osj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>##getElementByTagName: 它的筛选范围是当前上下文的后代元素（子子孙孙）</p>
+<p>##children ：获取所有元素子节点，但是在IE低版本浏览器中和标准浏览器中获取的结果不统一，IE低版本浏览器会把注释节点也当做元素节点获取到（需要处理兼容）<br>jQ中常用的三个筛选的方法:children (子代查找) 、find（后代查找）、filter（同级过滤）===尝试基于children的方法思考</p>
+<p>###JS中兼容性检测的三大方式：</p>
+<p>####1、try  catch  异常捕获</p>
+<ul>
+<li>原理：把我们执行的代码放在try中 尝试执行  如果没报错说明兼容，报错说明不兼容，但是报错会执行catch中的代码，我们在catch中处理兼容即可</li>
+<li>前提：代码在不兼容的浏览器中执行会报错，我们才能使用这种方法</li>
+<li>弊端： 不管当前浏览器是否支持，都需要把try 中的代码先执行一次，这样对性能和浏览器不友好，  所以一般很少用</li>
+</ul>
+<p>####2、检测浏览器的类型和版本号 </p>
+<ul>
+<li>原理：只要我们知道当前操作不兼容什么样的浏览器（前提），我们可以先获取当前浏览器的版本号，验证一下是否在不兼容的清单中， 通过这样的判断来检测兼容即可<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">window.navigator.userAgent---&gt;获取当前浏览器的版本信息</div><div class="line">如果是IE包括“MSIE 版本号” 这样的字符串</div><div class="line">思考题：回去查询JS检测浏览器的代码，分析各个浏览器版本信息的规律</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>####3、检测当前的方法或者属性是否属于某个对象，属于就兼容，不属于就不兼容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">第一种写法</div><div class="line">if(&apos;getComputedStyle&apos; in window)&#123; &#125;</div><div class="line"></div><div class="line">第二种写法</div><div class="line">if(window.getComputedStyle)&#123; //获取属性值  看是否属于undefined  属于的话条件就不成立了，反之条件成立 </div><div class="line">&#125;</div><div class="line"></div><div class="line">第三种写法</div><div class="line">if(typeof window.getComputedStyle!==&apos;undefined&apos;)&#123;  &#125;</div></pre></td></tr></table></figure></p>
+<p>##JS高阶编程技巧：惰性思想<br>能够执行一次就解决的，我们绝不会执行多次<br>第一次给utils赋值的时候，执行自执行函数，形成一个不销毁的私有作用域，我们在这里就把是否兼容处理好了，存在一个私有变量中，以后再需要检测是否兼容，我们直接的使用变量即可，没必要重复的操作检测；</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/15、JS中兼容性检测/">
+    <time datetime="2017-06-28T10:05:42.466Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+
+
+
+
+  
+  
+    <nav id="pagination">
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      </nav>
+    </nav>
+  
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

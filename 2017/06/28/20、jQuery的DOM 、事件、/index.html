@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="12345$(function()&amp;#123;    console.log(this)  // #document&amp;#125;)console.log(this)  //window
+##内部插入：1234567891011append  在指定的容器中插入节点（插入到容器底部）$(&amp;apos;." />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>jQuery的DOM事件 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345$(function()&amp;#123;    console.log(this)  // #document&amp;#125;)console.log(this)  //window ##内部插入：1234567891011append  在指定的容器中插入节点（插入到容器底部）$(&amp;apos;.div&amp;apos;).append($(&amp;apos;h3&amp;apos;)); 移动节点appendTo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery的DOM事件">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/20、jQuery的DOM 、事件、/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="12345$(function()&amp;#123;    console.log(this)  // #document&amp;#125;)console.log(this)  //window ##内部插入：1234567891011append  在指定的容器中插入节点（插入到容器底部）$(&amp;apos;.div&amp;apos;).append($(&amp;apos;h3&amp;apos;)); 移动节点appendTo">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.919Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery的DOM事件">
+<meta name="twitter:description" content="12345$(function()&amp;#123;    console.log(this)  // #document&amp;#125;)console.log(this)  //window ##内部插入：1234567891011append  在指定的容器中插入节点（插入到容器底部）$(&amp;apos;.div&amp;apos;).append($(&amp;apos;h3&amp;apos;)); 移动节点appendTo">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-20、jQuery的DOM 、事件、" class="post-20、jQuery的DOM 、事件、 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      jQuery的DOM事件
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/20、jQuery的DOM 、事件、/" data-id="cj4gu5bic000j5sr4wv0joi53" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">    console.log(this)  // #document</div><div class="line">&#125;)</div><div class="line"></div><div class="line">console.log(this)  //window</div></pre></td></tr></table></figure>
+<p>##内部插入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">append  在指定的容器中插入节点（插入到容器底部）</div><div class="line">$(&apos;.div&apos;).append($(&apos;h3&apos;)); 移动节点</div><div class="line"></div><div class="line">appendTo  将节点添加到指定容器(容器内容的前面)</div><div class="line">$(&apos;&lt;h2&gt;angular&lt;/h2&gt;&apos;).appendTo($(&apos;.oDiv&apos;));</div><div class="line"></div><div class="line">prepend  在指定容器 内部 前面 插入 节点</div><div class="line">$(&apos;.oDiv&apos;).prepend(&apos;&lt;h2&gt;angular&lt;/h2&gt;&apos;)</div><div class="line"></div><div class="line">prependTo  将节点 插入到 指定容器内部 前面</div><div class="line">$(&apos;&lt;h2&gt;argular&lt;/h2&gt;&apos;).prependTo(&apos;.oDiv&apos;)</div></pre></td></tr></table></figure></p>
+<p>##外部插入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">在指定容器外部（同辈元素） 后面添加节点</div><div class="line">$(&apos;div&apos;).after(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;);</div><div class="line"></div><div class="line">在指定容器外部（同辈元素） 前面添加节点</div><div class="line">$(&apos;div&apos;).before(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;);</div><div class="line"></div><div class="line"></div><div class="line">将节点插入到指定的元素外部后面  </div><div class="line">$(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;).insertAfter($(&apos;div&apos;));</div><div class="line"></div><div class="line"></div><div class="line">将节点插入到指定的元素外部前面</div><div class="line">$(&apos;&lt;h2&gt;angularjs&lt;/h2&gt;&apos;).insertBefore$($(&apos;div&apos;));</div><div class="line"></div><div class="line"></div><div class="line">包裹节点</div><div class="line">$(&apos;span&apos;).wrap(&apos;&lt;strong&gt;&lt;/strong&gt;&apos;) //前提是这个标签里面什么都没有</div><div class="line"></div><div class="line">包裹所有节点    将匹配到的元素 包裹在一起 包裹所有</div><div class="line">$(&apos;span&apos;).wrapAll(&apos;&lt;strong&gt;&lt;/strong&gt;&apos;) </div><div class="line"></div><div class="line"></div><div class="line">包裹指定容器的子内容</div><div class="line">$(&apos;span&apos;).wrapInner(&apos;&lt;strong&gt;&lt;/strong&gt;&apos;)</div><div class="line"></div><div class="line"></div><div class="line">将包裹的父级元素移除 只移除父级</div><div class="line">$(&apos;i&apos;).unwrap()</div><div class="line"></div><div class="line"></div><div class="line">移除节点（不仅会移除节点 也会移除绑定事件（原有的事件也会被移除） 并移除节点后 返回移除节点的jq对象</div><div class="line">$(&apos;div i&apos;).remove() 返回的结果是移除的节点</div><div class="line"></div><div class="line">detach 移除节点 保留事件</div><div class="line"></div><div class="line"></div><div class="line">复制节点</div><div class="line">clone 不加true 不会复制事件  为true 复制事件</div><div class="line"></div><div class="line"></div><div class="line">替换节点</div><div class="line">replaceAll  用其他节点 替换指定节点</div><div class="line">replaceWith   将指定节点替换成其他节点</div></pre></td></tr></table></figure></p>
+<p>##JQ-CSS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">获取多项样式属性 返回一个普通样式对象  获取的多项以键值对的形式 放在对象里返回</div><div class="line">console.log($(&apos;.div&apos;).css([&apos;width&apos;,&apos;height&apos;,&apos;backgroundColor&apos;]));</div><div class="line"></div><div class="line">console.log($(&apos;.div&apos;).height()); // number 100  不带单位</div><div class="line">console.log($(&apos;.div&apos;).css(&apos;height&apos;)); // string 100px 带单位</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">console.log($(&apos;div&apos;).innerWidth()) 相当于获取当前元素的clientWidth;</div><div class="line">console.log($(&apos;div&apos;).innerHeight()) 相当于获取当前元素的clientHeight;</div><div class="line"></div><div class="line">console.log($(&apos;div&apos;).outerWidth()) 相当于获取当前元素的offsetWidth;</div><div class="line">console.log($(&apos;div&apos;).outerHeight())相当于获取当前元素的offsetHeight;</div><div class="line"></div><div class="line">距离视口偏移量</div><div class="line">$(&apos;div&apos;).offset()</div><div class="line"></div><div class="line">父级参照物的 偏移值</div><div class="line">$(&apos;div&apos;).position();</div></pre></td></tr></table></figure></p>
+<p>##jQ-DOM<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">插入jq对象节点</div><div class="line">var $h3=$(&apos;&lt;h3&gt;hello jQuery!&lt;/h3&gt;&apos;)</div><div class="line">$(&apos;.oDiv&apos;).append($h3);</div><div class="line"></div><div class="line">插入原生DOM节点</div><div class="line">var h3=document.createElement(&apos;h3&apos;)</div><div class="line">h3.innerHTML=&apos;hello vueJs&apos;;</div></pre></td></tr></table></figure></p>
+<p>##jQ-DOM 查找<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">prev 上一个哥哥元素 （jQ对象）</div><div class="line">$(&apos;.four&apos;).prev().css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">next 下一个弟弟元素（jQ对象）</div><div class="line">$(&apos;.four&apos;).next().css(&apos;backgroundColor&apos;,&apos;blue&apos;);</div><div class="line"></div><div class="line">prevAll 所有哥哥元素（jQ对象）</div><div class="line">$(&apos;.four&apos;).prevAll().css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">nextAll 所有弟弟元素（jQ对象）</div><div class="line">$(&apos;.four&apos;).nextAll().css(&apos;backgroundColor&apos;,&apos;red&apos;);</div><div class="line"></div><div class="line">所有子元素</div><div class="line">console.log($(&apos;ul&apos;).children());</div><div class="line"></div><div class="line">所有父元素 (得到所有祖先元素  一直找到html为止)</div><div class="line">console.log($(&apos;.four&apos;).parents());</div><div class="line"></div><div class="line"></div><div class="line">查找所有祖先元素中 id为oDiv1的元素</div><div class="line">console.log($(&apos;.four&apos;)).parents(&apos;#oDiv1&apos;);</div></pre></td></tr></table></figure></p>
+<p>##jQ-事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">上拉收取复合写法</div><div class="line">$(&apos;#btn&apos;).on(&apos;click.btn1&apos;,function()&#123;</div><div class="line">        </div><div class="line">        $(&apos;oDiv&apos;).slideToggle();</div><div class="line">   &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"> ///  off </div><div class="line">   移除指定事件行为</div><div class="line">$(&apos;#btn&apos;).off(&apos;click&apos;);  </div><div class="line"></div><div class="line">移除当前元素所有事件行为</div><div class="line">$(&apos;#btn&apos;).off()</div><div class="line"></div><div class="line">根据命名空间移除的相应事件类型移除</div><div class="line">$(&apos;#btn&apos;).off(&apos;click.btn1&apos;);</div><div class="line"></div><div class="line"></div><div class="line">根据命名空间移除</div><div class="line">$(&apos;#btn&apos;).off(&apos;.btn1&apos;); </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">/// unbind</div><div class="line">$(&apos;#btn&apos;).unbind()  //移除所有</div><div class="line"></div><div class="line">$(&apos;#btn&apos;).unbind(&apos;click&apos;)  //移除某个行为</div><div class="line"></div><div class="line">$(&apos;#btn&apos;).unbind(&apos;.over&apos;)  //命名空间</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">/// 预留事件 解决未来添加的元素  绑定事件</div><div class="line">$(&apos;body&apos;).on(&apos;click&apos;,&apos;button&apos;,function()&#123;</div><div class="line">      console.log(&apos;button&apos;)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line"></div><div class="line">/// 预留事件  解决未来添加的后代元素 绑定事件</div><div class="line">$(&apos;.container&apos;).delegate(&apos;button&apos;,&apos;click&apos;,function()&#123;</div><div class="line">         </div><div class="line">         console.log(&apos;delegate-click&apos;) ;</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">/// 移除delegate绑定的事件</div><div class="line">  $(&apos;.container&apos;).undelegate(&apos;click&apos;);</div><div class="line">  $(&apos;.container&apos;).undelegate();</div><div class="line"></div><div class="line"></div><div class="line">/// 显示/隐藏切换</div><div class="line">$(&apos;oDiv&apos;).stop().toggle(3000,function()&#123;</div><div class="line">       console.log(&apos;结束&apos;)   </div><div class="line"> &#125;)</div><div class="line"></div><div class="line"></div><div class="line">///滑入滑出</div><div class="line">$(&apos;#btn&apos;).hover(function()&#123; </div><div class="line">     console.log(&apos;mouseover&apos;)</div><div class="line">&#125;,function()&#123;</div><div class="line">     console.log(&apos;mouseout&apos;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// slideToggle 上拉收起  </div><div class="line">$(&apos;.oDiv&apos;).stop().slideToggle(&apos;fast&apos;);</div><div class="line"></div><div class="line"></div><div class="line">//fadeToggle  渐入渐出</div><div class="line">$(&apos;.oDiv&apos;).fadeToggle()</div><div class="line"></div><div class="line"></div><div class="line">//一次性事件</div><div class="line">$(&apos;#btn&apos;).one(&apos;click&apos;,function()&#123;</div><div class="line">      console.log(&apos;one&apos;);</div><div class="line">  &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">//不会事件冒泡</div><div class="line">$(&apos;#btn&apos;).triggerHandler(&apos;click&apos;);</div></pre></td></tr></table></figure></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/20、jQuery的DOM 、事件、/">
+    <time datetime="2017-06-28T10:05:42.632Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/21、常用工具方法/" rel="prev"><span class="meta-nav">←</span> 常用的工具方法</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/19、jQuery/" rel="next">jQuery <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

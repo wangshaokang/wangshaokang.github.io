@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="1、主机=域名+端口号2、第三方模块和自身内置模块不需要加路径，而自定义模块需要加路径3、第三方模块是按照绝对路径查找
+##客户端打开页面进行跳转1window.location.href=&amp;apos;http://www.baidu.com&amp;apos;;
+##服务器端页面跳转（永久重定向）1234" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>server | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、主机=域名+端口号2、第三方模块和自身内置模块不需要加路径，而自定义模块需要加路径3、第三方模块是按照绝对路径查找 ##客户端打开页面进行跳转1window.location.href=&amp;apos;http://www.baidu.com&amp;apos;; ##服务器端页面跳转（永久重定向）12345678910111213let http=require(&amp;apos;http&amp;apos;);le">
+<meta property="og:type" content="article">
+<meta property="og:title" content="server">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/36、server/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、主机=域名+端口号2、第三方模块和自身内置模块不需要加路径，而自定义模块需要加路径3、第三方模块是按照绝对路径查找 ##客户端打开页面进行跳转1window.location.href=&amp;apos;http://www.baidu.com&amp;apos;; ##服务器端页面跳转（永久重定向）12345678910111213let http=require(&amp;apos;http&amp;apos;);le">
+<meta property="og:updated_time" content="2017-06-28T10:20:42.718Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="server">
+<meta name="twitter:description" content="1、主机=域名+端口号2、第三方模块和自身内置模块不需要加路径，而自定义模块需要加路径3、第三方模块是按照绝对路径查找 ##客户端打开页面进行跳转1window.location.href=&amp;apos;http://www.baidu.com&amp;apos;; ##服务器端页面跳转（永久重定向）12345678910111213let http=require(&amp;apos;http&amp;apos;);le">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-36、server" class="post-36、server post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      server
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/36、server/" data-id="cj4gu5bok000z5sr42kwwjocd" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>1、主机=域名+端口号<br>2、第三方模块和自身内置模块不需要加路径，而自定义模块需要加路径<br>3、第三方模块是按照绝对路径查找</p>
+<p>##客户端打开页面进行跳转<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.location.href=&apos;http://www.baidu.com&apos;;</div></pre></td></tr></table></figure></p>
+<p>##服务器端页面跳转（永久重定向）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">let http=require(&apos;http&apos;);</div><div class="line">let url=require(&apos;url&apos;);</div><div class="line">let fs=require(&apos;fs&apos;);</div><div class="line">http.createServer(function(req,res)&#123;</div><div class="line">    let&#123;pathname&#125;=url.parse(req.url);</div><div class="line">    if(pathname===&apos;/&apos;)&#123;</div><div class="line">        // res.setHeader(&apos;Content-type&apos;,&apos;text/html;charset=utf-8&apos;);</div><div class="line">        // 都是设置响应头  setHeader 只是针对某一个设置的  而writeHead针对的是全局所有的重新定向</div><div class="line">        res.writeHead(302,&#123;</div><div class="line">            Location:&apos;https://www.baidu.com&apos;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>##ajax的状态码</p>
+<ul>
+<li>0  未初始化  创建了ajax对象 但没有调用open</li>
+<li>1  载入  发送请求 调用了open和send</li>
+<li>2  载入完成  接收响应原始数据</li>
+<li>3  交互  将响应回来的原始数据 解析成为客户端可以调用的数据</li>
+<li>4  done 完成 通过 xhr.responseText 供客户端调用</li>
+</ul>
+<p>##ajax标准版本写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"> let xhr=new XMLHttpRequest();  //高版本浏览器</div><div class="line">//    console.log(xhr.readyState); //0</div><div class="line">    xhr.open(&apos;GET&apos;,&apos;http://127.0.0.1:8060/getUsers&apos;,true);</div><div class="line">    xhr.responseType=&apos;json&apos;;</div><div class="line">    xhr.onreadystatechange=function()&#123;</div><div class="line">        console.log(xhr.readyState); //2 3 4</div><div class="line">        if(this.readyState===4&amp;&amp;/^2\d&#123;2&#125;$/.test(this.status))&#123;</div><div class="line">//            if(this.response.error===0)&#123;</div><div class="line">                typeof callBack===&apos;function&apos;?callBack(this.response):null;</div><div class="line">                console.log(this.response);</div><div class="line">//            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    xhr.send();</div></pre></td></tr></table></figure></p>
+<p>##ajax原生JS兼容低版本写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function createXhr() &#123;</div><div class="line">       let xhr = null;</div><div class="line">       if (window.XMLHttpRequest) &#123;</div><div class="line">           xhr = new XMLHttpRequest();</div><div class="line">       &#125; else &#123;</div><div class="line">           if (new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;)) &#123;</div><div class="line">               xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">           &#125; else if (new ActiveXObject(&apos;Msxml2.XMLHTTP&apos;)) &#123;</div><div class="line">               xhr = new ActiveXObject(&apos;Msxml2.XMLHTTP&apos;);</div><div class="line">           &#125; else if (new ActiveXObject(&apos;Msxml3.XMLHTTP&apos;)) &#123;</div><div class="line">               xhr = new ActiveXObject(&apos;Msxml3.XMLHTTP&apos;);</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       return xhr;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   let xhr = createXhr();</div><div class="line">   xhr.open(&apos;get&apos;, &apos;http://127.0.0.1:8060/getUsers&apos;, true);</div><div class="line">   xhr.onreadystatechange = function () &#123;</div><div class="line"></div><div class="line">   &#125;;</div><div class="line">   xhr.send();</div></pre></td></tr></table></figure></p>
+<p>##服务器端解决跨域请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">                访问    控制    允许   起源</div><div class="line">res.setHeader(&apos;Access-Control-Allow-Origin&apos;,&apos;*&apos;) //服务端解决跨域</div></pre></td></tr></table></figure></p>
+<p>##ajax请求的数据类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(this.response);  //对象格式数据</div><div class="line">console.log(this.responseText); //string文本数据</div></pre></td></tr></table></figure></p>
+<p>##es6模板字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">  str+= `&lt;li&gt;&lt;span&gt;$&#123;data[i].id&#125;&lt;/span&gt;&lt;span&gt;$&#123;data[i].name&#125;&lt;/span&gt;&lt;span&gt;$&#123;data[i].score&#125;&lt;/span&gt;&lt;/li&gt;`</div><div class="line">     </div><div class="line">lists.innerHTML=str;</div></pre></td></tr></table></figure></p>
+<p>##基于node环境下自定义模板<br> a.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">let sum=(a,b)=&gt;a+b;</div><div class="line">//导出方法（两种方法）</div><div class="line"> 1 、 相当于提供了一个导出的接口 （挂载到这个对象） 导出模块的接口</div><div class="line">// module.exports.sum=sum;</div><div class="line">// module.exports=&#123;</div><div class="line">//     sum, //sum:sum</div><div class="line">//     say:&apos;nihao&apos;</div><div class="line">// &#125;</div><div class="line">//默认导出的都是 module.exports 指向的空间地址</div><div class="line"></div><div class="line">  //2、</div><div class="line">exports.name=&apos;liwueb&apos;;</div><div class="line">// exports=&#123;//改变了地址默认指向 所以不能批量导出设置</div><div class="line">//     id:10,</div><div class="line">//     name:&apos;wanggsh&apos;</div><div class="line">// &#125;</div></pre></td></tr></table></figure></p>
+<p>b.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//对路径的操作</div><div class="line">let path=require(&apos;pxth&apos;)</div><div class="line">// require 引入模块的接口</div><div class="line">let obj=require(&apos;./a.js&apos;);</div><div class="line">//若想获取一次执行一次 必须删除上一次的缓存</div><div class="line">console.log(require.cache);//cache是模块缓存信息对象 属性名 是模块的绝对路径</div><div class="line">delete require.cache[path.resolve(&apos;./a.js&apos;)];//</div><div class="line">let obj1=require(&apos;./a.js&apos;);</div><div class="line">let obj2=require(&apos;./a.js&apos;);//只执行一次  第一次执行产生的缓存保存数据 所以只执行了一次</div><div class="line"></div><div class="line">// console.log(obj.sum(120, 1230));</div><div class="line">// console.log(obj.name)</div></pre></td></tr></table></figure></p>
+<p>//当前项目目录下 打开命令窗口 npm install mime –save<br>let mime=require(‘mime’);<br>console.log(mime.lookup(‘./index3.html’)); //解析出指定文件的mime类型</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/36、server/">
+    <time datetime="2017-06-28T10:05:42.846Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/37、jquery版ajax/" rel="prev"><span class="meta-nav">←</span> jquery版ajax</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/35、ajax+node/" rel="next">ajax+node <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

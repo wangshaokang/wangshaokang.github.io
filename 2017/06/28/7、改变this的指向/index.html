@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="1、所有的对象数据类型（普通对象 实例 prototype  函数）都是Object基类的一个实例2、所有的函数数据类型（普通函数  类（内置类 自定义））都是Function的一个实例3、所有的实例都是对象数据类型的，函数和类都是Function的实例，所以函数也是对象数据类型的值
+##函数的多面" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>改变this的指向 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、所有的对象数据类型（普通对象 实例 prototype  函数）都是Object基类的一个实例2、所有的函数数据类型（普通函数  类（内置类 自定义））都是Function的一个实例3、所有的实例都是对象数据类型的，函数和类都是Function的实例，所以函数也是对象数据类型的值 ##函数的多面性1、普通函数执行的时候形成一个私有作用域  形参赋值  预解释  代码从上到下执行2、作为一个类具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="改变this的指向">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/7、改变this的指向/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、所有的对象数据类型（普通对象 实例 prototype  函数）都是Object基类的一个实例2、所有的函数数据类型（普通函数  类（内置类 自定义））都是Function的一个实例3、所有的实例都是对象数据类型的，函数和类都是Function的实例，所以函数也是对象数据类型的值 ##函数的多面性1、普通函数执行的时候形成一个私有作用域  形参赋值  预解释  代码从上到下执行2、作为一个类具">
+<meta property="og:updated_time" content="2017-06-28T10:20:43.376Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="改变this的指向">
+<meta name="twitter:description" content="1、所有的对象数据类型（普通对象 实例 prototype  函数）都是Object基类的一个实例2、所有的函数数据类型（普通函数  类（内置类 自定义））都是Function的一个实例3、所有的实例都是对象数据类型的，函数和类都是Function的实例，所以函数也是对象数据类型的值 ##函数的多面性1、普通函数执行的时候形成一个私有作用域  形参赋值  预解释  代码从上到下执行2、作为一个类具">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="Hexo" rel="home">Hexo</a>
+      </h1>
+      
+        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
+        <h2 class="site-description"><script>hitokoto();</script></h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-7、改变this的指向" class="post-7、改变this的指向 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      改变this的指向
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/7、改变this的指向/" data-id="cj4gu5be800095sr4u1vsfenc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>1、所有的对象数据类型（普通对象 实例 prototype  函数）都是Object基类的一个实例<br>2、所有的函数数据类型（普通函数  类（内置类 自定义））都是Function的一个实例<br>3、所有的实例都是对象数据类型的，函数和类都是Function的实例，所以函数也是对象数据类型的值</p>
+<p>##函数的多面性<br>1、普通函数<br>执行的时候形成一个私有作用域  形参赋值  预解释  代码从上到下执行<br>2、作为一个类<br>具有原型链模式  类和实例的概念<br>3、作为一个对象<br>当做一个对象给他添加一个属性</p>
+<blockquote>
+<p>所有的函数数据类型（普通函数 类（内置类  自定义））都是Function的一个实例<br>每一个函数都可以使用Function的prototype上存储的属性和方法<br>Function的prototype上比较常用的几种属性（call/apply/bind(有兼容性)<br>每一个函数通过自己的<strong>proto</strong>找到、Function上的call方法<br>call的作用：<br>1、让方法中的this当做一个函数执行**<br>2、将call的this中的this修改为call的第一个参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;info:&apos;say&apos;&#125;;</div><div class="line">function fn()&#123;</div><div class="line">console.log(this)</div><div class="line">&#125;</div><div class="line">fn.call(obj)</div><div class="line">fn.call(obj)这里面fn是call的this，call方法让他执行也就是fn() 并且将fn中的this修改为call的第一个参数值obj   所以fn中的this被修改为obj</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">var obj=&#123;info:&apos;say&apos;&#125;;</div><div class="line">function fn(a,b)&#123;</div><div class="line">console.log(this)</div><div class="line">console.log(a,b)</div><div class="line">&#125;</div><div class="line">fn.call(obj,10,20)</div><div class="line">call语法</div><div class="line">函数.call([this].param1,param2....)第一参数作为call this中的this  其余后面一次是在给call的this传递的参数值</div><div class="line"></div><div class="line"></div><div class="line">1、&apos;use strict&apos;</div><div class="line">严格模式：</div><div class="line">让javaScript 在更加严格的方式下运行 ，如果call中第一个参数不传或者传的是null/undefined  方法中的this都是undefined  其余call中第一个参数是啥就是啥；</div><div class="line">2、非严格模式下：</div><div class="line">如果call中第一个参数不传或者传的是null/undefined 方法中this都是window 其余的call中第一个参数是啥就是啥</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>###call 改变方法中的this关键字<br>call的作用：<br>改变call “.”  前面方法中的this  并让前面的方法执行</p>
+<p>###apply  修改方法中的this关键字<br>作用：<br>将apply ‘.’ 前面的this修改call中的第一个参数值<br>并让apply ‘.’  前面的this执行<br><strong>例如：fn.apply(arr2)   首先fn是apply的this   将fn中的this改为arr2  并让fn执行</strong></p>
+<p>###bind (ie6~8)<br>预处理：事先将fn中的this修改为arr1  但并不会让fn执行，而是将改造后的fn当做值返回<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var arr1=[1,2,3]</div><div class="line">var arr2=[3,4,5]</div><div class="line">function fn(a,b)&#123;</div><div class="line">  console.log(this)</div><div class="line">  console.log(a,b)</div><div class="line">&#125;</div><div class="line">fn.call(arr1)</div><div class="line">var fe=fn.bind(arr1) fe接收的是this被改造后的fn</div><div class="line">fe()  改造后的fn执行</div></pre></td></tr></table></figure></p>
+<p>###call和apply的区别<br>首先， call和apply都是改变方法中this关键字<br>不同：<br>call传参的时候是从第二个参数开始一个一个的传递<br>apply 把需要传递的参数值  放在一个数组里，也相当于一个一个将参数传递进去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn1()&#123;console.log(&apos;f1&apos;)&#125;</div><div class="line">function fn2()&#123;console.log(&apos;f2&apos;)&#125;</div><div class="line">fn1.call(fn2); 让fn执行里面this修改为fn2</div><div class="line">fn1.call.call.call.call();每一个函数都可以使用Function.prototype上的call方法  因为call也是要给函数  所以就可以fn.call.call.call.call;</div></pre></td></tr></table></figure>
+<p>##取出一个数组中的最大值 最小值</p>
+<blockquote>
+<p>var  ary=[1,2,3,4,5,6]<br>var max=Math.max.apply(null,[1,2,3,4,5,6])<br>var min=Math.min.apply(null,[1,2,3,4,5,6])<br>原理：利用apply传递参数的时候，是把需要传递的参数放在数组里，其实也是相当于一次性分别把数组中的每一个参数取出来  当做数组传递到我们方法中</p>
+</blockquote>
+<p>##取平均分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"> function average()&#123;</div><div class="line">**  //    var ary=[];</div><div class="line">//      for(var //i=0;i&lt;arguments.length;i++)&#123;</div><div class="line">//           ary.push(arguments[i]);</div><div class="line">//       &#125;**</div><div class="line">        var ary=[].slice.call(arguments,0);</div><div class="line">        ary.sort(function(a,b)&#123;return a-b&#125;);</div><div class="line">        ary.length--;</div><div class="line">        ary.shift();</div><div class="line">        var sum=eval(ary.join(&apos;+&apos;));</div><div class="line">        var num=(sum/ary.length).toFixed(3);</div><div class="line">        return num;</div><div class="line">    &#125;</div><div class="line">    console.log(average(3,4,5,6,7,8,9,67,45,32));</div></pre></td></tr></table></figure></p>
+<p>###js中捕获异常</p>
+<p>  /<em>try catch finally<br>    如果try里面报错就会执行catch里面的代码<br>    finally不管报不报错  都会执行
+    </em>/<br>  try{<br>      console.log(num);<br>  }catch(e){<br>      console.log(e,message);<br>//      throw new Error(e,message);<br>  }console.log(52);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">1题</div><div class="line"> var num = 0;</div><div class="line">    function Fn(num) &#123;</div><div class="line">        arguments[0] = 100;</div><div class="line">        this.num = 200;</div><div class="line">        console.log(num);</div><div class="line">        console.log(this.num);</div><div class="line">        return num;</div><div class="line">    &#125;</div><div class="line">    Fn.num = 400;</div><div class="line">    Fn.prototype.num = 300;</div><div class="line">    Fn.prototype.getNum = function () &#123;</div><div class="line">        console.log(this.num);</div><div class="line">    &#125;;</div><div class="line">    var f = new Fn(num);//</div><div class="line">    console.log(f.num);//</div><div class="line">    f.getNum();//</div><div class="line">    Fn.prototype.getNum();//</div><div class="line">    console.log(num);//</div><div class="line">    var n = Fn(num);//</div><div class="line">    console.log(n);//</div><div class="line">    console.log(num);//</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">2题</div><div class="line"> function Fn() &#123;</div><div class="line">        this.num=200;</div><div class="line">        num=300;</div><div class="line">        this.say=function () &#123;</div><div class="line">            this.num=15;</div><div class="line">            console.log(this.num);</div><div class="line">            console.log(Fn.num);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    var f1=new Fn;</div><div class="line">    Fn.prototype.num=100;</div><div class="line">    num=400;</div><div class="line">    Fn.num=111;</div><div class="line">    f1.say();</div><div class="line">    console.log(num);</div><div class="line">    console.log(f1.num);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">3题</div><div class="line">function Foo() &#123;</div><div class="line">getName = function () &#123; alert (1); &#125;;</div><div class="line">return this;</div><div class="line">&#125;</div><div class="line">Foo.getName = function () &#123; alert (2);&#125;;</div><div class="line">Foo.prototype.getName = function () &#123; alert (3);&#125;;</div><div class="line">var getName = function () &#123; alert (4);&#125;;</div><div class="line">function getName() &#123; alert (5);&#125;</div><div class="line">//请写出以下输出结果：</div><div class="line">Foo.getName();</div><div class="line">getName();</div><div class="line">Foo().getName();</div><div class="line">getName();</div><div class="line">new Foo.getName();</div><div class="line">new Foo().getName();</div><div class="line">new new Foo().getName();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">4题</div><div class="line"> function text() &#123;</div><div class="line">    //        var n=666;</div><div class="line">    //        function add() &#123;</div><div class="line">    //            n++;</div><div class="line">    //            console.log(n);</div><div class="line">    //        &#125;</div><div class="line">    //        return &#123;n:n,add:add&#125;</div><div class="line">    //    &#125;</div><div class="line">    //    var r1 =text();</div><div class="line">    //    var r2=text();</div><div class="line">    //    r1.add();</div><div class="line">    //    r1.add();</div><div class="line">    //    console.log(r1.n);</div><div class="line">    //    r2.add();</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">5题</div><div class="line"> var num=1;</div><div class="line">    var obj=&#123;num:2&#125;;</div><div class="line">    obj.fn=(function(num)&#123;</div><div class="line">        this.num=num*2;</div><div class="line">        num++;</div><div class="line">        return function(n)&#123;</div><div class="line">            this.num+=n;</div><div class="line">            num++;</div><div class="line">            console.log(num);</div><div class="line">        &#125;</div><div class="line">    &#125;)(obj.num);</div><div class="line">    var fn=obj.fn;</div><div class="line">    fn(10); obj.fn(20);</div><div class="line">    console.log(num,obj.num);</div></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/06/28/7、改变this的指向/">
+    <time datetime="2017-06-28T10:05:42.354Z" class="entry-date">
+        2017-06-28
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2017/06/28/8、json/" rel="prev"><span class="meta-nav">←</span> json</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/06/28/6、重构对象模型/" rel="next">重构对象模型 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2017 John Doe
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
