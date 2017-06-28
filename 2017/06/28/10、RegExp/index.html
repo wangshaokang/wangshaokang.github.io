@@ -1,8 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
+  <title>regexp | Hexo</title>
+  <meta name="author" content="John Doe" />
+
   
   <meta name="description" content="不是正则不重要（项目中很少用正则，面试也很少问正则），而是面试官不会
 ##1、正则是什么？如何学习？正则就是由相关“元字符”和”修饰符“组成的一个规则用来匹配验证或者捕获字符串中某些内容的规则（正则仅仅用来处理字符串的）
@@ -16,82 +19,67 @@
   
 
   
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="regexp" />
+  <meta property="og:site_name" content="Hexo" />
+
   
-  
-  
-  
-  
-  <title>regexp | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不是正则不重要（项目中很少用正则，面试也很少问正则），而是面试官不会 ##1、正则是什么？如何学习？正则就是由相关“元字符”和”修饰符“组成的一个规则用来匹配验证或者捕获字符串中某些内容的规则（正则仅仅用来处理字符串的）  元字符 修饰符 编写常用的正则 正则的验证 正则的捕获 正则的一些小实战以及一些常规方法的封装：myOueryURLParameter 、 myTrim 、myFormatT">
-<meta property="og:type" content="article">
-<meta property="og:title" content="regexp">
-<meta property="og:url" content="http://yoursite.com/2017/06/28/10、RegExp/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="不是正则不重要（项目中很少用正则，面试也很少问正则），而是面试官不会 ##1、正则是什么？如何学习？正则就是由相关“元字符”和”修饰符“组成的一个规则用来匹配验证或者捕获字符串中某些内容的规则（正则仅仅用来处理字符串的）  元字符 修饰符 编写常用的正则 正则的验证 正则的捕获 正则的一些小实战以及一些常规方法的封装：myOueryURLParameter 、 myTrim 、myFormatT">
-<meta property="og:updated_time" content="2017-06-28T10:20:43.361Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="regexp">
-<meta name="twitter:description" content="不是正则不重要（项目中很少用正则，面试也很少问正则），而是面试官不会 ##1、正则是什么？如何学习？正则就是由相关“元字符”和”修饰符“组成的一个规则用来匹配验证或者捕获字符串中某些内容的规则（正则仅仅用来处理字符串的）  元字符 修饰符 编写常用的正则 正则的验证 正则的捕获 正则的一些小实战以及一些常规方法的封装：myOueryURLParameter 、 myTrim 、myFormatT">
-  
-  
-    <link rel="icon" href="/css/images/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css">
   
 
   
+    <meta property="og:image" content="undefined" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
   <!-- baidu webmaster push -->
   <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
 </head>
-<body class="home blog custom-background custom-font-enabled single-author">
-  <div id="page" class="hfeed site">
-      <header id="masthead" class="site-header" role="banner">
-    <hgroup>
-      <h1 class="site-title">
-        <a href="/" title="Hexo" rel="home">Hexo</a>
-      </h1>
-      
-        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
-        <h2 class="site-description"><script>hitokoto();</script></h2>
-      
-    </hgroup>
 
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle">菜单</button>
-            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
-            <div class="menu-main-container">
-                <ul id="menu-main" class="nav-menu">
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
-                
-                </ul>
-            </div>
-    </nav>
-</header>
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-10、RegExp" class="post-10、RegExp post type-post status-publish format-standard hentry">
-    <!---->
 
-      <header class="entry-header">
-        
-        
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
-    <h1 class="entry-title article-title">
-      regexp
-    </h1>
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.400Z"><a href="/2017/06/28/10、RegExp/">2017-06-28</a></time>
+      
+      
+  
+    <h1 class="title">regexp</h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/10、RegExp/" data-id="cj4gu5bdg00075sr4ccw0ntza" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <blockquote>
 <p>不是正则不重要（项目中很少用正则，面试也很少问正则），而是面试官不会</p>
@@ -182,108 +170,93 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">手机号  var reg=/^1\d&#123;10&#125;/;</div><div class="line">身份证号 var reg=/^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)\d&#123;2&#125;(\d)(\d|X)$/</div><div class="line">密码  var reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]&#123;6,14&#125;$/;</div><div class="line">有效数字 var reg=/^[+-]?(\d|([1-9]\d+))(\.\d+)?$/</div><div class="line">名字  var reg=/^[\u4e00-\u9fa5]&#123;2,4&#125;$/     </div><div class="line">年龄(16-76) var reg=/^1[6-9]|[2-6]\d|7[0-6]$/</div><div class="line">AXXB  var reg=/^[a-z]([a-z])\1$/</div><div class="line">ABBA  var reg=/^([a-z])([a-z])\2\1$/</div><div class="line">邮箱  var reg=/^\w+((-\w+)|(\.\w+))*@[a-zA-Z0-9]+((\.|-)[a-zA-Z0-9]+)*\.[a-zA-Z0-9]+$/</div><div class="line">出现一个数字 但不为3  var reg=/^((?!3)\d)+$/ </div><div class="line"></div><div class="line">用户昵称  function checkNick(nick)&#123;</div><div class="line">          var reg1=/^[\u4e00-\u9fa5]&#123;6,14&#125;$/;</div><div class="line">          var reg2=/^\w$/;</div><div class="line">          var len=0;</div><div class="line">          for(var i=0;i&lt;nick.length;i++)&#123;</div><div class="line">           if(reg1.test(nick[i]))&#123;</div><div class="line">           len+=2;</div><div class="line">           &#125;</div><div class="line">           else(reg2.test(nick[i]))&#123;</div><div class="line">           len++;</div><div class="line">           &#125;</div><div class="line">           else&#123;</div><div class="line">           len=0;</div><div class="line">           break;</div><div class="line">           &#125;</div><div class="line">      &#125;</div><div class="line">      if(len===0||len&gt;14)&#123;</div><div class="line">      return false;</div><div class="line">      &#125;</div><div class="line">      return true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/10、RegExp/">
-    <time datetime="2017-06-28T10:05:42.400Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
-
-
-    
-<nav class="nav-single">
-    <h3 class="assistive-text">文章导航</h3>
-    
-        <span class="nav-previous"><a href="/2017/06/28/11、盒子模型/" rel="prev"><span class="meta-nav">←</span> 盒子模型</a></span>
-    
-    
-        <span class="nav-next"><a href="/2017/06/28/9、oop(Object Oriented  Programming) 面向对象/" rel="next">oop <span class="meta-nav">→</span></a></span>
-    
-</nav><!-- .nav-single -->
-
-
-
-
 
 
 
 </div></div>
-        <div id="secondary" class="widget-area" role="complementary">
-  
-    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
-    <div>
-        <input type="text" value="" name="s" id="s" />
-        <input type="submit" id="searchsubmit" value="搜索" />
-    </div>
-</form></aside>
-  
-    
-  
-    
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget-content">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </aside>
-
-  
-    
-  
-    
-  
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
 </div>
-      </div>
-      <footer id="colophon" role="contentinfo">
-    <p>&copy; 2017 John Doe
-    All rights reserved.</p>
-    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</footer>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
-<script src="/js/jquery-2.0.3.min.js"></script>
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(3)/"></a>
+      </li>
+    
+  </ul>
+</div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
 
-
-<script src="/js/script.js"></script>
-
-<script src="/js/navigation.js"></script>
-
-<div id="bg"></div>
-
+  
+</aside>
+    <div class="clearfix"></div>
   </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 John Doe
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
 </body>
 </html>

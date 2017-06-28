@@ -1,85 +1,76 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  
+  <title>Seite 3 | Hexo</title>
+  <meta name="author" content="John Doe" />
+
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
   
   
 
   
-  
-  
-  
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-  
-    <link rel="icon" href="/css/images/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <meta property="og:image" content="undefined" />
   
 
   
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
   <!-- baidu webmaster push -->
   <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
 </head>
-<body class="home blog custom-background custom-font-enabled single-author">
-  <div id="page" class="hfeed site">
-      <header id="masthead" class="site-header" role="banner">
-    <hgroup>
-      <h1 class="site-title">
-        <a href="/" title="Hexo" rel="home">Hexo</a>
-      </h1>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
       
-        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
-        <h2 class="site-description"><script>hitokoto();</script></h2>
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:43.065Z"><a href="/2017/06/28/44、xss/">2017-06-28</a></time>
       
-    </hgroup>
-
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle">菜单</button>
-            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
-            <div class="menu-main-container">
-                <ul id="menu-main" class="nav-menu">
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
-                
-                </ul>
-            </div>
-    </nav>
-</header>
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
+      
   
-    <article id="post-44、xss" class="post-44、xss post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/44、xss/">xss</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/44、xss/">xss</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/44、xss/" data-id="cj4guolzu001t5sr4m3kdswn0" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>协议：域名.端口号</p>
 <p>防护原则<br>安全第一，不轻信任何数据，不轻信队友<br>慎用公共cdn资源<br>慎用第三方服务jsonp接口</p>
@@ -90,45 +81,40 @@
 <p>##网页404 关爱宝贝回家<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">app.use(function(req,res,next)&#123; // 404</div><div class="line">    res.render(&apos;404&apos;,&#123;title:&apos;你的页面走丢了&apos;&#125;);</div><div class="line">&#125;);</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.qq.com/404/search_children.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.qq.com/404/search_children.js?edition=small&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/44、xss/">
-    <time datetime="2017-06-28T10:05:43.065Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-43、Vue(2)" class="post-43、Vue(2) post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:43.054Z"><a href="/2017/06/28/43、Vue(2)/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/43、Vue(2)/">vue(2)</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/43、Vue(2)/">vue(2)</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/43、Vue(2)/" data-id="cj4guoly7001s5sr4ii0mn72m" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>如果想绑定动态数据  则需要用v-bind   v-bind简写成我们的 :<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img :src=&quot;title&quot; alt=&quot;&quot;&gt;</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">vue init webpack-simple myvuex 新建一个文件夹 myvuex</div><div class="line">cd myvuex 进入文件夹 myvuex</div><div class="line">npm install安装npm</div><div class="line">npm run dev 让程序跑起来</div></pre></td></tr></table></figure>
@@ -155,45 +141,40 @@
 <p>querystring.parse(str, [sep], [eq], [options])<br>接收参数：<br>str                                         欲转换的字符串<br>sep                                       设置分隔符，默认为 ‘&amp;’<br>eq                                         设置赋值符，默认为 ‘=’<br>[options]  maxKeys             可接受字符串的最大长度，默认为1000</p>
 </script></li></ul>
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/43、Vue(2)/">
-    <time datetime="2017-06-28T10:05:43.054Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-42、Vue(1)" class="post-42、Vue(1) post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:43.038Z"><a href="/2017/06/28/42、Vue(1)/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/42、Vue(1)/">vue（1）</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/42、Vue(1)/">vue（1）</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/42、Vue(1)/" data-id="cj4gu5cfm00145sr4umf50yzq" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>v-on 绑定事件 v-on:事件类型=’处理函数’</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$event 特殊变量 代表的是事件对象 </div><div class="line">  &lt;button v-on:click=&quot;say(&apos;param,$event)&quot;&gt;点击&lt;/button&gt; </div><div class="line">   &lt;!--v-on:缩写成@--&gt;</div><div class="line"> &lt;button @click=&quot;say(&apos;param,$event)&quot;&gt;点击&lt;/button&gt;</div><div class="line"> 不传参 默认第一个参数就是事件对象  v-on 绑定事件 v-on:事件类型=&apos;处理函数&apos;</div></pre></td></tr></table></figure>
@@ -210,7 +191,7 @@
 <p>###动态绑定 v-bind:class<br>    与静态资源class是共存的 class=“font s2”<br>    <div :class="s2" class="font">我是内容</div></p>
 <p>##计算属性 computed 通过一个属性 计算出来一个新的属性 当这个属性变化时  新的属性也会跟着改变</p>
 <p>##vue 事件修饰符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div class=&quot;oDiv&quot; @click=&quot;parent&quot;&gt;</div><div class="line">    &lt;!--修饰符  事件类型.修饰符  click.stop 阻止冒泡传播--&gt;</div><div class="line">    &lt;button v-on:click.stop=&quot;child&quot;&gt;点击&lt;/button&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div class=&quot;oDiv&quot; @click=&quot;parent&quot;&gt;</div><div class="line">&lt;!--阻止默认行为的修饰符  事件类型.prevent--&gt;</div><div class="line">&lt;a href=&quot;http://www.baidu.com&quot; @click.prevent.stop=&quot;link&quot;&gt;百度&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;!--捕获阶段 capture 从外到内--&gt;</div><div class="line">&lt;div class=&quot;outer&quot; @click.capture=&quot;outer&quot;&gt;</div><div class="line">    &lt;div class=&quot;inner&quot; @click.capture=&quot;inner&quot;&gt;</div><div class="line">        &lt;div class=&quot;center&quot; @click.capture=&quot;center&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;!--事件值触发一次 once--&gt;</div><div class="line">&lt;button @click.once=&quot;one&quot;&gt;一次性事件&lt;/button&gt;</div><div class="line"></div><div class="line">&lt;!--阻止表单默认提交</div><div class="line">原生的写法：onsubmit=&quot; return false&quot;</div><div class="line">Vue的写法：@submit.prevent/v-on:submit.prevent--&gt;</div></pre></td></tr></table></figure></p>
-<p>##按键修饰符<br> <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#33;&#x2d;&#x2d;&#x40;&#107;&#x65;&#x79;&#x75;&#112;&#46;&#107;&#x65;&#x79;&#x43;&#111;&#x64;&#x65;&#x2f;&#x4e5f;&#21487;&#20197;&#30452;&#25509;&#x5199;&#x6210;&#x28;&#x40;&#x6b;&#x65;&#x79;&#x75;&#112;&#x2e;&#x952e;&#x7801;&#x503c;&#x29;&#45;&#x2d;">&#33;&#x2d;&#x2d;&#x40;&#107;&#x65;&#x79;&#x75;&#112;&#46;&#107;&#x65;&#x79;&#x43;&#111;&#x64;&#x65;&#x2f;&#x4e5f;&#21487;&#20197;&#30452;&#25509;&#x5199;&#x6210;&#x28;&#x40;&#x6b;&#x65;&#x79;&#x75;&#112;&#x2e;&#x952e;&#x7801;&#x503c;&#x29;&#45;&#x2d;</a><br>    <!--回车 触发--><br>    enter:<input type="text" @keyup.enter="say"><br><br>    <!--空格 触发--><br>    space:<input type="text" @keyup.space="say"><br><br>    <!--esc 触发--><br>    esc:<input type="text" @keyup.esc="say"><br><br>    <!--delete 触发--><br>    delete:<input type="text" @keyup.delete="say"><br><br>    <!--tab 触发--><br>    tab:<input type="text" @keyup.tab="say"><br><br>    <!--up 触发--><br>    up:<input type="text" @keyup.up="say"><br><br>    <!--down 触发--><br>    down:<input type="text" @keyup.down="say"><br><br>    <!--left 触发--><br>    left:<input type="text" @keyup.left="say"><br><br>    <!--right 触发--><br>    right:<input type="text" @keyup.right="say"><br><br>    <!--Q 触发--><br>    Q1:<input type="text" @keyup.81="say"><br><br>    Q2:<input type="text" @keyup.q="say"><br><br><br></p>
+<p>##按键修饰符<br> <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x21;&#x2d;&#x2d;&#64;&#x6b;&#101;&#121;&#x75;&#x70;&#46;&#x6b;&#101;&#121;&#67;&#x6f;&#100;&#x65;&#x2f;&#20063;&#x53ef;&#x4ee5;&#x76f4;&#25509;&#20889;&#25104;&#40;&#64;&#x6b;&#101;&#x79;&#x75;&#112;&#46;&#38190;&#x7801;&#x503c;&#41;&#45;&#x2d;">&#x21;&#x2d;&#x2d;&#64;&#x6b;&#101;&#121;&#x75;&#x70;&#46;&#x6b;&#101;&#121;&#67;&#x6f;&#100;&#x65;&#x2f;&#20063;&#x53ef;&#x4ee5;&#x76f4;&#25509;&#20889;&#25104;&#40;&#64;&#x6b;&#101;&#x79;&#x75;&#112;&#46;&#38190;&#x7801;&#x503c;&#41;&#45;&#x2d;</a><br>    <!--回车 触发--><br>    enter:<input type="text" @keyup.enter="say"><br><br>    <!--空格 触发--><br>    space:<input type="text" @keyup.space="say"><br><br>    <!--esc 触发--><br>    esc:<input type="text" @keyup.esc="say"><br><br>    <!--delete 触发--><br>    delete:<input type="text" @keyup.delete="say"><br><br>    <!--tab 触发--><br>    tab:<input type="text" @keyup.tab="say"><br><br>    <!--up 触发--><br>    up:<input type="text" @keyup.up="say"><br><br>    <!--down 触发--><br>    down:<input type="text" @keyup.down="say"><br><br>    <!--left 触发--><br>    left:<input type="text" @keyup.left="say"><br><br>    <!--right 触发--><br>    right:<input type="text" @keyup.right="say"><br><br>    <!--Q 触发--><br>    Q1:<input type="text" @keyup.81="say"><br><br>    Q2:<input type="text" @keyup.q="say"><br><br><br></p>
 <p>##组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">全局组件  局部组件</div><div class="line">    在初始化实例之前 注册全局组件  可以在多个实例 以自定义的形式被引用</div><div class="line">    @param1  组件名 （自定义标签） 多个单词  my-component(‘-’隔开)  也可以是单个单词 comp  组件名不能是html里已存在的标签</div><div class="line">    @param2  参数对象  配置  组件  结构template  行为methods  数据data  计算属性   钩子函数 (组件data必须是一个函数)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&lt;template id=&quot;temps&quot;&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;h3&gt;我是全局模板&lt;/h3&gt;</div><div class="line">        &lt;p @click=&quot;say&quot;&gt;欢迎来珠峰&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  Vue.component(&apos;my-component&apos;,&#123;</div><div class="line">//  1、    template:&apos;&lt;div&gt;&lt;h3&gt;我是一个全局组件&lt;/h3&gt;&lt;/div&gt;&apos;    //组件只能有一个根元素</div><div class="line">    2、   template:&apos;#temps&apos;,  //通过模板ID来引用</div><div class="line">        methods:&#123;</div><div class="line">            say ()&#123;</div><div class="line">                alert(&apos;hello world&apos;);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p>##局部组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> // 局部组件</div><div class="line">    new Vue(&#123;</div><div class="line">        el:&apos;#app1&apos;,</div><div class="line">        components:&#123;//局部注册组件</div><div class="line">            &apos;my-comp1&apos;:&#123;  //有‘-’的局部组件名必须用引号包起来  单个不用</div><div class="line">                template:&apos;&lt;div&gt;&lt;h3&gt;my-comp1&lt;/h3&gt;&lt;/div&gt;&apos;</div><div class="line">            &#125;,</div><div class="line">            child:&#123;</div><div class="line">                template:&apos;&lt;div&gt;&lt;h3&gt;child&lt;/h3&gt;&lt;/div&gt;&apos;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">从子组件外部传递数据  mess=&apos;lilei&apos; 这样的传递都是string</div><div class="line">如果想传递动态属性 需要v-bind      (v-bind:mess)可以缩写成（:mess）</div></pre></td></tr></table></figure></p>
 <p>##父子组件的通信<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">let obj=&#123;count:0&#125;;</div><div class="line">    // 父子组件通信 props接收外部传递进来的数据</div><div class="line">    //子组件不可以 直接使用 父组件的数据</div><div class="line">    /*</div><div class="line">    * props 用来从父组件 传递数据给子组件</div><div class="line">    * */</div><div class="line">    let child=&#123;</div><div class="line">        props:[&apos;mess&apos;,&apos;say&apos;],//指定一个传递的数据属性 如果声明的是驼峰命名  在外部使用的时候全小写 并用‘-’隔开  &lt;child :my-mess=&quot;title&quot;&gt;&lt;/child&gt;</div><div class="line">        template:&apos;&lt;div&gt;&lt;h3&gt;&#123;&#123;say&#125;&#125;  &#123;&#123;mess&#125;&#125;&lt;/h3&gt;&lt;/div&gt;&apos;</div><div class="line">//        template:&apos;&lt;button @click=&quot;count+=1&quot;&gt;&#123;&#123;title&#125;&#125;&lt;/button&gt;&apos;,</div><div class="line">//        data()&#123;</div><div class="line">//            return &#123;count:0&#125;;</div><div class="line">//        &#125;</div><div class="line">    &#125;</div><div class="line">    let vm=new Vue(&#123;</div><div class="line">        el:&apos;#app&apos;,</div><div class="line">        data:&#123;</div><div class="line">            title:&apos;black&apos;</div><div class="line">        &#125;,</div><div class="line">        components:&#123;</div><div class="line">            child</div><div class="line">        &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
@@ -218,45 +199,40 @@
 <p>###过载完成 钩子函数   中的this是当前的组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">let cpc=new Vue();</div><div class="line">    let prev=&#123;</div><div class="line">        template:&apos;&lt;div&gt;&lt;input @keyup.enter=&quot;publish&quot; type=&quot;text&quot; v-model=&quot;val&quot;&gt;&lt;button @click=&quot;publish&quot;&gt;发布&lt;/button&gt;&lt;/div&gt;&apos;,</div><div class="line">        data()&#123;</div><div class="line">          return &#123;val:&apos;hello&apos;&#125;</div><div class="line">        &#125;,</div><div class="line">        methods:&#123;</div><div class="line">            publish()&#123;</div><div class="line">                cpc.$emit(&apos;warning&apos;,this.val)</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    let next=&#123;</div><div class="line">        template:&apos;&lt;div&gt;&lt;h3&gt;next 组件&lt;/h3&gt;&lt;p&gt;接收到：&#123;&#123;msg&#125;&#125;&lt;/p&gt;&lt;/div&gt;&apos;,</div><div class="line">        mounted()&#123; //过载完成 钩子函数   中的this是当前的组件</div><div class="line">            cpc.$on(&apos;warning&apos;,this.listen);</div><div class="line">        &#125;,</div><div class="line">        data()&#123;</div><div class="line">            return &#123;msg:&apos;&apos;&#125;</div><div class="line">        &#125;,</div><div class="line">        methods:&#123;</div><div class="line">            listen(val)&#123;</div><div class="line">                console.log(val)</div><div class="line">                this.msg=val.toUpperCase();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;;</div><div class="line">    new Vue(&#123;</div><div class="line">        el:&apos;#app&apos;,</div><div class="line">        components:&#123;</div><div class="line">            prev,</div><div class="line">            next</div><div class="line">        &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/42、Vue(1)/">
-    <time datetime="2017-06-28T10:05:43.038Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-41、node(1)" class="post-41、node(1) post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:43.024Z"><a href="/2017/06/28/41、node(1)/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/41、node(1)/">node(1)</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/41、node(1)/">node(1)</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/41、node(1)/" data-id="cj4guom67001u5sr4qq68i6uf" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##1、git config –list查看git的账号 密码（一般在最后两行）</p>
 <p>##2、git config –global user.name XX配置全局的用户名</p>
@@ -304,45 +280,40 @@
 <p>function a(a){<br>    return function(b){<br>        return  a+b;<br>    }<br>}<br>简写：<br>let a=a=&gt;b=&gt;a+b;<br>```</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/41、node(1)/">
-    <time datetime="2017-06-28T10:05:43.024Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-40、Vue" class="post-40、Vue post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:43.012Z"><a href="/2017/06/28/40、Vue/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/40、Vue/">vue</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/40、Vue/">vue</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/40、Vue/" data-id="cj4gu5cfc00135sr45tofwchg" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <ul>
 <li>渐进式框架  mvvm</li>
@@ -357,45 +328,40 @@
 <p>##Vue 压缩和不压缩<br>通常开发阶段  引入不压缩版 报错提示 便于调试  生成版（压缩版） Vue.min.js  是没有  报错提示的</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/40、Vue/">
-    <time datetime="2017-06-28T10:05:43.012Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-39、server(1)" class="post-39、server(1) post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.987Z"><a href="/2017/06/28/39、server(1)/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/39、server(1)/">server(1)</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/39、server(1)/">server(1)</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/39、server(1)/" data-id="cj4gu5cf700125sr4akcyeu2d" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>npm init -y    初始化<br>npm install 包名 –save   下载相关模块</p>
 <p>##fs.exists方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">测试某个路径下的文件是否存在。回调函数包含一个参数exists，true则文件存在，否则是false。</div><div class="line">由于该方法属于fs模块，使用前需要引入fs模块var fs= require(“fs”) </div><div class="line">fs.existsSync(路径下的文件)  Sync 同步</div></pre></td></tr></table></figure></p>
@@ -423,45 +389,40 @@
 <p>##ajax跨域请求数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">        $.ajax(&#123;</div><div class="line">            url:&apos;http://127.0.0.1:8060/getTime&apos;,</div><div class="line">            type:&apos;get&apos;,</div><div class="line">            dataType:&apos;jsonp&apos;,//跨域请求</div><div class="line">            jsonp:&apos;cb&apos;, // 后台定的   callBack=fn   重写URL请求中  传递函数的字段名</div><div class="line">            jsonpCallback:&apos;wangdaxian&apos;, //重写jsonp  URL请求中 回调函数名</div><div class="line">            success:function(result)&#123;</div><div class="line">                console.log(result);</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">    &#125;)</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/39、server(1)/">
-    <time datetime="2017-06-28T10:05:42.987Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-38、node" class="post-38、node post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.975Z"><a href="/2017/06/28/38、node/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/38、node/">node</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/38、node/">node</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/38、node/" data-id="cj4gu5cdy00115sr4c4s2flsy" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##什么是node？<br>node就是一个运行环境，可以使js运行在服务端  浏览器不能操作本地文件  </p>
 <p>##node</p>
@@ -497,89 +458,79 @@
 </ul>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/38、node/">
-    <time datetime="2017-06-28T10:05:42.975Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-37、jquery版ajax" class="post-37、jquery版ajax post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.956Z"><a href="/2017/06/28/37、jquery版ajax/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/37、jquery版ajax/">jquery版ajax</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/37、jquery版ajax/">jquery版ajax</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/37、jquery版ajax/" data-id="cj4gu5cac00105sr4hxtb2w1e" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"> $(function()&#123;</div><div class="line">        $.ajax(&#123;</div><div class="line">            url:url, //接口请求地址</div><div class="line">            type:&apos;GET&apos;,  //请求方式      1.9以下的版本用method</div><div class="line">            beforeSend:function(xhr)&#123;  // 发送请求之前 触发</div><div class="line"></div><div class="line">            &#125;,</div><div class="line">            cache:true, //  是否缓存      true（缓存）  false（不缓存）</div><div class="line">            async:true,  //true 异步   false 同步</div><div class="line">            context:window,  //指定success里面的上下文</div><div class="line">            dataType:&apos;text&apos;, // 指定解析 接收的数据的格式  responseType(原生的写法)</div><div class="line">//   跨域    dataType:&apos;jsonp&apos;</div><div class="line">            jsonp:&apos;cd&apos;,   //重写jsonp的请求 URL中回调函数key的名称</div><div class="line">            jsonpCallback:&apos;fn&apos;, // 指定jsonp回调函数的名称</div><div class="line">            success:function(result)&#123; //成功回调函数</div><div class="line">                console.log(result);</div><div class="line">            &#125;,</div><div class="line"></div><div class="line">            timeout:3000, //xhr,timeout 设置超时时间 如果超时会触发error时间</div><div class="line">            // 原生 xhr.timeout  触发 xhr.ontimeout=function</div><div class="line">            error:function(err)&#123;  //请求出错</div><div class="line">                console.log(err);</div><div class="line">            &#125;,</div><div class="line"></div><div class="line">            complete:function(xhr)&#123; //不管提交成功不成功  都会执行</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
 <p>对象合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">原生的方法</div><div class="line">Object.assign(default1,options1)</div><div class="line"></div><div class="line">es6的方法</div><div class="line">for(let attr in options)&#123;</div><div class="line">if(option1.hasOwnProperty(attr))&#123;</div><div class="line">       default[attr]=opations[attr];</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/37、jquery版ajax/">
-    <time datetime="2017-06-28T10:05:42.956Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-36、server" class="post-36、server post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.846Z"><a href="/2017/06/28/36、server/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/36、server/">server</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/36、server/">server</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/36、server/" data-id="cj4gu5bok000z5sr42kwwjocd" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>1、主机=域名+端口号<br>2、第三方模块和自身内置模块不需要加路径，而自定义模块需要加路径<br>3、第三方模块是按照绝对路径查找</p>
 <p>##客户端打开页面进行跳转<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">window.location.href=&apos;http://www.baidu.com&apos;;</div></pre></td></tr></table></figure></p>
@@ -602,45 +553,40 @@
 <p>//当前项目目录下 打开命令窗口 npm install mime –save<br>let mime=require(‘mime’);<br>console.log(mime.lookup(‘./index3.html’)); //解析出指定文件的mime类型</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/36、server/">
-    <time datetime="2017-06-28T10:05:42.846Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-35、ajax+node" class="post-35、ajax+node post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.834Z"><a href="/2017/06/28/35、ajax+node/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/35、ajax+node/">ajax+node</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/35、ajax+node/">ajax+node</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/35、ajax+node/" data-id="cj4gu5bo4000x5sr47ly5wvp2" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##DOS 命令(磁盘操作系统)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> &gt; ipconfig                       ... 显示信息</div><div class="line">  &gt; ipconfig /all                  ... 显示详细信息</div><div class="line">  &gt; ipconfig /renew                ... 更新所有适配器</div><div class="line">  &gt; ipconfig /renew EL*            ... 更新所有名称以 EL 开头</div><div class="line">                                       的连接</div><div class="line">  &gt; ipconfig /release *Con*        ... 释放所有匹配的连接，</div><div class="line">                                       例如 &quot;Local Area Connection 1&quot; 或</div><div class="line">                                           &quot;Local Area Connection 2&quot;</div><div class="line">  &gt; ipconfig /allcompartments      ... 显示有关所有分段的</div><div class="line">                                       信息</div><div class="line">  &gt; ipconfig /allcompartments /all ... 显示有关所有分段的</div><div class="line">                                       详细信息</div><div class="line"></div><div class="line">ipconfig  ipconfig/all  查看本机IP信息</div><div class="line">clear/cls                         清屏</div></pre></td></tr></table></figure></p>
 <p>##在window命令窗口中使用Linux命令<br>1、安装git时候，选择adjusting your path env中的第三项<br>2、配置环境变量<br>右键计算机–&gt;&gt;属性–&gt;&gt;高级系统设置–&gt;&gt;环境变量–&gt;&gt;系统变量–&gt;&gt;path–（git安装目录下cmd路径）f:\Program Files\Git\cmd<br>1、ipconfig ipconfig/all   查看本机IP信息<br>2、clear/cls  清屏<br>3、ls -al    查看所有文件<br>4、cd   切换目录  change direction<br>5、mkdir  创建目录<br>6、touch  创建文件<br>7、echo  编辑文件内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">添加并将原有内容覆盖</div><div class="line">echo 编辑的内容&gt;文件名</div><div class="line">追加内容</div><div class="line">echo 编辑的内容&gt;&gt;文件名</div></pre></td></tr></table></figure></p>
@@ -657,17 +603,19 @@
 <p>2、全局安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install package -g</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/35、ajax+node/">
-    <time datetime="2017-06-28T10:05:42.834Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
@@ -675,86 +623,83 @@
 
 
 
+<nav id="pagination">
   
-  
-    <nav id="pagination">
-      <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
-      </nav>
-    </nav>
-  
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Vorherige Seite</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/4/">Nächste Seite &raquo;</a>
+  </nav>
 
+</nav>
 </div></div>
-        <div id="secondary" class="widget-area" role="complementary">
-  
-    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
-    <div>
-        <input type="text" value="" name="s" id="s" />
-        <input type="submit" id="searchsubmit" value="搜索" />
-    </div>
-</form></aside>
-  
-    
-  
-    
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget-content">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </aside>
-
-  
-    
-  
-    
-  
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
 </div>
-      </div>
-      <footer id="colophon" role="contentinfo">
-    <p>&copy; 2017 John Doe
-    All rights reserved.</p>
-    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</footer>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
-<script src="/js/jquery-2.0.3.min.js"></script>
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(3)/"></a>
+      </li>
+    
+  </ul>
+</div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
 
-
-<script src="/js/script.js"></script>
-
-<script src="/js/navigation.js"></script>
-
-<div id="bg"></div>
-
+  
+</aside>
+    <div class="clearfix"></div>
   </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 John Doe
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
 </body>
 </html>

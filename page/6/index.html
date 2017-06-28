@@ -1,85 +1,76 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  
+  <title>Seite 6 | Hexo</title>
+  <meta name="author" content="John Doe" />
+
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
   
   
 
   
-  
-  
-  
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/6/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-  
-    <link rel="icon" href="/css/images/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <meta property="og:image" content="undefined" />
   
 
   
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
   <!-- baidu webmaster push -->
   <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
 </head>
-<body class="home blog custom-background custom-font-enabled single-author">
-  <div id="page" class="hfeed site">
-      <header id="masthead" class="site-header" role="banner">
-    <hgroup>
-      <h1 class="site-title">
-        <a href="/" title="Hexo" rel="home">Hexo</a>
-      </h1>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
       
-        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
-        <h2 class="site-description"><script>hitokoto();</script></h2>
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.447Z"><a href="/2017/06/28/14、JS盒子模型和继承/">2017-06-28</a></time>
       
-    </hgroup>
-
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle">菜单</button>
-            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
-            <div class="menu-main-container">
-                <ul id="menu-main" class="nav-menu">
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
-                
-                </ul>
-            </div>
-    </nav>
-</header>
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
+      
   
-    <article id="post-14、JS盒子模型和继承" class="post-14、JS盒子模型和继承 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/14、JS盒子模型和继承/">JS盒子模型和继承</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/14、JS盒子模型和继承/">JS盒子模型和继承</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/14、JS盒子模型和继承/" data-id="cj4gu5bfu000d5sr4zb4bjbkp" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##JS盒子模型中的常用属性<br>client（width/height/top/left/）<br>offset(width/height/top/left) offsetParent<br>scroll(width/height/top(读写)/left（读写）)<br>//其他的属性只能读<br>ofset:获取当前元素相对于BODY的偏移（top：xxx,left:xxx)</p>
 <p>##获取当前元素具体的某一个样式值：<br>curEle.style.xxx  :  只能获取写在元素行内上的样式<br>getComputedStyle  /  currentStyle: 获取当前元素所有经过浏览器计算的样式<br>—-getCss<br>—-setCss<br>—-setGroupCss（批量设置）<br>——-&gt;  JQ中的css方法</p>
@@ -123,45 +114,40 @@
 <p>###6、中间类继承<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">// 中间类继承：通过使用__proto__</div><div class="line">     // var arr = [1,2,4]; // arr.__proto__.shift</div><div class="line">     // arr.shift();</div><div class="line">     // console.log(arr);</div><div class="line">     // console.log(arr.__proto__.shift === Array.prototype.shift);</div><div class="line">     // console.log(arr.__proto__ === Array.prototype);</div><div class="line">     // function add() &#123;</div><div class="line">     //   // 类数组的__proto__ 指向了 Array.prototype</div><div class="line">     //   arguments.__proto__ =  Array.prototype;</div><div class="line">     //   arguments.shift(); // [2,3,4,5]</div><div class="line">     //   console.log(arguments);</div><div class="line">     // &#125;</div><div class="line">     // add(1,2,3,4,5)</div><div class="line">     console.log([].__proto__);</div><div class="line">     function sorts() &#123;</div><div class="line">       arguments.__proto__ =  Array.prototype;</div><div class="line">       arguments.sort();</div><div class="line">       console.log(arguments);</div><div class="line">     &#125;</div><div class="line">     sorts(6,9,3,5,8);</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/14、JS盒子模型和继承/">
-    <time datetime="2017-06-28T10:05:42.447Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-13、类名的增删改查" class="post-13、类名的增删改查 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.442Z"><a href="/2017/06/28/13、类名的增删改查/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/13、类名的增删改查/">类型的增删改查</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/13、类名的增删改查/">类型的增删改查</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/13、类名的增删改查/" data-id="cj4gu5bfs000c5sr49etwma2c" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##字面量方式 无法在正则中拼接变量<br>new RegExp 可以拼接变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
 <p>##类名的增删改查<br>oDiv.classList.remove(‘c1’)  移出类<br>oDiv.classList.add(‘c2’)   增加类<br>oDiv.classList.toggle(‘c4’)  切换类 （当前元素中  有就移除  没有就添加</p>
@@ -170,45 +156,40 @@
 </blockquote>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/13、类名的增删改查/">
-    <time datetime="2017-06-28T10:05:42.442Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-12、获取元素样式属性" class="post-12、获取元素样式属性 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.424Z"><a href="/2017/06/28/12、获取元素样式属性/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/12、获取元素样式属性/">获取样式属性</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/12、获取元素样式属性/">获取样式属性</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/12、获取元素样式属性/" data-id="cj4gu5bd200065sr42iiffc7v" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>复习：<br>clientWidth<br>clientHeight<br>clientLeft<br>clientTop</p>
 <p>元素.style只能获取到行内样式</p>
@@ -217,45 +198,40 @@
 <p>加单位  如果不带单位的value  我们给加上单位</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/12、获取元素样式属性/">
-    <time datetime="2017-06-28T10:05:42.424Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-11、盒子模型" class="post-11、盒子模型 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.412Z"><a href="/2017/06/28/11、盒子模型/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/11、盒子模型/">盒子模型</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/11、盒子模型/">盒子模型</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/11、盒子模型/" data-id="cj4guolxt001q5sr4a3teo3pj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>检测字母出现的次数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var str=&apos;my name is zhou xiao tian&apos;</div><div class="line">var reg=/(?!\s)[a-z]/g;</div><div class="line">var obj=&#123;&#125;;</div><div class="line">str.replace(reg,function()&#123;</div><div class="line">     var cur=arguments[0];</div><div class="line">     if(obj[cur])&#123;</div><div class="line">      obj[cur]++;</div><div class="line">     &#125;else&#123;</div><div class="line">     obj[cur]=1;</div><div class="line">     &#125;</div><div class="line">&#125;)</div><div class="line">console.log(obj);</div><div class="line"></div><div class="line"></div><div class="line"> 比较那个出现的次数最多</div><div class="line">var max=obj[&apos;m&apos;];</div><div class="line">for(var key in obj)&#123;</div><div class="line">var cur=obj[key];</div><div class="line">  cur&gt;max ? max=cur:null;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">得到出现次数最多的那一项</div><div class="line">var ary=[];</div><div class="line">for(var key in obj)&#123;</div><div class="line">   if(obj[key]==max)&#123;</div><div class="line">   ary.push(key)</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var str=&apos;http://www.baidu.com/index.html?name=狮子王&amp;age=20&amp;sex=1&apos;</div><div class="line"></div><div class="line">//封装一个方法</div><div class="line">function getParamer()&#123;</div><div class="line">var reg=/([^?&amp;=]+)=([^?&amp;=]+)/g;</div><div class="line">var obj=[];</div><div class="line">url.replace(reg,function()&#123;</div><div class="line">   obj[arguments[1]]=arguments[2];</div><div class="line">&#125;)</div><div class="line">&#125;</div><div class="line">console.log(getParamer(obj))</div></pre></td></tr></table></figure>
@@ -298,45 +274,40 @@
 </blockquote>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/11、盒子模型/">
-    <time datetime="2017-06-28T10:05:42.412Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-10、RegExp" class="post-10、RegExp post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.400Z"><a href="/2017/06/28/10、RegExp/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/10、RegExp/">regexp</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/10、RegExp/">regexp</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/10、RegExp/" data-id="cj4gu5bdg00075sr4ccw0ntza" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <blockquote>
 <p>不是正则不重要（项目中很少用正则，面试也很少问正则），而是面试官不会</p>
@@ -427,87 +398,77 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">手机号  var reg=/^1\d&#123;10&#125;/;</div><div class="line">身份证号 var reg=/^(\d&#123;6&#125;)(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)\d&#123;2&#125;(\d)(\d|X)$/</div><div class="line">密码  var reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[a-zA-Z0-9]&#123;6,14&#125;$/;</div><div class="line">有效数字 var reg=/^[+-]?(\d|([1-9]\d+))(\.\d+)?$/</div><div class="line">名字  var reg=/^[\u4e00-\u9fa5]&#123;2,4&#125;$/     </div><div class="line">年龄(16-76) var reg=/^1[6-9]|[2-6]\d|7[0-6]$/</div><div class="line">AXXB  var reg=/^[a-z]([a-z])\1$/</div><div class="line">ABBA  var reg=/^([a-z])([a-z])\2\1$/</div><div class="line">邮箱  var reg=/^\w+((-\w+)|(\.\w+))*@[a-zA-Z0-9]+((\.|-)[a-zA-Z0-9]+)*\.[a-zA-Z0-9]+$/</div><div class="line">出现一个数字 但不为3  var reg=/^((?!3)\d)+$/ </div><div class="line"></div><div class="line">用户昵称  function checkNick(nick)&#123;</div><div class="line">          var reg1=/^[\u4e00-\u9fa5]&#123;6,14&#125;$/;</div><div class="line">          var reg2=/^\w$/;</div><div class="line">          var len=0;</div><div class="line">          for(var i=0;i&lt;nick.length;i++)&#123;</div><div class="line">           if(reg1.test(nick[i]))&#123;</div><div class="line">           len+=2;</div><div class="line">           &#125;</div><div class="line">           else(reg2.test(nick[i]))&#123;</div><div class="line">           len++;</div><div class="line">           &#125;</div><div class="line">           else&#123;</div><div class="line">           len=0;</div><div class="line">           break;</div><div class="line">           &#125;</div><div class="line">      &#125;</div><div class="line">      if(len===0||len&gt;14)&#123;</div><div class="line">      return false;</div><div class="line">      &#125;</div><div class="line">      return true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/10、RegExp/">
-    <time datetime="2017-06-28T10:05:42.400Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-9、oop(Object Oriented  Programming) 面向对象" class="post-9、oop(Object Oriented  Programming) 面向对象 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.394Z"><a href="/2017/06/28/9、oop(Object Oriented  Programming) 面向对象/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/9、oop(Object Oriented  Programming) 面向对象/">oop</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/9、oop(Object Oriented  Programming) 面向对象/">oop</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/9、oop(Object Oriented  Programming) 面向对象/" data-id="cj4gu5bei000b5sr4g5h1sept" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <h1 id="9、oop-Object-Oriented-Programming-面向对象"><a href="#9、oop-Object-Oriented-Programming-面向对象" class="headerlink" title="9、oop(Object Oriented  Programming) 面向对象"></a>9、oop(Object Oriented  Programming) 面向对象</h1>
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/9、oop(Object Oriented  Programming) 面向对象/">
-    <time datetime="2017-06-28T10:05:42.394Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-8、json" class="post-8、json post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.373Z"><a href="/2017/06/28/8、json/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/8、json/">json</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/8、json/">json</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/8、json/" data-id="cj4gu5bea000a5sr4ub6wuggo" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##JSON :一种数据格式，主要应用于前后端交互，前台向后台发送请求时，后台返回返回的基本是JSON格式的数据</p>
 <p>##JSON对象和JSON字符串</p>
@@ -528,45 +489,40 @@
 <p>###</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/8、json/">
-    <time datetime="2017-06-28T10:05:42.373Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-7、改变this的指向" class="post-7、改变this的指向 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.354Z"><a href="/2017/06/28/7、改变this的指向/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/7、改变this的指向/">改变this的指向</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/7、改变this的指向/">改变this的指向</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/7、改变this的指向/" data-id="cj4gu5be800095sr4u1vsfenc" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>1、所有的对象数据类型（普通对象 实例 prototype  函数）都是Object基类的一个实例<br>2、所有的函数数据类型（普通函数  类（内置类 自定义））都是Function的一个实例<br>3、所有的实例都是对象数据类型的，函数和类都是Function的实例，所以函数也是对象数据类型的值</p>
 <p>##函数的多面性<br>1、普通函数<br>执行的时候形成一个私有作用域  形参赋值  预解释  代码从上到下执行<br>2、作为一个类<br>具有原型链模式  类和实例的概念<br>3、作为一个对象<br>当做一个对象给他添加一个属性</p>
@@ -592,45 +548,40 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">4题</div><div class="line"> function text() &#123;</div><div class="line">    //        var n=666;</div><div class="line">    //        function add() &#123;</div><div class="line">    //            n++;</div><div class="line">    //            console.log(n);</div><div class="line">    //        &#125;</div><div class="line">    //        return &#123;n:n,add:add&#125;</div><div class="line">    //    &#125;</div><div class="line">    //    var r1 =text();</div><div class="line">    //    var r2=text();</div><div class="line">    //    r1.add();</div><div class="line">    //    r1.add();</div><div class="line">    //    console.log(r1.n);</div><div class="line">    //    r2.add();</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">5题</div><div class="line"> var num=1;</div><div class="line">    var obj=&#123;num:2&#125;;</div><div class="line">    obj.fn=(function(num)&#123;</div><div class="line">        this.num=num*2;</div><div class="line">        num++;</div><div class="line">        return function(n)&#123;</div><div class="line">            this.num+=n;</div><div class="line">            num++;</div><div class="line">            console.log(num);</div><div class="line">        &#125;</div><div class="line">    &#125;)(obj.num);</div><div class="line">    var fn=obj.fn;</div><div class="line">    fn(10); obj.fn(20);</div><div class="line">    console.log(num,obj.num);</div></pre></td></tr></table></figure>
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/7、改变this的指向/">
-    <time datetime="2017-06-28T10:05:42.354Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-6、重构对象模型" class="post-6、重构对象模型 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.334Z"><a href="/2017/06/28/6、重构对象模型/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/6、重构对象模型/">重构对象模型</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/6、重构对象模型/">重构对象模型</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/6、重构对象模型/" data-id="cj4gu5bdk00085sr4o9u1mbm9" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">function Fn()&#123;</div><div class="line">   </div><div class="line">&#125;</div><div class="line">var f1=new Fn</div><div class="line">//**每个类天生自带的属性prototype，浏览器为它开辟了一个堆内存  里面有一个天生自带的属性constructor这个属性**</div><div class="line"></div><div class="line">Fn.prototype=&#123;</div><div class="line">y:10</div><div class="line">&#125;</div><div class="line">console.log(Fn.prototype)</div><div class="line">//重构原型对象：自己开辟的堆内存 来存储公有的属性和方法  将浏览器天生为Fn.prototype开辟的堆内存替换掉</div><div class="line"></div><div class="line"></div><div class="line">//f1.constructor  由于我们为Fn.prototype新开辟了一个堆内存，所以最终通过原型链查找，找到的是Object.prototype上的constructor===&gt;Object</div><div class="line"></div><div class="line"></div><div class="line">//只有浏览器天生为Fn.prototype开辟的堆内存才有constructor这个属性  我们自己开辟的堆内存没有constructor 这个属性</div><div class="line"></div><div class="line">//为了和原来的一样 就自己手动在 自己为Fn.prototype 开辟的堆内存里添加constructor 指向Fn</div></pre></td></tr></table></figure>
 <p>###批量添加公有属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Fn.prototype=&#123;</div><div class="line">   constructor:Fn</div><div class="line">   x:10</div><div class="line">   y:10</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -641,45 +592,40 @@
 </blockquote>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/6、重构对象模型/">
-    <time datetime="2017-06-28T10:05:42.334Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-5.原型模式" class="post-5.原型模式 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.282Z"><a href="/2017/06/28/5.原型模式/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/5.原型模式/">原型模式</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/5.原型模式/">原型模式</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/5.原型模式/" data-id="cj4gu5bb000045sr4i1t9japt" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##javaScript:    JS就是一门轻量级的脚本“编程”语言</p>
 <p>##1、编程语言</p>
@@ -727,17 +673,19 @@
 <p>3、思考题  (5).plus(3).minus(2) =&gt;6   在Number的原型上扩展方法：plus和minus不仅可以实现加减操作而且还可以实现链接写法  </p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/5.原型模式/">
-    <time datetime="2017-06-28T10:05:42.282Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
@@ -745,86 +693,83 @@
 
 
 
+<nav id="pagination">
   
-  
-    <nav id="pagination">
-      <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
-      </nav>
-    </nav>
-  
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; Vorherige Seite</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Nächste Seite &raquo;</a>
+  </nav>
 
+</nav>
 </div></div>
-        <div id="secondary" class="widget-area" role="complementary">
-  
-    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
-    <div>
-        <input type="text" value="" name="s" id="s" />
-        <input type="submit" id="searchsubmit" value="搜索" />
-    </div>
-</form></aside>
-  
-    
-  
-    
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget-content">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </aside>
-
-  
-    
-  
-    
-  
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
 </div>
-      </div>
-      <footer id="colophon" role="contentinfo">
-    <p>&copy; 2017 John Doe
-    All rights reserved.</p>
-    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</footer>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
-<script src="/js/jquery-2.0.3.min.js"></script>
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(3)/"></a>
+      </li>
+    
+  </ul>
+</div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
 
-
-<script src="/js/script.js"></script>
-
-<script src="/js/navigation.js"></script>
-
-<div id="bg"></div>
-
+  
+</aside>
+    <div class="clearfix"></div>
   </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 John Doe
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
 </body>
 </html>

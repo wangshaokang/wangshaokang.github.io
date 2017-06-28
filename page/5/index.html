@@ -1,85 +1,76 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  
+  <title>Seite 5 | Hexo</title>
+  <meta name="author" content="John Doe" />
+
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
   
   
 
   
-  
-  
-  
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/page/5/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  
-  
-    <link rel="icon" href="/css/images/favicon.ico">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <meta property="og:image" content="undefined" />
   
 
   
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
   <!-- baidu webmaster push -->
   <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
 </head>
-<body class="home blog custom-background custom-font-enabled single-author">
-  <div id="page" class="hfeed site">
-      <header id="masthead" class="site-header" role="banner">
-    <hgroup>
-      <h1 class="site-title">
-        <a href="/" title="Hexo" rel="home">Hexo</a>
-      </h1>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
       
-        <script type="text/javascript" src="http://api.hitokoto.us/rand?encode=js&charset=utf-8"></script>
-        <h2 class="site-description"><script>hitokoto();</script></h2>
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.688Z"><a href="/2017/06/28/24、鼠标跟随/">2017-06-28</a></time>
       
-    </hgroup>
-
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle">菜单</button>
-            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
-            <div class="menu-main-container">
-                <ul id="menu-main" class="nav-menu">
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
-                
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
-                
-                </ul>
-            </div>
-    </nav>
-</header>
-      <div id="main" class="wrapper">
-        <div id="primary" class="site-content"><div id="content" role="main">
+      
   
-    <article id="post-24、鼠标跟随" class="post-24、鼠标跟随 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
-  
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/24、鼠标跟随/">鼠标跟随</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/24、鼠标跟随/">鼠标跟随</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/24、鼠标跟随/" data-id="cj4gu5bkp000n5sr416ks78h1" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>元素跟着鼠标移动 （移动的时候mousemove 实时计算元素的位置left和top</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">DOM二级事件绑定 </div><div class="line">btn.addEventListener(&apos;click&apos;,function()&#123;&#125;,false);</div><div class="line">true 捕获阶段   false 冒泡阶段</div></pre></td></tr></table></figure>
@@ -98,45 +89,40 @@
 <p>bind 同一个事件类型 需要绑定多个处理函数（事件类型需要一个容器 按绑定顺序存放处理函数，并且将处理函数里的this 修改为当前绑定事件元素）<br>执行 根据事件类型找到相应的处理函数的容器 然后依次取出 按顺序执行</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/24、鼠标跟随/">
-    <time datetime="2017-06-28T10:05:42.688Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-23、DOM 零级 二级事件 基础" class="post-23、DOM 零级 二级事件 基础 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.674Z"><a href="/2017/06/28/23、DOM 零级 二级事件 基础/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/23、DOM 零级 二级事件 基础/">DOM零级和二级事件基础</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/23、DOM 零级 二级事件 基础/">DOM零级和二级事件基础</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/23、DOM 零级 二级事件 基础/" data-id="cj4gu5bji000m5sr4jpnes99x" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <blockquote>
 <p>DOM 0级事件绑定<br>oDiv.onclick=function(){};<br>DOM 2级事件绑定<br>oDiv.addEventListener(‘click’,function(){},false)<br>addEventListener这个属性是定义在当前元素所属EventTarget这个类的原型上的</p>
@@ -150,45 +136,40 @@
 <p>##事件委托<br>利用事件默认会进行冒泡传播的机制，我们给最外层元素相关行为绑定事件  元素内的子元素相关行为 触发的时候 也会导致 最外层元素的相关行为事件触发，我们根据事件对象中的事件源来进行相关处理<br> 一个容器内document多个元素div 相关行为click绑定的时候  可以采用事件委托方式进行绑定  比单独一个一个绑定事件 执行和性能上提升很多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">document.onclick=function(e)&#123;  </div><div class="line">       e=e||window.event;</div><div class="line">       var tar=e.target;</div><div class="line">       if(tar.id===&apos;center&apos;)&#123;</div><div class="line">             console.log(tar.innerHTML);</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/23、DOM 零级 二级事件 基础/">
-    <time datetime="2017-06-28T10:05:42.674Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-22、事件基础" class="post-22、事件基础 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.665Z"><a href="/2017/06/28/22、事件基础/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/22、事件基础/">事件基础</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/22、事件基础/">事件基础</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/22、事件基础/" data-id="cj4gu5bjf000l5sr4wx97av57" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>柯理化函数：一个js预先处理的思想</p>
 <blockquote>
@@ -206,45 +187,40 @@
 <p>var pagex=e.clientX+(document.documentElement.scroll)<br>```</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/22、事件基础/">
-    <time datetime="2017-06-28T10:05:42.665Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-21、常用工具方法" class="post-21、常用工具方法 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.650Z"><a href="/2017/06/28/21、常用工具方法/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/21、常用工具方法/">常用的工具方法</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/21、常用工具方法/">常用的工具方法</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/21、常用工具方法/" data-id="cj4gu5bjc000k5sr4qi96oec6" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">去重  直接在原有上去重</div><div class="line">var ary=[1,2,2,3,3,4,6,6]</div><div class="line">$(.unipue(arr))</div><div class="line"></div><div class="line"></div><div class="line">合并数组</div><div class="line">$.merge([1,2],[3,4])</div><div class="line"></div><div class="line"></div><div class="line">将第二个参数对象合并到 第一个对象里面  修改第一个first</div><div class="line">var first=&#123;name:&apos;zhufeng&apos;,id:1,age:20&#125;;</div><div class="line">var second=&#123;name:&apos;zheli&apos;,id:2,say:&apos;hello world&apos;&#125;</div><div class="line">$.extend(first,send)</div><div class="line"></div><div class="line"></div><div class="line">检测数据类型</div><div class="line">console.log($.type(12));</div><div class="line"></div><div class="line"></div><div class="line">检测一个对象是否为空</div><div class="line">$.idEmptyObject(&#123;&#125;) //true</div><div class="line"></div><div class="line"></div><div class="line">检测是字面量创建的or 实例创建的对象??</div><div class="line">var a=&#123;&#125;</div><div class="line">var obj= new Object</div><div class="line">$.isPlainObject(obj);  // true</div><div class="line">$.isPlainObject(a);    // false</div><div class="line"></div><div class="line"></div><div class="line">$.extend(&#123;</div><div class="line">  myAdd:function(a,b)&#123;</div><div class="line">   return a+b;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line">在jq原型上扩展的属性方法</div><div class="line">$.fn.extend(&#123;</div><div class="line">    mySay:function()&#123;</div><div class="line">        console.log(&apos;nihao&apos;);</div><div class="line">     &#125;</div><div class="line"> &#125;)</div><div class="line"></div><div class="line"></div><div class="line">去除首尾空格</div><div class="line">console.log($.trim(&apos; ni hao &apos;));</div><div class="line"></div><div class="line"></div><div class="line">JSON 字符串转化为JSON对象</div><div class="line"></div><div class="line"></div><div class="line">get请求 需要我们给后台传递的参数  以这种形式URL？wd=nihao&amp;res_spt=1</div><div class="line">var url=&apos;http://www.baidu.com/s?&apos;+$param(obj);</div><div class="line">var obj=&#123;</div><div class="line">   wd:&apos;nihao&apos;,</div><div class="line">   rev_spt:1</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">$(&apos;from&apos;).serialize();</div><div class="line"></div><div class="line">$(&apos;from&apos;).serializeAll();</div></pre></td></tr></table></figure>
 <p>##jQ-ajax<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">	  type:&apos;GET&apos; //请求方式 GET  POST</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
@@ -254,45 +230,40 @@
 </blockquote>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/21、常用工具方法/">
-    <time datetime="2017-06-28T10:05:42.650Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-20、jQuery的DOM 、事件、" class="post-20、jQuery的DOM 、事件、 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.632Z"><a href="/2017/06/28/20、jQuery的DOM 、事件、/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/20、jQuery的DOM 、事件、/">jQuery的DOM事件</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/20、jQuery的DOM 、事件、/">jQuery的DOM事件</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/20、jQuery的DOM 、事件、/" data-id="cj4gu5bic000j5sr4wv0joi53" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">    console.log(this)  // #document</div><div class="line">&#125;)</div><div class="line"></div><div class="line">console.log(this)  //window</div></pre></td></tr></table></figure>
 <p>##内部插入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">append  在指定的容器中插入节点（插入到容器底部）</div><div class="line">$(&apos;.div&apos;).append($(&apos;h3&apos;)); 移动节点</div><div class="line"></div><div class="line">appendTo  将节点添加到指定容器(容器内容的前面)</div><div class="line">$(&apos;&lt;h2&gt;angular&lt;/h2&gt;&apos;).appendTo($(&apos;.oDiv&apos;));</div><div class="line"></div><div class="line">prepend  在指定容器 内部 前面 插入 节点</div><div class="line">$(&apos;.oDiv&apos;).prepend(&apos;&lt;h2&gt;angular&lt;/h2&gt;&apos;)</div><div class="line"></div><div class="line">prependTo  将节点 插入到 指定容器内部 前面</div><div class="line">$(&apos;&lt;h2&gt;argular&lt;/h2&gt;&apos;).prependTo(&apos;.oDiv&apos;)</div></pre></td></tr></table></figure></p>
@@ -303,45 +274,40 @@
 <p>##jQ-事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">上拉收取复合写法</div><div class="line">$(&apos;#btn&apos;).on(&apos;click.btn1&apos;,function()&#123;</div><div class="line">        </div><div class="line">        $(&apos;oDiv&apos;).slideToggle();</div><div class="line">   &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"> ///  off </div><div class="line">   移除指定事件行为</div><div class="line">$(&apos;#btn&apos;).off(&apos;click&apos;);  </div><div class="line"></div><div class="line">移除当前元素所有事件行为</div><div class="line">$(&apos;#btn&apos;).off()</div><div class="line"></div><div class="line">根据命名空间移除的相应事件类型移除</div><div class="line">$(&apos;#btn&apos;).off(&apos;click.btn1&apos;);</div><div class="line"></div><div class="line"></div><div class="line">根据命名空间移除</div><div class="line">$(&apos;#btn&apos;).off(&apos;.btn1&apos;); </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">/// unbind</div><div class="line">$(&apos;#btn&apos;).unbind()  //移除所有</div><div class="line"></div><div class="line">$(&apos;#btn&apos;).unbind(&apos;click&apos;)  //移除某个行为</div><div class="line"></div><div class="line">$(&apos;#btn&apos;).unbind(&apos;.over&apos;)  //命名空间</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">/// 预留事件 解决未来添加的元素  绑定事件</div><div class="line">$(&apos;body&apos;).on(&apos;click&apos;,&apos;button&apos;,function()&#123;</div><div class="line">      console.log(&apos;button&apos;)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line"></div><div class="line">/// 预留事件  解决未来添加的后代元素 绑定事件</div><div class="line">$(&apos;.container&apos;).delegate(&apos;button&apos;,&apos;click&apos;,function()&#123;</div><div class="line">         </div><div class="line">         console.log(&apos;delegate-click&apos;) ;</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">/// 移除delegate绑定的事件</div><div class="line">  $(&apos;.container&apos;).undelegate(&apos;click&apos;);</div><div class="line">  $(&apos;.container&apos;).undelegate();</div><div class="line"></div><div class="line"></div><div class="line">/// 显示/隐藏切换</div><div class="line">$(&apos;oDiv&apos;).stop().toggle(3000,function()&#123;</div><div class="line">       console.log(&apos;结束&apos;)   </div><div class="line"> &#125;)</div><div class="line"></div><div class="line"></div><div class="line">///滑入滑出</div><div class="line">$(&apos;#btn&apos;).hover(function()&#123; </div><div class="line">     console.log(&apos;mouseover&apos;)</div><div class="line">&#125;,function()&#123;</div><div class="line">     console.log(&apos;mouseout&apos;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">// slideToggle 上拉收起  </div><div class="line">$(&apos;.oDiv&apos;).stop().slideToggle(&apos;fast&apos;);</div><div class="line"></div><div class="line"></div><div class="line">//fadeToggle  渐入渐出</div><div class="line">$(&apos;.oDiv&apos;).fadeToggle()</div><div class="line"></div><div class="line"></div><div class="line">//一次性事件</div><div class="line">$(&apos;#btn&apos;).one(&apos;click&apos;,function()&#123;</div><div class="line">      console.log(&apos;one&apos;);</div><div class="line">  &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">//不会事件冒泡</div><div class="line">$(&apos;#btn&apos;).triggerHandler(&apos;click&apos;);</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/20、jQuery的DOM 、事件、/">
-    <time datetime="2017-06-28T10:05:42.632Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-19、jQuery" class="post-19、jQuery post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.612Z"><a href="/2017/06/28/19、jQuery/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/19、jQuery/">jQuery</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/19、jQuery/">jQuery</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/19、jQuery/" data-id="cj4gu5bib000i5sr4lgxotwq8" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##一个javascript 函数库，里面提供了 强大的选择器  DOM方法封装 ajax完整的封装  动画animate</p>
 <p>###jQuery 版本 1.0  2.0  3.0、<br>1、1.0版本 兼容IE6-8<br>2、2.0版本   不兼容IE6-8<br>3、3.0 版本   不兼容ie6-8  增加了一些新特性  同时 弃用了一些方法</p>
@@ -368,45 +334,40 @@
 <p>##在String原型上扩展一个方法 ,去除空白<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">String.prototype.myTrim=function myTrim()&#123;</div><div class="line">     if(&apos;trim&apos; in String.prototype)&#123;</div><div class="line">          return this.trim();</div><div class="line">     &#125;</div><div class="line">     return this.replace(/^ +| +$/g,&apos;&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/19、jQuery/">
-    <time datetime="2017-06-28T10:05:42.612Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-18、面向对象" class="post-18、面向对象 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.596Z"><a href="/2017/06/28/18、面向对象/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/18、面向对象/">面向对象</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/18、面向对象/">面向对象</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/18、面向对象/" data-id="cj4gu5bhf000h5sr4u8dawvpr" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>面向对象的过程—-实现逻辑</p>
 <p>选择器—&gt;查找DOM元素并且保存</p>
@@ -415,45 +376,40 @@
 <p>###如何判断一个对象是否是DOM对象(Assret;  断言,条件)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">try&#123;</div><div class="line">   selector.clone(true);//   克隆是DOM里面的方法 影响最小  </div><div class="line">   this[0]=selector;</div><div class="line">   this.length=1;</div><div class="line">&#125;catch(e)&#123;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/18、面向对象/">
-    <time datetime="2017-06-28T10:05:42.596Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-17、回调函数" class="post-17、回调函数 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.588Z"><a href="/2017/06/28/17、回调函数/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/17、回调函数/">回调函数</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/17、回调函数/">回调函数</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/17、回调函数/" data-id="cj4gu5bhd000g5sr4gtwrz8if" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##在方法A里 把 方法B当做一个参数 在方法A调用执行  何时执行执行多少次都可以</p>
 <blockquote>
@@ -461,87 +417,77 @@
 </blockquote>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/17、回调函数/">
-    <time datetime="2017-06-28T10:05:42.588Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-16、简单动画" class="post-16、简单动画 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.475Z"><a href="/2017/06/28/16、简单动画/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/16、简单动画/">简单动画</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/16、简单动画/">简单动画</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/16、简单动画/" data-id="cj4gu5bg3000f5sr4pq555mvh" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">匀速运动公式：当前时间，初始偏移值，总运动量，总运动时间</div><div class="line">function(time,begin,change,duration)&#123;</div><div class="line">           return   time/duration*change+begin;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/16、简单动画/">
-    <time datetime="2017-06-28T10:05:42.475Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
 
 
 
-
+  <article class="post">
   
-    <article id="post-15、JS中兼容性检测" class="post-15、JS中兼容性检测 post type-post status-publish format-standard hentry">
-    <!---->
-
-      <header class="entry-header">
-        
-        
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-28T10:05:42.466Z"><a href="/2017/06/28/15、JS中兼容性检测/">2017-06-28</a></time>
+      
+      
   
-    <h1 class="entry-title">
-      <a class="article-title" href="/2017/06/28/15、JS中兼容性检测/">JS中兼容性检测</a>
-    </h1>
+    <h1 class="title"><a href="/2017/06/28/15、JS中兼容性检测/">JS中兼容性检测</a></h1>
   
 
-        
-        <div class="comments-link">
-            
-            <a href="javascript:void(0);" data-url="http://yoursite.com/2017/06/28/15、JS中兼容性检测/" data-id="cj4gu5bfv000e5sr4vd413osj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
-        </div><!-- .comments-link -->
-      </header><!-- .entry-header -->
-
-    <div class="entry-content">
+    </header>
+    <div class="entry">
       
         <p>##getElementByTagName: 它的筛选范围是当前上下文的后代元素（子子孙孙）</p>
 <p>##children ：获取所有元素子节点，但是在IE低版本浏览器中和标准浏览器中获取的结果不统一，IE低版本浏览器会把注释节点也当做元素节点获取到（需要处理兼容）<br>jQ中常用的三个筛选的方法:children (子代查找) 、find（后代查找）、filter（同级过滤）===尝试基于children的方法思考</p>
@@ -561,17 +507,19 @@
 <p>##JS高阶编程技巧：惰性思想<br>能够执行一次就解决的，我们绝不会执行多次<br>第一次给utils赋值的时候，执行自执行函数，形成一个不销毁的私有作用域，我们在这里就把是否兼容处理好了，存在一个私有变量中，以后再需要检测是否兼容，我们直接的使用变量即可，没必要重复的操作检测；</p>
 
       
-    </div><!-- .entry-content -->
-
-    <footer class="entry-meta">
-    <a href="/2017/06/28/15、JS中兼容性检测/">
-    <time datetime="2017-06-28T10:05:42.466Z" class="entry-date">
-        2017-06-28
-    </time>
-</a>
+    </div>
     
-    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
     </footer>
+  </div>
 </article>
 
 
@@ -579,86 +527,83 @@
 
 
 
+<nav id="pagination">
   
-  
-    <nav id="pagination">
-      <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
-      </nav>
-    </nav>
-  
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; Vorherige Seite</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">Nächste Seite &raquo;</a>
+  </nav>
 
+</nav>
 </div></div>
-        <div id="secondary" class="widget-area" role="complementary">
-  
-    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
-    <div>
-        <input type="text" value="" name="s" id="s" />
-        <input type="submit" id="searchsubmit" value="搜索" />
-    </div>
-</form></aside>
-  
-    
-  
-    
-  
-    
-  <aside class="widget">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget-content">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/06/28/JavaScript基础知识(3)/">(no title)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </aside>
-
-  
-    
-  
-    
-  
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
 </div>
-      </div>
-      <footer id="colophon" role="contentinfo">
-    <p>&copy; 2017 John Doe
-    All rights reserved.</p>
-    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
-</footer>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
-<script src="/js/jquery-2.0.3.min.js"></script>
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/06/28/移动端(2)/">移动端(2)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/移动端(1)/">移动端(1)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(5)/">JavaScript基础知识(5)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(4)/">JavaScript基础知识(4)</a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/28/JavaScript基础知识(3)/"></a>
+      </li>
+    
+  </ul>
+</div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
 
-
-<script src="/js/script.js"></script>
-
-<script src="/js/navigation.js"></script>
-
-<div id="bg"></div>
-
+  
+</aside>
+    <div class="clearfix"></div>
   </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 John Doe
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
 </body>
 </html>
